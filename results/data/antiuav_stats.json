@@ -1,0 +1,192 @@
+{
+  "stats": {
+    "train": {
+      "stride": 20,
+      "source_videos": 22,
+      "seqs": 184,
+      "frames_total": 171838,
+      "frames_present": 169052,
+      "frames_absent": 2538,
+      "sampled_present": 8477,
+      "sampled_absent": 129,
+      "frames_invalid": 248,
+      "sampled_invalid": 14,
+      "resolutions": {
+        "640x512": 184
+      },
+      "eval_frames": 8606,
+      "eval_frames_without_drone": 129,
+      "small_supplement_frames": 0,
+      "small_supplement_sequences": 0,
+      "size_all_frames": {
+        "n": 169052,
+        "percentiles_sqrt_wh": {
+          "5": 23.45,
+          "25": 32.65,
+          "50": 38.5,
+          "75": 47.01,
+          "95": 61.19
+        },
+        "bins": {
+          "tiny": 28,
+          "small": 985,
+          "medium": 36542,
+          "large": 124521,
+          "xlarge": 6976
+        }
+      },
+      "size_sampled_frames": {
+        "n": 8477,
+        "percentiles_sqrt_wh": {
+          "5": 23.49,
+          "25": 32.76,
+          "50": 38.5,
+          "75": 47.02,
+          "95": 61.43
+        },
+        "bins": {
+          "tiny": 1,
+          "small": 49,
+          "medium": 1824,
+          "large": 6251,
+          "xlarge": 352
+        }
+      }
+    },
+    "val": {
+      "stride": 25,
+      "source_videos": 5,
+      "seqs": 43,
+      "frames_total": 39689,
+      "frames_present": 39685,
+      "sampled_present": 1596,
+      "frames_absent": 1,
+      "frames_invalid": 3,
+      "resolutions": {
+        "640x512": 43
+      },
+      "eval_frames": 1596,
+      "eval_frames_without_drone": 0,
+      "small_supplement_frames": 0,
+      "small_supplement_sequences": 0,
+      "size_all_frames": {
+        "n": 39685,
+        "percentiles_sqrt_wh": {
+          "5": 22.91,
+          "25": 26.0,
+          "50": 30.85,
+          "75": 37.0,
+          "95": 55.37
+        },
+        "bins": {
+          "tiny": 11,
+          "small": 13,
+          "medium": 21816,
+          "large": 17016,
+          "xlarge": 829
+        }
+      },
+      "size_sampled_frames": {
+        "n": 1596,
+        "percentiles_sqrt_wh": {
+          "5": 22.77,
+          "25": 25.98,
+          "50": 30.5,
+          "75": 37.34,
+          "95": 55.68
+        },
+        "bins": {
+          "tiny": 0,
+          "small": 1,
+          "medium": 879,
+          "large": 682,
+          "xlarge": 34
+        }
+      }
+    },
+    "test": {
+      "stride": 10,
+      "source_videos": 10,
+      "seqs": 91,
+      "frames_total": 85374,
+      "frames_present": 84178,
+      "sampled_present": 8429,
+      "frames_absent": 1153,
+      "sampled_absent": 1153,
+      "frames_invalid": 43,
+      "sampled_invalid": 4,
+      "resolutions": {
+        "640x512": 91
+      },
+      "eval_frames": 9582,
+      "eval_frames_without_drone": 1153,
+      "small_supplement_frames": 340,
+      "small_supplement_sequences": 9,
+      "size_all_frames": {
+        "n": 84178,
+        "percentiles_sqrt_wh": {
+          "5": 22.98,
+          "25": 32.4,
+          "50": 37.09,
+          "75": 43.47,
+          "95": 58.98
+        },
+        "bins": {
+          "tiny": 17,
+          "small": 365,
+          "medium": 19559,
+          "large": 62711,
+          "xlarge": 1526
+        }
+      },
+      "size_sampled_frames": {
+        "n": 8429,
+        "percentiles_sqrt_wh": {
+          "5": 22.98,
+          "25": 32.4,
+          "50": 37.12,
+          "75": 43.49,
+          "95": 59.13
+        },
+        "bins": {
+          "tiny": 2,
+          "small": 40,
+          "medium": 1965,
+          "large": 6272,
+          "xlarge": 150
+        }
+      }
+    }
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-08T05:54:15+00:00",
+    "git_commit": "28c9f16c813babcc8077b9e8671a0a6f929b56c7",
+    "git_dirty": true,
+    "config": "configs/default.yaml",
+    "config_sha256": "0a55658192437300dd38610246612b2c4bb3903670735d36241d3c60bf700510",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    }
+  }
+}

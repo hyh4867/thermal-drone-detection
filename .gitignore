@@ -1,0 +1,7 @@
+# Large/raw data, model weights and local env are never committed.
+/.venv/
+/data/
+/runs/
+*.pt
+*.pth
+__pycache__/

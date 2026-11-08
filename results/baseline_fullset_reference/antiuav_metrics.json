@@ -1,0 +1,183 @@
+{
+  "val": {
+    "frames": 1596,
+    "ap50": 0.1281764118412983,
+    "n_gt": 1596,
+    "selected_threshold": {
+      "threshold": 5.152894973754883,
+      "f1": 0.26101938262742286,
+      "precision": 0.16930527100018625,
+      "recall": 0.5695488721804511
+    }
+  },
+  "test": {
+    "frames": 9582,
+    "ap50": 0.12814238906912614,
+    "precision": 0.14357743097238895,
+    "precision_ci95": [
+      0.1399,
+      0.1474
+    ],
+    "recall": 0.5675643611341796,
+    "recall_ci95": [
+      0.557,
+      0.5781
+    ],
+    "tp": 4784,
+    "fp": 28536,
+    "fn": 3645,
+    "gt_boxes": 8429,
+    "drone_free_frames": 1153,
+    "drone_free_frames_with_alarm": 1146,
+    "false_alarm_rate_drone_free_frames": 0.9939288811795317,
+    "false_alarm_rate_ci95": [
+      0.9875,
+      0.9971
+    ],
+    "fp_per_drone_free_frame": 2.718126626192541,
+    "per_sequence_recall": {
+      "n_sequences": 91,
+      "median": 0.59,
+      "p10": 0.05319148936170213,
+      "p90": 0.9891304347826086
+    },
+    "recall_by_size": {
+      "tiny": {
+        "matched": 0,
+        "total": 17,
+        "recall": 0.0,
+        "ci95": [
+          0.0,
+          0.1843
+        ]
+      },
+      "small": {
+        "matched": 6,
+        "total": 365,
+        "recall": 0.01643835616438356,
+        "ci95": [
+          0.0076,
+          0.0354
+        ]
+      },
+      "medium": {
+        "matched": 703,
+        "total": 1965,
+        "recall": 0.35776081424936385,
+        "ci95": [
+          0.3369,
+          0.3792
+        ]
+      },
+      "large": {
+        "matched": 3956,
+        "total": 6272,
+        "recall": 0.6307397959183674,
+        "ci95": [
+          0.6187,
+          0.6426
+        ]
+      },
+      "xlarge": {
+        "matched": 125,
+        "total": 150,
+        "recall": 0.8333333333333334,
+        "ci95": [
+          0.7655,
+          0.8845
+        ]
+      }
+    },
+    "recall_by_size_frames": 9922
+  },
+  "threshold": 5.152894973754883,
+  "meta": {
+    "timestamp_utc": "2026-11-08T07:20:40+00:00",
+    "git_commit": "5bcd16c47b681f6b78149f6542fa9bebd94f1d71",
+    "git_dirty": true,
+    "config": "configs/default.yaml",
+    "config_sha256": "32e5f22f6d58f8e598632969247f22ef66b75461dfb9317d23342f670a34a8a2",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "method": {
+      "method": "top-hat spot detector (training-free)",
+      "params": {
+        "kernel_grid": [
+          9,
+          15,
+          21,
+          31,
+          45,
+          61
+        ],
+        "k_grid": [
+          2.0,
+          2.5,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          8.0
+        ],
+        "polarity": "both",
+        "max_dets": 10,
+        "min_area": 2,
+        "pad": 1,
+        "osd_rects": [
+          [
+            0,
+            0,
+            110,
+            30
+          ],
+          [
+            430,
+            0,
+            640,
+            30
+          ],
+          [
+            0,
+            55,
+            235,
+            90
+          ]
+        ],
+        "osd_mask_grid": [
+          false,
+          true
+        ],
+        "kernel": 61,
+        "k": 2.0,
+        "osd_mask": true
+      }
+    },
+    "timing_seconds": {
+      "val_s": 222.83953380584717,
+      "test_s": 1227.0422348976135,
+      "supp_s": 43.61799097061157
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "threshold": 0.8979253172874451,
+  "per_category": 3,
+  "items": [
+    {
+      "category": "missed_small_drone",
+      "file": "results/failures/missed_small_drone_01.png",
+      "video": "20190925_111757_1_9",
+      "frame": 775,
+      "gt_size_px_native": 11.3,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 40
+    },
+    {
+      "category": "missed_small_drone",
+      "file": "results/failures/missed_small_drone_02.png",
+      "video": "20190925_193610_1_9",
+      "frame": 178,
+      "gt_size_px_native": 2.0,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 40
+    },
+    {
+      "category": "missed_small_drone",
+      "file": "results/failures/missed_small_drone_03.png",
+      "video": "20190925_200805_1_2",
+      "frame": 348,
+      "gt_size_px_native": 15.5,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 40
+    },
+    {
+      "category": "missed_distant_drone",
+      "file": "results/failures/missed_distant_drone_01.png",
+      "video": "IR_DRONE_061",
+      "frame": 0,
+      "gt_size_px_native": 10.4,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 31
+    },
+    {
+      "category": "missed_distant_drone",
+      "file": "results/failures/missed_distant_drone_02.png",
+      "video": "IR_DRONE_098",
+      "frame": 0,
+      "gt_size_px_native": 10.8,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 31
+    },
+    {
+      "category": "missed_distant_drone",
+      "file": "results/failures/missed_distant_drone_03.png",
+      "video": "IR_DRONE_106",
+      "frame": 0,
+      "gt_size_px_native": 14.7,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 31
+    },
+    {
+      "category": "bird_as_drone",
+      "file": "results/failures/bird_as_drone_01.png",
+      "video": "IR_BIRD_033",
+      "frame": 0,
+      "gt_size_px_native": null,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9758797883987427,
+      "candidates_in_category": 26
+    },
+    {
+      "category": "bird_as_drone",
+      "file": "results/failures/bird_as_drone_02.png",
+      "video": "IR_BIRD_036",
+      "frame": 0,
+      "gt_size_px_native": null,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9744670391082764,
+      "candidates_in_category": 26
+    },
+    {
+      "category": "bird_as_drone",
+      "file": "results/failures/bird_as_drone_03.png",
+      "video": "IR_BIRD_032",
+      "frame": 0,
+      "gt_size_px_native": null,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9717752933502197,
+      "candidates_in_category": 26
+    },
+    {
+      "category": "airplane_as_drone",
+      "file": "results/failures/airplane_as_drone_01.png",
+      "video": "IR_AIRPLANE_063",
+      "frame": 0,
+      "gt_size_px_native": 23.0,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9895826578140259,
+      "candidates_in_category": 36
+    },
+    {
+      "category": "airplane_as_drone",
+      "file": "results/failures/airplane_as_drone_02.png",
+      "video": "IR_AIRPLANE_066",
+      "frame": 0,
+      "gt_size_px_native": 17.7,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9889339804649353,
+      "candidates_in_category": 36
+    },
+    {
+      "category": "airplane_as_drone",
+      "file": "results/failures/airplane_as_drone_03.png",
+      "video": "IR_AIRPLANE_064",
+      "frame": 0,
+      "gt_size_px_native": 16.5,
+      "n_dets_above_thr": 2,
+      "top_score": 0.9794173836708069,
+      "candidates_in_category": 36
+    },
+    {
+      "category": "helicopter_as_drone",
+      "file": "results/failures/helicopter_as_drone_01.png",
+      "video": "IR_HELICOPTER_055",
+      "frame": 0,
+      "gt_size_px_native": 31.5,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9929558038711548,
+      "candidates_in_category": 29
+    },
+    {
+      "category": "helicopter_as_drone",
+      "file": "results/failures/helicopter_as_drone_02.png",
+      "video": "IR_HELICOPTER_024",
+      "frame": 0,
+      "gt_size_px_native": 32.2,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9906340837478638,
+      "candidates_in_category": 29
+    },
+    {
+      "category": "helicopter_as_drone",
+      "file": "results/failures/helicopter_as_drone_03.png",
+      "video": "IR_HELICOPTER_054",
+      "frame": 0,
+      "gt_size_px_native": 19.7,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9870750308036804,
+      "candidates_in_category": 29
+    },
+    {
+      "category": "false_alarm_no_drone",
+      "file": "results/failures/false_alarm_no_drone_01.png",
+      "video": "20190925_193610_1_4",
+      "frame": 900,
+      "gt_size_px_native": null,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9881160259246826,
+      "candidates_in_category": 3
+    },
+    {
+      "category": "false_alarm_no_drone",
+      "file": "results/failures/false_alarm_no_drone_02.png",
+      "video": "20190926_111509_1_3",
+      "frame": 710,
+      "gt_size_px_native": null,
+      "n_dets_above_thr": 1,
+      "top_score": 0.9310805201530457,
+      "candidates_in_category": 3
+    },
+    {
+      "category": "missed_large_drone",
+      "file": "results/failures/missed_large_drone_01.png",
+      "video": "20190925_111757_1_1",
+      "frame": 200,
+      "gt_size_px_native": 44.1,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 63
+    },
+    {
+      "category": "missed_large_drone",
+      "file": "results/failures/missed_large_drone_02.png",
+      "video": "20190925_111757_1_2",
+      "frame": 0,
+      "gt_size_px_native": 45.0,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 63
+    },
+    {
+      "category": "missed_large_drone",
+      "file": "results/failures/missed_large_drone_03.png",
+      "video": "20190925_111757_1_3",
+      "frame": 0,
+      "gt_size_px_native": 46.9,
+      "n_dets_above_thr": 0,
+      "top_score": null,
+      "candidates_in_category": 63
+    }
+  ]
+}

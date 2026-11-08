@@ -1,0 +1,151 @@
+{
+  "stride": 5,
+  "excluded_videos": [
+    {
+      "video": "IR_BIRD_027",
+      "frames": 319,
+      "labels": 85
+    },
+    {
+      "video": "IR_BIRD_035",
+      "frames": 327,
+      "labels": 174
+    },
+    {
+      "video": "IR_DRONE_096",
+      "frames": 321,
+      "labels": 397
+    },
+    {
+      "video": "IR_DRONE_101",
+      "frames": 321,
+      "labels": 342
+    },
+    {
+      "video": "IR_DRONE_104",
+      "frames": 311,
+      "labels": 360
+    }
+  ],
+  "per_class_bin": {
+    "AIRPLANE/CLOSE": {
+      "videos": 9,
+      "label_video_len_mismatch": 0,
+      "frames": 578,
+      "frames_with_object": 578,
+      "res_320x256": 9
+    },
+    "AIRPLANE/DISTANT": {
+      "videos": 40,
+      "label_video_len_mismatch": 0,
+      "frames": 2520,
+      "frames_with_object": 2520,
+      "res_320x256": 40
+    },
+    "AIRPLANE/MEDIUM": {
+      "videos": 25,
+      "label_video_len_mismatch": 0,
+      "frames": 1580,
+      "frames_with_object": 1580,
+      "res_320x256": 25
+    },
+    "BIRD/CLOSE": {
+      "videos": 8,
+      "label_video_len_mismatch": 8,
+      "frames": 509,
+      "frames_with_object": 437,
+      "res_320x256": 8,
+      "excluded_videos": 2
+    },
+    "BIRD/DISTANT": {
+      "videos": 46,
+      "label_video_len_mismatch": 46,
+      "frames": 2911,
+      "frames_with_object": 2632,
+      "res_320x256": 46
+    },
+    "BIRD/MEDIUM": {
+      "videos": 23,
+      "label_video_len_mismatch": 23,
+      "frames": 1452,
+      "frames_with_object": 1261,
+      "res_320x256": 23
+    },
+    "DRONE/CLOSE": {
+      "videos": 23,
+      "label_video_len_mismatch": 0,
+      "frames": 1462,
+      "frames_with_object": 1462,
+      "res_320x256": 23,
+      "excluded_videos": 1
+    },
+    "DRONE/DISTANT": {
+      "videos": 38,
+      "label_video_len_mismatch": 0,
+      "frames": 2392,
+      "frames_with_object": 2392,
+      "res_320x256": 38,
+      "excluded_videos": 1
+    },
+    "DRONE/MEDIUM": {
+      "videos": 93,
+      "label_video_len_mismatch": 1,
+      "frames": 5843,
+      "frames_with_object": 5528,
+      "res_320x256": 93,
+      "excluded_videos": 1
+    },
+    "HELICOPTER/CLOSE": {
+      "videos": 15,
+      "label_video_len_mismatch": 0,
+      "frames": 919,
+      "frames_with_object": 919,
+      "res_320x256": 15
+    },
+    "HELICOPTER/DISTANT": {
+      "videos": 20,
+      "label_video_len_mismatch": 0,
+      "frames": 1252,
+      "frames_with_object": 1252,
+      "res_320x256": 20
+    },
+    "HELICOPTER/MEDIUM": {
+      "videos": 20,
+      "label_video_len_mismatch": 2,
+      "frames": 1244,
+      "frames_with_object": 1244,
+      "res_320x256": 20
+    }
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-08T05:56:26+00:00",
+    "git_commit": "28c9f16c813babcc8077b9e8671a0a6f929b56c7",
+    "git_dirty": true,
+    "config": "configs/default.yaml",
+    "config_sha256": "1d861d45cc36a798491a57f9508cff159ebd5e01b2403cc005a6b054eed1ab13",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    }
+  }
+}

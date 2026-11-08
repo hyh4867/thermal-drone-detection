@@ -1,0 +1,61 @@
+{
+  "note": "Planned 4 epochs; stopped after epoch 1 (user asked to finish quickly). LR schedule was the 4-epoch cosine, so training ended at a high LR (no annealing).",
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.04030181712102751,
+      "val_ap50_subset": 0.8906632980290434,
+      "val_frames": 798,
+      "epoch_minutes": 107.03406688372294
+    }
+  ],
+  "best_epoch": 0,
+  "iterations": 1050,
+  "last_logged_iter": {
+    "iter": 1050,
+    "epoch": 0,
+    "lr": 0.008976464356367134,
+    "loss": 0.040372122537699486,
+    "loss_classifier": 0.0085,
+    "loss_box_reg": 0.0194,
+    "loss_objectness": 0.0003,
+    "loss_rpn_box_reg": 0.0006,
+    "s_per_iter": 5.849076878683908
+  },
+  "train_frames": 8606,
+  "batch_size": 8,
+  "device": "mps",
+  "meta": {
+    "timestamp_utc": "2026-11-08T08:04:33+00:00",
+    "git_commit": "5bcd16c47b681f6b78149f6542fa9bebd94f1d71",
+    "git_dirty": true,
+    "config": "configs/default.yaml",
+    "config_sha256": "909691032246d2bd464fe8b3e0f94ec3d3ccd5baf253d2c0c4c7619727944358",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "run": "frcnn",
+    "training_started_at_commit": "59e9dbe"
+  }
+}

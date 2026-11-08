@@ -1,0 +1,546 @@
+{
+  "grid": [
+    {
+      "kernel": 9,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.0012731313189717484
+    },
+    {
+      "kernel": 9,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.025472995936443275
+    },
+    {
+      "kernel": 9,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.0004730694486049555
+    },
+    {
+      "kernel": 9,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.013657236990867041
+    },
+    {
+      "kernel": 9,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.0001887224747179337
+    },
+    {
+      "kernel": 9,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.009845481081711193
+    },
+    {
+      "kernel": 9,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 9.989082917036427e-06
+    },
+    {
+      "kernel": 9,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.005683223082809073
+    },
+    {
+      "kernel": 9,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 9,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.003027142351743199
+    },
+    {
+      "kernel": 9,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 9,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.0014966626771843244
+    },
+    {
+      "kernel": 9,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 9,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.0006315149787546723
+    },
+    {
+      "kernel": 15,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.028410592501876525
+    },
+    {
+      "kernel": 15,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.07182282840677578
+    },
+    {
+      "kernel": 15,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.01641826633062713
+    },
+    {
+      "kernel": 15,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.06804942252525216
+    },
+    {
+      "kernel": 15,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.010660629941054075
+    },
+    {
+      "kernel": 15,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.0649316974338277
+    },
+    {
+      "kernel": 15,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 0.0009783252320155669
+    },
+    {
+      "kernel": 15,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.05714041047418132
+    },
+    {
+      "kernel": 15,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 8.16062556072324e-06
+    },
+    {
+      "kernel": 15,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.04575727577635363
+    },
+    {
+      "kernel": 15,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 15,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.031170811023064474
+    },
+    {
+      "kernel": 15,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 15,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.011544321643142246
+    },
+    {
+      "kernel": 21,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.04785367538502305
+    },
+    {
+      "kernel": 21,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.07667487818497654
+    },
+    {
+      "kernel": 21,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.029057694566124538
+    },
+    {
+      "kernel": 21,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.07528827508998372
+    },
+    {
+      "kernel": 21,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.0159269054881108
+    },
+    {
+      "kernel": 21,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.07374007682058382
+    },
+    {
+      "kernel": 21,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 0.0028360926663754905
+    },
+    {
+      "kernel": 21,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.06990705266162191
+    },
+    {
+      "kernel": 21,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 6.559782531424712e-05
+    },
+    {
+      "kernel": 21,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.06251932001959365
+    },
+    {
+      "kernel": 21,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 4.171547377097871e-07
+    },
+    {
+      "kernel": 21,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.04901797550562152
+    },
+    {
+      "kernel": 21,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 21,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.018396410227676456
+    },
+    {
+      "kernel": 31,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.06213797203490444
+    },
+    {
+      "kernel": 31,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.09259859285001726
+    },
+    {
+      "kernel": 31,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.040506603367711266
+    },
+    {
+      "kernel": 31,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.0864193094238517
+    },
+    {
+      "kernel": 31,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.021997223811449598
+    },
+    {
+      "kernel": 31,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.08040539933003799
+    },
+    {
+      "kernel": 31,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 0.004087658450230071
+    },
+    {
+      "kernel": 31,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.07536107421941604
+    },
+    {
+      "kernel": 31,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 3.5647868361966845e-05
+    },
+    {
+      "kernel": 31,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.06805791159657804
+    },
+    {
+      "kernel": 31,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 31,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.052897781942081806
+    },
+    {
+      "kernel": 31,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 31,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.02677913902693884
+    },
+    {
+      "kernel": 45,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.056122425073900375
+    },
+    {
+      "kernel": 45,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.11468702667848162
+    },
+    {
+      "kernel": 45,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.02775923147855633
+    },
+    {
+      "kernel": 45,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.11021391348422059
+    },
+    {
+      "kernel": 45,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.011580824573278352
+    },
+    {
+      "kernel": 45,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.09391240335145726
+    },
+    {
+      "kernel": 45,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 0.00024541803246993355
+    },
+    {
+      "kernel": 45,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.06821093941196205
+    },
+    {
+      "kernel": 45,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 45,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.04523398978287245
+    },
+    {
+      "kernel": 45,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 45,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.020079906134299545
+    },
+    {
+      "kernel": 45,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 45,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.004346651578166977
+    },
+    {
+      "kernel": 61,
+      "k": 2.0,
+      "osd_mask": false,
+      "val_ap50": 0.04502185377895193
+    },
+    {
+      "kernel": 61,
+      "k": 2.0,
+      "osd_mask": true,
+      "val_ap50": 0.1281764118412983
+    },
+    {
+      "kernel": 61,
+      "k": 2.5,
+      "osd_mask": false,
+      "val_ap50": 0.02396068302037786
+    },
+    {
+      "kernel": 61,
+      "k": 2.5,
+      "osd_mask": true,
+      "val_ap50": 0.11485566693855633
+    },
+    {
+      "kernel": 61,
+      "k": 3.0,
+      "osd_mask": false,
+      "val_ap50": 0.008719393625973466
+    },
+    {
+      "kernel": 61,
+      "k": 3.0,
+      "osd_mask": true,
+      "val_ap50": 0.09094388168879167
+    },
+    {
+      "kernel": 61,
+      "k": 4.0,
+      "osd_mask": false,
+      "val_ap50": 0.00014223126662775185
+    },
+    {
+      "kernel": 61,
+      "k": 4.0,
+      "osd_mask": true,
+      "val_ap50": 0.05907047753857492
+    },
+    {
+      "kernel": 61,
+      "k": 5.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 61,
+      "k": 5.0,
+      "osd_mask": true,
+      "val_ap50": 0.02886100441331619
+    },
+    {
+      "kernel": 61,
+      "k": 6.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 61,
+      "k": 6.0,
+      "osd_mask": true,
+      "val_ap50": 0.015484653409771473
+    },
+    {
+      "kernel": 61,
+      "k": 8.0,
+      "osd_mask": false,
+      "val_ap50": 0.0
+    },
+    {
+      "kernel": 61,
+      "k": 8.0,
+      "osd_mask": true,
+      "val_ap50": 0.003528552340595185
+    }
+  ],
+  "selected": {
+    "kernel": 61,
+    "k": 2.0,
+    "osd_mask": true,
+    "val_ap50": 0.1281764118412983
+  },
+  "selection": "max AP@0.5 on val (Anti-UAV, source-video split)",
+  "meta": {
+    "timestamp_utc": "2026-11-08T06:53:56+00:00",
+    "git_commit": "5bcd16c47b681f6b78149f6542fa9bebd94f1d71",
+    "git_dirty": false,
+    "config": "configs/default.yaml",
+    "config_sha256": "32e5f22f6d58f8e598632969247f22ef66b75461dfb9317d23342f670a34a8a2",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    }
+  }
+}
