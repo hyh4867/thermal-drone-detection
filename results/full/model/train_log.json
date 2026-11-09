@@ -1,0 +1,78 @@
+{
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.040504042170075485,
+      "val_ap50_subset": 0.8915803267224249,
+      "val_frames": 1596,
+      "epoch_minutes": 43.3043206969897
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.040588690202922134,
+      "val_ap50_subset": 0.9303047104444693,
+      "val_frames": 1596,
+      "epoch_minutes": 43.81128447850545
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04144487333849717,
+      "val_ap50_subset": 0.9373040265234288,
+      "val_frames": 1596,
+      "epoch_minutes": 44.6788954337438
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.04152613588558123,
+      "val_ap50_subset": 0.9373820344028005,
+      "val_frames": 1596,
+      "epoch_minutes": 44.64289011557897
+    }
+  ],
+  "best_epoch": 3,
+  "iterations": 4300,
+  "complete": true,
+  "resumed": {
+    "from_epoch": 0,
+    "iter": 1075,
+    "rng_state_restored": false,
+    "at": "2026-11-08 19:48:40 KST"
+  },
+  "val_frames_for_selection": 1596,
+  "train_frames": 8606,
+  "minutes_this_process": 133.20938258171083,
+  "device": "mps",
+  "meta": {
+    "timestamp_utc": "2026-11-08T13:01:52+00:00",
+    "git_commit": "d6ae377350256f3b13d7d42f05c32de4a2029b45",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "run": "full_frcnn"
+  }
+}

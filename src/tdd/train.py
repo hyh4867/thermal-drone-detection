@@ -78,6 +78,19 @@ class CropDataset(Dataset):
         return img, target
 
 
+def _empty_cache(device) -> None:
+    if device.type == "mps":
+        torch.mps.empty_cache()
+
+
+def _mem_stats() -> dict:
+    out = {}
+    if torch.backends.mps.is_available():
+        out["mps_driver_gb"] = round(torch.mps.driver_allocated_memory() / 1e9, 3)
+        out["mps_current_gb"] = round(torch.mps.current_allocated_memory() / 1e9, 3)
+    return out
+
+
 def collate(batch):
     return tuple(zip(*batch))
 
@@ -87,6 +100,9 @@ def main():
     ap.add_argument("--config", default="configs/default.yaml")
     ap.add_argument("--run", default="frcnn")
     ap.add_argument("--max-iters", type=int, default=0, help="smoke test only")
+    ap.add_argument("--results-dir", default="results/model")
+    ap.add_argument("--resume", action="store_true",
+                    help="continue from runs/<run>/train_state.pt (end of the last finished epoch) if it exists")
     args = ap.parse_args()
     cfg = load_config(args.config)
     set_seed(cfg["seed"])
@@ -98,8 +114,12 @@ def main():
     man = path(cfg["data"]["manifests_dir"])
     train = read_json(man / "antiuav_train.json")
     val = read_json(man / "antiuav_val.json")[:: max(1, tc["val_stride_during_training"] // cfg["split"]["stride"]["val"])]
+    if args.max_iters:  # smoke test: tiny val so the check takes seconds
+        val = val[:16]
     ds = CropDataset(train, tc, cfg["seed"])
     g = torch.Generator().manual_seed(cfg["seed"])
+    micro = int(tc.get("micro_batch_size", tc["batch_size"]))
+    assert tc["batch_size"] % micro == 0, "batch_size must be a multiple of micro_batch_size"
     dl = DataLoader(ds, batch_size=tc["batch_size"], shuffle=True, num_workers=tc["num_workers"],
                     collate_fn=collate, generator=g, persistent_workers=False, drop_last=True)
 
@@ -116,10 +136,35 @@ def main():
         p = (it - tc["warmup_iters"]) / max(1, total - tc["warmup_iters"])
         return tc["lr"] * 0.5 * (1 + math.cos(math.pi * min(p, 1.0)))
 
-    log_f = open(run_dir / "train_log.jsonl", "w")
-    history, best_ap, it = [], -1.0, 0
+    history, best_ap, it, start_epoch, resumed = [], -1.0, 0, 0, None
+    state_p = run_dir / "train_state.pt"
+    if args.resume and state_p.exists():
+        st = torch.load(state_p, map_location="cpu", weights_only=False)
+        if st["total_iters"] != total:
+            raise RuntimeError(f"schedule mismatch: saved total {st['total_iters']} != {total}")
+        model.load_state_dict(torch.load(run_dir / f"epoch{st['epoch']}.pt", map_location="cpu"))
+        opt.load_state_dict(st["optimizer"])
+        it, start_epoch = st["iter"], st["epoch"] + 1
+        if "torch_rng" in st:
+            torch.set_rng_state(st["torch_rng"])
+        prev = read_json(ROOT / args.results_dir / "train_log.json")
+        history = [h for h in prev["history"] if h["epoch"] <= st["epoch"]]
+        best_ap = max(h["val_ap50_subset"] for h in history)
+        # replay the generator draws of the finished epochs (worker base seed at
+        # iterator creation + the shuffle permutation at the first batch), so the
+        # remaining epochs see the same data order as an uninterrupted run
+        for _ in range(start_epoch):
+            _it = iter(dl)
+            next(_it)
+            del _it
+        resumed = {"from_epoch": st["epoch"], "iter": it, "rng_state_restored": "torch_rng" in st,
+                   "at": time.strftime("%Y-%m-%d %H:%M:%S %Z")}
+        print("resumed", resumed, "history", history, flush=True)
+    log_f = open(run_dir / "train_log.jsonl", "a" if resumed else "w")
+    if resumed:
+        log_f.write(json.dumps({"resumed": resumed}) + "\n")
     t_start = time.time()
-    for epoch in range(tc["epochs"]):
+    for epoch in range(start_epoch, tc["epochs"]):
         ds.epoch = epoch
         model.train()
         set_input_size(model, tc["crop"], tc["crop"])
@@ -127,30 +172,46 @@ def main():
         for imgs, tgts in dl:
             for gp in opt.param_groups:
                 gp["lr"] = lr_at(it)
-            imgs = [i.to(device) for i in imgs]
-            tgts = [{k: v.to(device) for k, v in t.items()} for t in tgts]
-            losses = model(imgs, tgts)
-            loss = sum(losses.values())
-            if not torch.isfinite(loss):
-                raise RuntimeError(f"non-finite loss at iter {it}: {losses}")
+            # The loader still yields the full batch (same shuffle and RNG draws as
+            # before); it is split into micro-batches whose gradients are accumulated,
+            # so one optimizer step still sees batch_size images. Faster R-CNN losses
+            # are per-image-balanced means, so mean-of-micro-means == full-batch mean.
             opt.zero_grad(set_to_none=True)
-            loss.backward()
+            loss_val, loss_parts = 0.0, {}
+            n_img = len(imgs)
+            for a in range(0, n_img, micro):
+                mi = [i.to(device) for i in imgs[a:a + micro]]
+                mt = [{k: v.to(device) for k, v in t.items()} for t in tgts[a:a + micro]]
+                losses = model(mi, mt)
+                w = len(mi) / n_img
+                loss = sum(losses.values())
+                if not torch.isfinite(loss):
+                    raise RuntimeError(f"non-finite loss at iter {it}: {losses}")
+                (loss * w).backward()
+                loss_val += loss.item() * w
+                for k, v in losses.items():
+                    loss_parts[k] = loss_parts.get(k, 0.0) + v.item() * w
+                del mi, mt, losses, loss
             opt.step()
-            run_loss += loss.item()
+            run_loss += loss_val
             n_b += 1
             it += 1
             if it % 50 == 0:
                 rec = {"iter": it, "epoch": epoch, "lr": lr_at(it), "loss": run_loss / n_b,
-                       **{k: round(v.item(), 4) for k, v in losses.items()},
-                       "s_per_iter": (time.time() - t0) / n_b}
+                       **{k: round(v, 4) for k, v in loss_parts.items()},
+                       "s_per_iter": (time.time() - t0) / n_b, **_mem_stats()}
                 log_f.write(json.dumps(rec) + "\n")
                 log_f.flush()
                 print(rec, flush=True)
             if args.max_iters and it >= args.max_iters:
                 break
         # --- per-epoch val AP@0.5 (checkpoint selection only) ---
-        predict = make_predict_fn(model, device, mc, batch_size=4, load_image=load_image)
-        val_ap = ap_on(val, predict(val), cfg["eval"]["iou_thr"])
+        _empty_cache(device)
+        predict = make_predict_fn(model, device, mc, batch_size=mc.get("eval_batch_size", 4), load_image=load_image)
+        val_preds = predict(val)
+        _empty_cache(device)
+        val_ap = ap_on(val, val_preds, cfg["eval"]["iou_thr"])
+        write_json(val_preds, run_dir / f"val_preds_epoch{epoch}.json")
         rec = {"epoch": epoch, "train_loss": run_loss / max(n_b, 1), "val_ap50_subset": val_ap,
                "val_frames": len(val), "epoch_minutes": (time.time() - t0) / 60}
         history.append(rec)
@@ -158,17 +219,30 @@ def main():
         log_f.flush()
         print(rec, flush=True)
         torch.save(model.state_dict(), run_dir / "last.pt")
+        torch.save(model.state_dict(), run_dir / f"epoch{epoch}.pt")
+        # full training state, so an interrupted run can be resumed on the same schedule
+        torch.save({"epoch": epoch, "iter": it, "optimizer": opt.state_dict(), "total_iters": total,
+                    "torch_rng": torch.get_rng_state()}, run_dir / "train_state.pt")
         if val_ap > best_ap:
             best_ap = val_ap
             torch.save(model.state_dict(), run_dir / "best.pt")
+            if len(val) == len(read_json(man / "antiuav_val.json")):
+                # val preds of the selected checkpoint = the evaluation cache for the full val split
+                write_json(val_preds, run_dir / "preds_antiuav_val.json")
+        write_json({"history": history, "best_epoch_so_far": max(history, key=lambda r: r["val_ap50_subset"])["epoch"],
+                    "iterations_so_far": it, "planned_iterations": total, "complete": False,
+                    "resumed": resumed, "meta": run_metadata(cfg, {"run": args.run})},
+                   ROOT / args.results_dir / "train_log.json")
         if args.max_iters and it >= args.max_iters:
             break
     log_f.close()
     best_epoch = max(history, key=lambda r: r["val_ap50_subset"])["epoch"]
-    write_json({"history": history, "best_epoch": best_epoch, "iterations": it,
-                "train_frames": len(ds), "total_minutes": (time.time() - t_start) / 60,
+    write_json({"history": history, "best_epoch": best_epoch, "iterations": it, "complete": True,
+                "resumed": resumed,
+                "val_frames_for_selection": len(val),
+                "train_frames": len(ds), "minutes_this_process": (time.time() - t_start) / 60,
                 "device": str(device), "meta": run_metadata(cfg, {"run": args.run})},
-               ROOT / "results" / "model" / ("train_log.json" if not args.max_iters else "smoke_train_log.json"))
+               ROOT / args.results_dir / ("train_log.json" if not args.max_iters else "smoke_train_log.json"))
 
 
 if __name__ == "__main__":

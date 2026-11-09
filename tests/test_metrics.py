@@ -36,3 +36,21 @@ def test_best_f1_threshold():
     frames = [{"gt": [[0, 0, 10, 10]], "det": [[0, 0, 10, 10, 0.9], [30, 30, 40, 40, 0.1]]}]
     t = best_f1_threshold(average_precision(frames))
     assert t["threshold"] == 0.9 and t["f1"] == 1.0
+
+
+def test_bootstrap_ap_matches_metric_and_brackets_point():
+    import numpy as np
+    from tdd.bootstrap import _ap, _units, bootstrap_antiuav
+    rng = np.random.default_rng(1)
+    frames, preds = [], []
+    for s in range(12):
+        for i in range(10):
+            gt = [[10, 10, 30, 30]] if i % 4 else []
+            d = [[10 + rng.normal(0, 3), 10, 30, 30, float(rng.random())], [50, 50, 60, 60, float(rng.random() * 0.5)]]
+            frames.append({"seq": f"s{s}", "gt": gt}); preds.append(d)
+    units = _units(frames, preds, lambda f: f["seq"], 0.3, 0.5)
+    direct = average_precision([{"gt": f["gt"], "det": p} for f, p in zip(frames, preds)])["ap"]
+    assert math.isclose(_ap(units), direct, rel_tol=1e-12)
+    b = bootstrap_antiuav(frames, preds, 0.3, 0.5, 200, 0)
+    lo, hi = b["ci95"]["ap50"]
+    assert lo <= direct <= hi and b["n_units"] == 12

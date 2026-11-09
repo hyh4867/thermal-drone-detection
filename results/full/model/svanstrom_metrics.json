@@ -1,0 +1,443 @@
+{
+  "threshold_from_antiuav_val": 0.9541826248168945,
+  "drone_recall_by_bin": {
+    "CLOSE": {
+      "videos": 23,
+      "frames": 1462,
+      "drone_boxes": 1462,
+      "matched": 965,
+      "recall": 0.6600547195622435,
+      "recall_ci95": [
+        0.6354,
+        0.6839
+      ],
+      "precision_in_drone_videos": 0.6485215053763441,
+      "median_size_px_native": 20.92
+    },
+    "MEDIUM": {
+      "videos": 93,
+      "frames": 5843,
+      "drone_boxes": 5528,
+      "matched": 3175,
+      "recall": 0.5743487698986975,
+      "recall_ci95": [
+        0.5613,
+        0.5873
+      ],
+      "precision_in_drone_videos": 0.5001575299306869,
+      "median_size_px_native": 14.89
+    },
+    "DISTANT": {
+      "videos": 38,
+      "frames": 2392,
+      "drone_boxes": 2392,
+      "matched": 421,
+      "recall": 0.17600334448160534,
+      "recall_ci95": [
+        0.1613,
+        0.1918
+      ],
+      "precision_in_drone_videos": 0.25608272506082724,
+      "median_size_px_native": 12.15
+    },
+    "ALL": {
+      "videos": 154,
+      "frames": 9697,
+      "drone_boxes": 9382,
+      "matched": 4561,
+      "recall": 0.4861436793860584,
+      "recall_ci95": [
+        0.476,
+        0.4963
+      ],
+      "precision_in_drone_videos": 0.4811181434599156,
+      "median_size_px_native": 14.74
+    }
+  },
+  "non_drone_flagged_as_drone": {
+    "BIRD": {
+      "CLOSE": {
+        "videos": 8,
+        "frames": 509,
+        "frames_with_drone_alarm": 411,
+        "frame_alarm_rate": 0.8074656188605108,
+        "frame_alarm_rate_ci95": [
+          0.771,
+          0.8394
+        ],
+        "frames_with_object": 437,
+        "object_boxed_as_drone": 67,
+        "object_misidentified_rate": 0.15331807780320367,
+        "object_misidentified_ci95": [
+          0.1226,
+          0.1901
+        ],
+        "videos_with_any_alarm": 8
+      },
+      "MEDIUM": {
+        "videos": 23,
+        "frames": 1452,
+        "frames_with_drone_alarm": 437,
+        "frame_alarm_rate": 0.3009641873278237,
+        "frame_alarm_rate_ci95": [
+          0.2779,
+          0.3251
+        ],
+        "frames_with_object": 1261,
+        "object_boxed_as_drone": 56,
+        "object_misidentified_rate": 0.04440919904837431,
+        "object_misidentified_ci95": [
+          0.0344,
+          0.0572
+        ],
+        "videos_with_any_alarm": 17
+      },
+      "DISTANT": {
+        "videos": 46,
+        "frames": 2911,
+        "frames_with_drone_alarm": 271,
+        "frame_alarm_rate": 0.09309515630367571,
+        "frame_alarm_rate_ci95": [
+          0.0831,
+          0.1042
+        ],
+        "frames_with_object": 2632,
+        "object_boxed_as_drone": 10,
+        "object_misidentified_rate": 0.003799392097264438,
+        "object_misidentified_ci95": [
+          0.0021,
+          0.007
+        ],
+        "videos_with_any_alarm": 19
+      },
+      "ALL": {
+        "videos": 77,
+        "frames": 4872,
+        "frames_with_drone_alarm": 1119,
+        "frame_alarm_rate": 0.22967980295566504,
+        "frame_alarm_rate_ci95": [
+          0.2181,
+          0.2417
+        ],
+        "frames_with_object": 4330,
+        "object_boxed_as_drone": 133,
+        "object_misidentified_rate": 0.03071593533487298,
+        "object_misidentified_ci95": [
+          0.026,
+          0.0363
+        ],
+        "videos_with_any_alarm": 44
+      }
+    },
+    "AIRPLANE": {
+      "CLOSE": {
+        "videos": 9,
+        "frames": 578,
+        "frames_with_drone_alarm": 479,
+        "frame_alarm_rate": 0.828719723183391,
+        "frame_alarm_rate_ci95": [
+          0.7959,
+          0.8572
+        ],
+        "frames_with_object": 578,
+        "object_boxed_as_drone": 326,
+        "object_misidentified_rate": 0.5640138408304498,
+        "object_misidentified_ci95": [
+          0.5233,
+          0.6039
+        ],
+        "videos_with_any_alarm": 9
+      },
+      "MEDIUM": {
+        "videos": 25,
+        "frames": 1580,
+        "frames_with_drone_alarm": 1139,
+        "frame_alarm_rate": 0.720886075949367,
+        "frame_alarm_rate_ci95": [
+          0.6983,
+          0.7424
+        ],
+        "frames_with_object": 1580,
+        "object_boxed_as_drone": 192,
+        "object_misidentified_rate": 0.12151898734177215,
+        "object_misidentified_ci95": [
+          0.1063,
+          0.1386
+        ],
+        "videos_with_any_alarm": 25
+      },
+      "DISTANT": {
+        "videos": 40,
+        "frames": 2520,
+        "frames_with_drone_alarm": 500,
+        "frame_alarm_rate": 0.1984126984126984,
+        "frame_alarm_rate_ci95": [
+          0.1833,
+          0.2144
+        ],
+        "frames_with_object": 2520,
+        "object_boxed_as_drone": 34,
+        "object_misidentified_rate": 0.013492063492063493,
+        "object_misidentified_ci95": [
+          0.0097,
+          0.0188
+        ],
+        "videos_with_any_alarm": 22
+      },
+      "ALL": {
+        "videos": 74,
+        "frames": 4678,
+        "frames_with_drone_alarm": 2118,
+        "frame_alarm_rate": 0.45275758871312527,
+        "frame_alarm_rate_ci95": [
+          0.4385,
+          0.4671
+        ],
+        "frames_with_object": 4678,
+        "object_boxed_as_drone": 552,
+        "object_misidentified_rate": 0.11799914493373237,
+        "object_misidentified_ci95": [
+          0.1091,
+          0.1276
+        ],
+        "videos_with_any_alarm": 56
+      }
+    },
+    "HELICOPTER": {
+      "CLOSE": {
+        "videos": 15,
+        "frames": 919,
+        "frames_with_drone_alarm": 840,
+        "frame_alarm_rate": 0.9140369967355821,
+        "frame_alarm_rate_ci95": [
+          0.8941,
+          0.9305
+        ],
+        "frames_with_object": 919,
+        "object_boxed_as_drone": 528,
+        "object_misidentified_rate": 0.5745375408052231,
+        "object_misidentified_ci95": [
+          0.5423,
+          0.6061
+        ],
+        "videos_with_any_alarm": 15
+      },
+      "MEDIUM": {
+        "videos": 20,
+        "frames": 1244,
+        "frames_with_drone_alarm": 756,
+        "frame_alarm_rate": 0.6077170418006431,
+        "frame_alarm_rate_ci95": [
+          0.5803,
+          0.6345
+        ],
+        "frames_with_object": 1244,
+        "object_boxed_as_drone": 114,
+        "object_misidentified_rate": 0.09163987138263666,
+        "object_misidentified_ci95": [
+          0.0768,
+          0.109
+        ],
+        "videos_with_any_alarm": 19
+      },
+      "DISTANT": {
+        "videos": 20,
+        "frames": 1252,
+        "frames_with_drone_alarm": 168,
+        "frame_alarm_rate": 0.134185303514377,
+        "frame_alarm_rate_ci95": [
+          0.1164,
+          0.1542
+        ],
+        "frames_with_object": 1252,
+        "object_boxed_as_drone": 9,
+        "object_misidentified_rate": 0.00718849840255591,
+        "object_misidentified_ci95": [
+          0.0038,
+          0.0136
+        ],
+        "videos_with_any_alarm": 9
+      },
+      "ALL": {
+        "videos": 55,
+        "frames": 3415,
+        "frames_with_drone_alarm": 1764,
+        "frame_alarm_rate": 0.5165446559297218,
+        "frame_alarm_rate_ci95": [
+          0.4998,
+          0.5333
+        ],
+        "frames_with_object": 3415,
+        "object_boxed_as_drone": 651,
+        "object_misidentified_rate": 0.19062957540263542,
+        "object_misidentified_ci95": [
+          0.1778,
+          0.2041
+        ],
+        "videos_with_any_alarm": 43
+      }
+    }
+  },
+  "bootstrap": {
+    "unit": "video",
+    "B": 1000,
+    "seed": 0,
+    "drone_recall_by_bin": {
+      "CLOSE": {
+        "n_videos": 23,
+        "ci95": [
+          0.5396,
+          0.7724
+        ]
+      },
+      "MEDIUM": {
+        "n_videos": 93,
+        "ci95": [
+          0.5012,
+          0.6441
+        ]
+      },
+      "DISTANT": {
+        "n_videos": 38,
+        "ci95": [
+          0.0976,
+          0.2673
+        ]
+      },
+      "ALL": {
+        "n_videos": 154,
+        "ci95": [
+          0.4215,
+          0.5483
+        ]
+      }
+    },
+    "non_drone": {
+      "BIRD": {
+        "n_videos": 77,
+        "ci95": {
+          "frame_alarm_rate": [
+            0.1609,
+            0.3028
+          ],
+          "object_misidentified_rate": [
+            0.0139,
+            0.0529
+          ]
+        }
+      },
+      "AIRPLANE": {
+        "n_videos": 74,
+        "ci95": {
+          "frame_alarm_rate": [
+            0.3565,
+            0.5457
+          ],
+          "object_misidentified_rate": [
+            0.0725,
+            0.1658
+          ]
+        }
+      },
+      "HELICOPTER": {
+        "n_videos": 55,
+        "ci95": {
+          "frame_alarm_rate": [
+            0.4032,
+            0.635
+          ],
+          "object_misidentified_rate": [
+            0.1131,
+            0.2904
+          ]
+        }
+      }
+    }
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-08T15:04:30+00:00",
+    "git_commit": "d6ae377350256f3b13d7d42f05c32de4a2029b45",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "method": {
+      "method": "Faster R-CNN R50-FPN (torchvision, COCO-pretrained) fine-tuned on Anti-UAV300 IR train",
+      "checkpoint": "runs/full_frcnn/best.pt",
+      "checkpoint_sha256": "354ac7bf6739c618fe70c17462d8354712db0c39d2c89550bd1a484699855fe3",
+      "model_cfg": {
+        "arch": "fasterrcnn_resnet50_fpn",
+        "weights": "DEFAULT",
+        "trainable_backbone_layers": 3,
+        "anchor_sizes": [
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "aspect_ratios": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "eval_min_size": 512,
+        "eval_max_size": 640,
+        "box_score_thresh": 0.001,
+        "detections_per_img": 20,
+        "eval_batch_size": 1
+      },
+      "train_cfg": {
+        "device": "mps",
+        "crop": 320,
+        "crop_contains_target_p": 0.8,
+        "include_empty_frames": true,
+        "hflip_p": 0.5,
+        "scale_jitter": {
+          "p": 0.5,
+          "min": 0.35,
+          "max": 1.0
+        },
+        "batch_size": 8,
+        "micro_batch_size": 2,
+        "epochs": 4,
+        "lr": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.0001,
+        "warmup_iters": 200,
+        "num_workers": 0,
+        "val_stride_during_training": 25
+      }
+    },
+    "timing_seconds": {
+      "val_s": 0.0,
+      "test_s": 2176.7244789600372,
+      "supp_s": 76.60887694358826,
+      "svanstrom_s": 5082.022501945496
+    }
+  }
+}

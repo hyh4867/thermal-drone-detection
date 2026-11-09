@@ -77,7 +77,8 @@ def run_metadata(cfg: dict, extra: dict | None = None) -> dict:
     meta = {
         "timestamp_utc": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
         "git_commit": _git("rev-parse", "HEAD"),
-        "git_dirty": bool(_git("status", "--porcelain", "--", ".")),
+        # outputs written by the run itself (results/) do not count as code changes
+        "git_dirty": bool(_git("status", "--porcelain", "--", ".", ":(exclude)results")),
         "config": cfg.get("_config_path"),
         "config_sha256": cfg.get("_config_sha256"),
         "seed": cfg.get("seed"),

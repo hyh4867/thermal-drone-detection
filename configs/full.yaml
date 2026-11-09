@@ -1,0 +1,104 @@
+# FULL RUN config (2026-11-08 night). Same protocol as default.yaml; differences:
+#  - no evaluation subsampling (full Anti-UAV test incl. all 1,153 drone-free frames,
+#    full small-target supplement, Svanström every 5th frame)
+#  - baseline grid widened (kernels 81, 101; k 1.5)
+#  - per-epoch model selection on the FULL val split
+#  - video-level bootstrap intervals
+# Results go to results/full/; results/ (reduced run) is left untouched.
+# All paths are relative to the repository root.
+seed: 0
+
+data:
+  antiuav_root: data/raw/antiuav300          # official Anti-UAV300 (Anti-UAV-RGBT.zip), IR only
+  antiuav_zip: data/raw/antiuav300_zip/Anti-UAV-RGBT.zip
+  svanstrom_root: data/raw/svanstrom/DroneDetectionThesis-Drone-detection-dataset-e7a6eaf/Data    # Svanström et al. 2021, Zenodo 10.5281/zenodo.5500576 v1.0.0
+  svanstrom_zip: data/raw/svanstrom_zip/Drone-detection-dataset-v1.0.0.zip
+  frames_dir: data/frames
+  manifests_dir: data/manifests
+
+split:
+  # Anti-UAV official train and val share 26 of 27 source videos (sequence name =
+  # <date>_<time>_<cam>_<clip>), so they are merged and re-split by SOURCE VIDEO.
+  # The official test set (10 source videos, no overlap) is kept as test.
+  val_fraction_sources: 0.2
+  # Frame sampling stride per split (every k-th frame of each 1000-frame sequence).
+  stride: {train: 20, val: 25, test: 10}
+  # Drone-absent frames are rare (~1.4% of test frames), so test also keeps every
+  # absent frame (not only every 10th) for the false-alarm rate.
+  include_all_absent: [test]
+  # Targets < 16 px are rare in Anti-UAV300 (test: 382 of 84,178 boxes), so every
+  # such test frame is added to a separate supplement used ONLY for size-bin recall.
+  small_target_supplement: {splits: [test], max_size: 16}
+
+eval:
+  iou_thr: 0.5
+  # sqrt(w*h) in pixels, lo <= s < hi
+  size_bins:
+    - [tiny, 0, 8]
+    - [small, 8, 16]
+    - [medium, 16, 32]
+    - [large, 32, 64]
+    - [xlarge, 64, 100000]
+  # Svanström IR clips are 320x256; they are upscaled x2 to 640x512 (the Anti-UAV
+  # IR resolution the detector is trained at). Fixed before any evaluation.
+  svanstrom_scale: 2.0
+  svanstrom_stride: 5
+  # Videos whose label count differs from the decoded frame count by more than this
+  # are excluded (alignment unknown). Decided before any model was evaluated.
+  svanstrom_max_label_mismatch: 2
+  # Video-level (Anti-UAV: sequence; Svanström: video) percentile bootstrap.
+  bootstrap: {n: 1000, seed: 0}
+
+baseline:
+  # Training-free bright/dark-spot detector: morphological top-hat contrast,
+  # threshold = mean + k * std, connected components -> boxes, score = peak contrast.
+  # Kernel and k are chosen on the val split (by AP@0.5), never on test.
+  # First grid (kernel 9-31, k 3-8) peaked at its edge (31, 3.0) on val, so it was
+  # widened before any test evaluation; Anti-UAV targets are ~37 px (median).
+  # Reduced run peaked at the grid edge (61, 2.0); full run adds 81, 101 and k 1.5.
+  kernel_grid: [9, 15, 21, 31, 45, 61, 81, 101]
+  k_grid: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0]
+  polarity: both         # white top-hat (hot target) and black top-hat (cold target)
+  max_dets: 10
+  min_area: 2
+  pad: 1                 # pixels added around each component box
+  # Anti-UAV frames carry burned-in OSD text (top-left two lines, top-right clock),
+  # [x1, y1, x2, y2] at 640x512. Whether to zero the response there is chosen on val.
+  osd_rects: [[0, 0, 110, 30], [430, 0, 640, 30], [0, 55, 235, 90]]
+  osd_mask_grid: [false, true]
+
+model:
+  arch: fasterrcnn_resnet50_fpn      # torchvision (BSD-3-Clause), COCO-pretrained weights
+  weights: DEFAULT
+  trainable_backbone_layers: 3
+  anchor_sizes: [8, 16, 32, 64, 128]
+  aspect_ratios: [0.5, 1.0, 2.0]
+  eval_min_size: 512
+  eval_max_size: 640
+  box_score_thresh: 0.001
+  detections_per_img: 20
+  # Low-memory evaluation (2026-11-08 19:45, after the run was killed for memory):
+  # one image per forward pass; predictions are streamed to disk.
+  eval_batch_size: 1
+
+train:
+  device: mps
+  crop: 320                # random 320x320 crops at native resolution
+  crop_contains_target_p: 0.8
+  include_empty_frames: true
+  hflip_p: 0.5
+  # Down-scale augmentation so the detector also sees targets smaller than
+  # Anti-UAV's typical 23-60 px (fixed before any evaluation).
+  scale_jitter: {p: 0.5, min: 0.35, max: 1.0}
+  batch_size: 8            # images per optimizer step (unchanged)
+  # Low-memory training (2026-11-08 19:45): each batch of 8 is run as micro-batches
+  # of 2 with gradient accumulation -> same effective batch, 1,075 steps/epoch,
+  # same LR schedule and same data order as batch_size 8.
+  micro_batch_size: 2
+  epochs: 4
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+  warmup_iters: 200
+  num_workers: 0           # was 2; no worker processes (lower memory)
+  val_stride_during_training: 25  # = every val manifest frame: per-epoch selection on FULL val

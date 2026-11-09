@@ -1,0 +1,212 @@
+{
+  "val": {
+    "frames": 1596,
+    "ap50": 0.1305389768804917,
+    "n_gt": 1596,
+    "selected_threshold": {
+      "threshold": 4.940742492675781,
+      "f1": 0.2683134582623509,
+      "precision": 0.17345814977973567,
+      "recall": 0.5921052631578947
+    }
+  },
+  "test": {
+    "frames": 9582,
+    "ap50": 0.13875222495145267,
+    "precision": 0.14701430292545797,
+    "precision_ci95": [
+      0.1432,
+      0.1509
+    ],
+    "recall": 0.5645984102503262,
+    "recall_ci95": [
+      0.554,
+      0.5752
+    ],
+    "tp": 4759,
+    "fp": 27612,
+    "fn": 3670,
+    "gt_boxes": 8429,
+    "drone_free_frames": 1153,
+    "drone_free_frames_with_alarm": 1147,
+    "false_alarm_rate_drone_free_frames": 0.99479618386817,
+    "false_alarm_rate_ci95": [
+      0.9887,
+      0.9976
+    ],
+    "fp_per_drone_free_frame": 2.6790980052038162,
+    "per_sequence_recall": {
+      "n_sequences": 91,
+      "median": 0.54,
+      "p10": 0.07446808510638298,
+      "p90": 0.9791666666666666
+    },
+    "recall_by_size": {
+      "tiny": {
+        "matched": 0,
+        "total": 17,
+        "recall": 0.0,
+        "ci95": [
+          0.0,
+          0.1843
+        ]
+      },
+      "small": {
+        "matched": 6,
+        "total": 365,
+        "recall": 0.01643835616438356,
+        "ci95": [
+          0.0076,
+          0.0354
+        ]
+      },
+      "medium": {
+        "matched": 757,
+        "total": 1965,
+        "recall": 0.3852417302798982,
+        "ci95": [
+          0.364,
+          0.407
+        ]
+      },
+      "large": {
+        "matched": 3880,
+        "total": 6272,
+        "recall": 0.6186224489795918,
+        "ci95": [
+          0.6065,
+          0.6306
+        ]
+      },
+      "xlarge": {
+        "matched": 122,
+        "total": 150,
+        "recall": 0.8133333333333334,
+        "ci95": [
+          0.7434,
+          0.8676
+        ]
+      }
+    },
+    "recall_by_size_frames": 9922,
+    "bootstrap": {
+      "unit": "sequence",
+      "n_units": 91,
+      "n_units_with_drone_free_frames": 21,
+      "B": 1000,
+      "seed": 0,
+      "ci95": {
+        "ap50": [
+          0.108,
+          0.1774
+        ],
+        "precision": [
+          0.1265,
+          0.1699
+        ],
+        "recall": [
+          0.4866,
+          0.642
+        ],
+        "false_alarm_rate_drone_free_frames": [
+          0.9819,
+          1.0
+        ]
+      }
+    }
+  },
+  "threshold": 4.940742492675781,
+  "meta": {
+    "timestamp_utc": "2026-11-08T09:03:08+00:00",
+    "git_commit": "c7f7b0a51ade5aab41fb83143641998c71fed0af",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "e45d07221f7edc1afb7a19f55432a6c6e428b9b2fafe45843d758ea6a8722462",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "method": {
+      "method": "top-hat spot detector (training-free)",
+      "params": {
+        "kernel_grid": [
+          9,
+          15,
+          21,
+          31,
+          45,
+          61,
+          81,
+          101
+        ],
+        "k_grid": [
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          8.0
+        ],
+        "polarity": "both",
+        "max_dets": 10,
+        "min_area": 2,
+        "pad": 1,
+        "osd_rects": [
+          [
+            0,
+            0,
+            110,
+            30
+          ],
+          [
+            430,
+            0,
+            640,
+            30
+          ],
+          [
+            0,
+            55,
+            235,
+            90
+          ]
+        ],
+        "osd_mask_grid": [
+          false,
+          true
+        ],
+        "kernel": 61,
+        "k": 1.5,
+        "osd_mask": true
+      }
+    },
+    "timing_seconds": {
+      "val_s": 71.34982109069824,
+      "test_s": 438.2870469093323,
+      "supp_s": 15.258238077163696
+    }
+  }
+}

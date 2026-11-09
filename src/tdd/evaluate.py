@@ -14,6 +14,7 @@ boxes in the frame's native pixel coordinates.
 from __future__ import annotations
 
 import collections
+import json
 import math
 import time
 from pathlib import Path
@@ -22,6 +23,7 @@ import cv2
 import numpy as np
 
 from .common import ROOT, path, read_json, run_metadata, write_json
+from .bootstrap import bootstrap_antiuav, bootstrap_svanstrom
 from .metrics import average_precision, best_f1_threshold, match_frame, operating_point, size_of
 
 _FRAMES = ROOT / "data" / "frames"
@@ -54,7 +56,23 @@ def ap_on(frames, preds, iou_thr=0.5) -> float:
     return average_precision(_frames_with_preds(frames, preds), iou_thr)["ap"]
 
 
+STREAM_CHUNK = 64
+
+
+def _empty_cache() -> None:
+    try:
+        import torch
+
+        if torch.backends.mps.is_available():
+            torch.mps.empty_cache()
+    except ImportError:
+        pass
+
+
 def _predict_cached(predict_fn, frames, cache: Path, scale=1.0, reuse=True, full_frames=None):
+    """Predictions are streamed to ``<cache>.partial.jsonl`` one frame per line as
+    they are made (nothing accumulates in memory), so a killed run resumes from the
+    last written frame; the finished file is then written as the JSON cache."""
     if reuse and cache.exists():
         preds = read_json(cache)
         if len(preds) == len(frames):
@@ -63,10 +81,27 @@ def _predict_cached(predict_fn, frames, cache: Path, scale=1.0, reuse=True, full
             sub = _cached_subset(cache, full_frames, frames)
             if sub is not None:
                 return sub, 0.0
+        del preds
+    partial = cache.with_suffix(".partial.jsonl")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    done = 0
+    if reuse and partial.exists():
+        with open(partial) as f:
+            done = sum(1 for _ in f)
     t = time.time()
-    preds = predict_fn(frames, scale=scale)
+    with open(partial, "a" if done else "w") as f:
+        for i in range(done, len(frames), STREAM_CHUNK):
+            for p in predict_fn(frames[i:i + STREAM_CHUNK], scale=scale):
+                f.write(json.dumps(p) + "\n")
+            f.flush()
     dt = time.time() - t
+    _empty_cache()
+    with open(partial) as f:
+        preds = [json.loads(line) for line in f]
+    if len(preds) != len(frames):
+        raise RuntimeError(f"{partial}: {len(preds)} predictions for {len(frames)} frames")
     write_json(preds, cache)
+    partial.unlink()
     return preds, dt
 
 
@@ -211,12 +246,18 @@ def evaluate_all(cfg, predict_fn, name: str, out_dir: Path, method_info: dict, r
     supp_p, timing["supp_s"] = _predict_cached(predict_fn, supp, runs / "preds_antiuav_test_small.json", reuse=reuse,
                                                full_frames=read_json(man / "antiuav_test_small_supplement.json"))
     au = evaluate_antiuav(cfg, val, val_p, test, test_p, supp, supp_p)
+    bs = cfg["eval"].get("bootstrap")
+    if bs:
+        au["test"]["bootstrap"] = bootstrap_antiuav(test, test_p, au["threshold"], cfg["eval"]["iou_thr"],
+                                                    bs["n"], bs["seed"])
     meta = run_metadata(cfg, {"method": method_info, "timing_seconds": timing})
     write_json({**au, "meta": meta}, out_dir / "antiuav_metrics.json")
     sv_p, timing["svanstrom_s"] = _predict_cached(
         predict_fn, sv, runs / "preds_svanstrom_ir.json", scale=cfg["eval"]["svanstrom_scale"], reuse=reuse,
         full_frames=full["svanstrom_ir"])
     svr = evaluate_svanstrom(cfg, sv, sv_p, au["threshold"])
+    if bs:
+        svr["bootstrap"] = bootstrap_svanstrom(sv, sv_p, au["threshold"], cfg["eval"]["iou_thr"], bs["n"], bs["seed"])
     write_json({"threshold_from_antiuav_val": au["threshold"], **svr,
                 "meta": run_metadata(cfg, {"method": method_info, "timing_seconds": timing})},
                out_dir / "svanstrom_metrics.json")

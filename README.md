@@ -4,31 +4,49 @@ A detector for small drones in thermal (infrared) video: a COCO-pretrained Faste
 
 Built with AI coding agents (Claude, Codex); tests and verification by me.
 
-> **Shortened first run.** Training stopped after 1 of 4 planned epochs, and every score comes from reduced samples (544 Anti-UAV test frames; one frame per video on the second dataset). Frames from the same video are correlated, so the 95% intervals in the result files are narrower than the real uncertainty. Read these numbers as a first estimate.
+> **Main finding.** On the dataset it was trained on, the detector finds 84.9% of drones. On a second dataset from a different camera and site, which was never used for training or tuning, it finds 48.6%, and only 17.6% beyond 60 m. Most of its alarms on bird, aeroplane and helicopter videos fall somewhere other than the labelled object.
 
 ![Thermal frame of tower blocks with a green label box around a 15-pixel drone near a rooftop and an enlarged view; the model drew no box](results/failures/missed_small_drone_03.png)
 
-Missed small drone (15.5 px) against buildings. Green = label; the model drew no box above its threshold. Anti-UAV300 test, sequence 20190925_200805_1_2, frame 348.
+Missed small drone (15.5 px) against buildings. Green = label; the model drew no box above its threshold. Anti-UAV300 test, sequence 20190925_200805_1_2, frame 348. The failure images come from the first run's model (see *First run* below).
 
 ## Results
 
-Both methods were scored on the same frames. The score threshold was chosen once on Anti-UAV validation data (highest F1) and applied unchanged everywhere. Counts in brackets.
+Final run: 4 training epochs, full evaluation sets. Both methods were scored on the same frames: all 9,582 Anti-UAV300 test frames (8,429 labelled drones, 1,153 drone-free frames) and every fifth frame of the second dataset. The score threshold was chosen once on the 1,596 Anti-UAV validation frames (highest F1) and applied unchanged everywhere. Counts are in parentheses. Square brackets are **95% intervals from a video-level bootstrap** (1,000 resamples, seed 0; the resampling unit is the Anti-UAV test sequence, 91 in all, or the Svanström video).
 
-| Measure | Top-hat baseline (no training) | Fine-tuned Faster R-CNN | Source |
-|---|---|---|---|
-| Anti-UAV300 test AP@0.5 | 0.123 | 0.846 | `results/*/antiuav_metrics.json` |
-| Precision | 13.6% (252 / 1,849) | 95.5% (340 / 356) | `results/*/antiuav_metrics.json` |
-| Recall | 58.6% (252 / 430) | 79.1% (340 / 430) | `results/*/antiuav_metrics.json` |
-| False-alarm rate on drone-free frames | 99.1% (113 / 114) | 2.6% (3 / 114) | `results/*/antiuav_metrics.json` |
-| Svanström drone recall, all distances | 3.4% (5 / 149) | 40.9% (61 / 149) | `results/*/svanstrom_metrics.json` |
-| Svanström drone recall, Close (< 20 m) | 8.7% (2 / 23) | 52.2% (12 / 23) | `results/*/svanstrom_metrics.json` |
-| Svanström drone recall, Medium (20–60 m) | 3.4% (3 / 88) | 47.7% (42 / 88) | `results/*/svanstrom_metrics.json` |
-| Svanström drone recall, Distant (> 60 m) | 0.0% (0 / 38) | 18.4% (7 / 38) | `results/*/svanstrom_metrics.json` |
-| Bird frames flagged as drone | 74.0% (57 / 77) | 33.8% (26 / 77) | `results/*/svanstrom_metrics.json` |
-| Aeroplane frames flagged as drone | 87.8% (65 / 74) | 48.6% (36 / 74) | `results/*/svanstrom_metrics.json` |
-| Helicopter frames flagged as drone | 76.4% (42 / 55) | 52.7% (29 / 55) | `results/*/svanstrom_metrics.json` |
+| Measure | Top-hat baseline (no training) | Fine-tuned Faster R-CNN |
+|---|---|---|
+| Anti-UAV300 test AP@0.5 | 0.139 [0.108–0.177] | 0.885 [0.839–0.926] |
+| Precision | 14.7% (4,759 / 32,371) [12.7–17.0] | 96.7% (7,154 / 7,401) [95.2–97.8] |
+| Recall | 56.5% (4,759 / 8,429) [48.7–64.2] | 84.9% (7,154 / 8,429) [80.0–89.6] |
+| False-alarm rate on drone-free frames | 99.5% (1,147 / 1,153) [98.2–100.0] | 3.5% (40 / 1,153) [0.8–8.9] |
+| Svanström drone recall, all distances | 9.6% (899 / 9,382) [6.4–12.5] | 48.6% (4,561 / 9,382) [42.1–54.8] |
+| Close (< 20 m, 23 videos) | 25.1% (367 / 1,462) [15.0–35.8] | 66.0% (965 / 1,462) [54.0–77.2] |
+| Medium (20–60 m, 93 videos) | 9.6% (529 / 5,528) [6.0–13.0] | 57.4% (3,175 / 5,528) [50.1–64.4] |
+| Distant (> 60 m, 38 videos) | 0.1% (3 / 2,392) [0.0–0.4] | 17.6% (421 / 2,392) [9.8–26.7] |
+| Bird frames with a drone alarm | 77.5% (3,777 / 4,872) [69.1–85.0] | 23.0% (1,119 / 4,872) [16.1–30.3] |
+| Aeroplane frames with a drone alarm | 89.1% (4,166 / 4,678) [82.4–94.8] | 45.3% (2,118 / 4,678) [35.6–54.6] |
+| Helicopter frames with a drone alarm | 78.7% (2,689 / 3,415) [68.6–88.0] | 51.7% (1,764 / 3,415) [40.3–63.5] |
+| Labelled bird boxed as a drone | 0.1% (3 / 4,330) [0.0–0.2] | 3.1% (133 / 4,330) [1.4–5.3] |
+| Labelled aeroplane boxed as a drone | 4.7% (218 / 4,678) [1.8–8.4] | 11.8% (552 / 4,678) [7.2–16.6] |
+| Labelled helicopter boxed as a drone | 6.3% (215 / 3,415) [2.3–11.2] | 19.1% (651 / 3,415) [11.3–29.0] |
 
-Model recall by target size, √(w·h), on the Anti-UAV test sample: 69.1% for 8–16 px (76 / 110), 73.5% for 16–32 px (72 / 98) and 80.4% for 32–64 px (258 / 321). Only six targets were under 8 px and the model found none of them. Source: `results/model/antiuav_metrics.json`. The full table, with Wilson intervals, is in `results/RESULTS.md`.
+- A frame "with a drone alarm" has at least one drone box above the threshold. A labelled object counts as "boxed as a drone" when a drone box overlaps its label with IoU ≥ 0.5; that rate is computed only over frames where the object is labelled.
+- Model recall by target size, √(w·h), including 340 extra test frames added for small targets: 0.0% under 8 px (0 / 17), 71.8% for 8–16 px (262 / 365), 78.2% for 16–32 px (1,537 / 1,965), 86.7% for 32–64 px (5,440 / 6,272) and 100% from 64 px (150 / 150).
+- Validation AP@0.5 after each epoch: 0.892, 0.930, 0.937, 0.937. Epoch 4 scored highest and was kept; the last two epochs differ by 0.0001.
+- The baseline's chosen setting is kernel 61, k = 1.5, text mask on (validation AP@0.5 0.131), from a grid of kernels {9, 15, 21, 31, 45, 61, 81, 101} × k {1.5, 2, 2.5, 3, 4, 5, 6, 8}.
+
+Sources: `results/full/{baseline,model}/{antiuav,svanstrom}_metrics.json`, `results/full/model/train_log.json`, `results/full/baseline/val_grid_search.json`. All of them, side by side with the first run, are in `results/full/COMPARISON.md` (generated by `python -m tdd.report_full`; table text in Korean).
+
+### What the numbers say
+
+1. **Recall drops sharply on an unseen dataset.** It is 84.9% on the Anti-UAV300 test set and 48.6% on the Svanström drone videos, and 17.6% beyond 60 m. Performance measured inside one dataset does not carry over unchanged to another camera and site.
+2. **Most false alarms on non-drone videos come from the background, not the labelled object.** The share of bird, aeroplane and helicopter frames with a drone alarm (23–52%) is far higher than the share in which the labelled object itself was boxed as a drone (3–19%). Some of those alarms may sit on unlabelled objects or overlap the object with IoU below 0.5; they were not checked one by one.
+3. On its own dataset the model reaches AP@0.5 0.885 with alarms on 3.5% of drone-free frames. The training-free baseline raised an alarm on 99.5% of drone-free frames.
+
+### First run (1 epoch, reduced samples)
+
+An earlier, shortened run stopped after 1 of 4 epochs and was scored on reduced samples: 544 Anti-UAV test frames and one frame per Svanström video (360 frames), with Wilson intervals that treat frames as independent. Its model scored AP@0.5 0.846, recall 79.1% (340 / 430), alarms on 2.6% of drone-free frames (3 / 114) and 40.9% Svanström drone recall (61 / 149). Files: `results/{baseline,model}/`, table `results/RESULTS.md`. The 20 failure images in `results/failures/` (list in `index.json`) were made with this first-run model. A reference run of the baseline alone on all test frames is in `results/baseline_fullset_reference/`.
 
 ## How it was verified
 
@@ -36,16 +54,16 @@ Model recall by target size, √(w·h), on the Anti-UAV test sample: 69.1% for 8
 - **Label checks.** Each video's frame count was checked against its labels; five Svanström videos whose labels did not line up with their frames were excluded before any model was run.
 - **One protocol for both methods.** A box counts as found if it overlaps a labelled drone with IoU ≥ 0.5. AP@0.5 is the area under the precision–recall curve. The false-alarm rate is the share of drone-free frames with at least one box above the threshold. The baseline's kernel, threshold and text mask were chosen on validation data only.
 - **A dataset never used for training or tuning.** The Svanström et al. set (different camera and site) measures generalisation and how often birds, aeroplanes and helicopters set the detector off. Its distance bins follow the dataset's own labels.
-- **Provenance.** Every result file records the configuration hash, the SHA-256 of each dataset archive and the git commit of the working repository at run time. That repository is private; this public repository starts from a fresh history, so those commits are not in it. The seed is fixed at 0.
-- **Unit tests** cover IoU, average precision, duplicate detections and empty frames (`tests/test_metrics.py`).
+- **Provenance.** Every result file records the configuration hash, the SHA-256 of each dataset archive and the git commit of the working repository at run time. That repository is private; this public repository starts from a fresh history, so those commits are not in it. The seed is fixed at 0. Every result file also records the machine's memory as read from the OS (8 GiB).
+- **Video-level intervals.** Frames of one video are strongly correlated, so the intervals resample whole sequences or videos rather than frames (`src/tdd/bootstrap.py`).
+- **Unit tests** cover IoU, average precision, duplicate detections, empty frames and the bootstrap's AP (`tests/test_metrics.py`).
 
 ## Limits
 
-- One of four planned epochs. The learning-rate schedule was set for four epochs, so training stopped before the rate had decayed. These are not the model's best numbers.
-- Reduced evaluation samples: 544 Anti-UAV test frames instead of 9,582, and one frame per video (360 frames) instead of every fifth frame on the second dataset. The baseline was also scored on all 9,582 test frames as a reference (`results/baseline_fullset_reference/`); the model was not.
-- Frames from the same video are strongly correlated, so the 95% intervals in the result files assume more independent evidence than there is.
-- Only six targets were under 8 px, too few for any conclusion about very small drones. Some missed small-target labels sit at the edge of the frame with no drone visible, so part of those misses may be labelling artefacts; they were not checked one by one.
-- On the first frames of the bird videos the bird is often unlabelled, so only frame-level alarms could be measured, not whether the bird itself was boxed. The baseline's best validation setting lay on the edge of its search grid, so the baseline may be slightly understated.
+- **No target under 8 px was found: 0 / 17.** Seventeen targets are too few for any conclusion about very small drones. Some missed small-target labels sit at the edge of the frame with no drone visible, so part of those misses may be labelling artefacts; they were not checked one by one.
+- **The baseline's best k lay on the lower edge of its grid (1.5).** A lower k might change its scores slightly, so the baseline may be understated.
+- **The Anti-UAV test set comes from only 10 source videos, so the intervals are wide.** The 91 test sequences used as bootstrap units are cut from those 10 videos and are correlated with each other, so the real uncertainty may be larger than the intervals show.
+- **Training was resumed once.** Epoch 1 ran with the original settings (2 data-loader workers, batch 8). Epochs 2–4 continued from the epoch-1 checkpoint and optimiser state with lower-memory settings (no workers; 4 × 2 images with gradient accumulation, effective batch 8, same learning-rate schedule). PyTorch's global random state was not restored, so the detector's internal random sampling differs from an uninterrupted run. Retraining may also differ in the last decimals, because Apple MPS kernels are not bit-for-bit deterministic.
 - Both datasets come from specific cameras and sites, and the second one was recorded in daylight only. The results say nothing about other sensors, weather or operational use.
 
 ## Run it
@@ -60,7 +78,7 @@ python -m pip install -r requirements-test.txt
 PYTHONPATH=src python -m pytest -q tests
 ```
 
-The full pipeline needs the datasets (below, about 6 GB for Anti-UAV300) and `requirements.txt` (PyTorch and torchvision). It was not re-run for this repository; the commands are:
+The full pipeline needs the datasets (below, about 6 GB for Anti-UAV300) and `requirements.txt` (PyTorch and torchvision). It was not re-run for this repository. The first run's commands are:
 
 ```sh
 python -m pip install -r requirements.txt
@@ -77,7 +95,13 @@ python -m tdd.failures     # -> results/failures/
 python -m tdd.report       # -> results/RESULTS.md
 ```
 
-All paths are set in `configs/default.yaml`. Raw data, extracted frames and model weights are ignored by Git.
+The final run uses `configs/full.yaml` and a staged script that writes to `results/full/`, logs each stage and resumes training from the last finished epoch:
+
+```sh
+caffeinate -i bash scripts/run_full.sh   # macOS; ~6 h on an 8 GiB M2 (baseline 37 min, training 3 h, evaluation 2 h)
+```
+
+All paths are set in `configs/default.yaml` and `configs/full.yaml`. Raw data, extracted frames and model weights are ignored by Git.
 
 ## Data, citation and licenses
 

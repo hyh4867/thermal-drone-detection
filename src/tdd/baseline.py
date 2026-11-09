@@ -84,10 +84,18 @@ def make_predict_fn(det: TopHatDetector, osd_rects=()):
     return predict
 
 
+def _run_name(args, best) -> str:
+    if args.run_name != "auto":
+        return args.run_name
+    return f"full_baseline_kern{best['kernel']}_k{best['k']}_osd{int(best['osd_mask'])}"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="configs/default.yaml")
     ap.add_argument("--out", default="results/baseline")
+    ap.add_argument("--run-name", default="baseline_tophat",
+                    help="prediction-cache dir under runs/; 'auto' = derived from the selected parameters")
     ap.add_argument("--reuse-grid", action="store_true", help="reuse the val selection in <out>/val_grid_search.json")
     args = ap.parse_args()
     cfg = load_config(args.config)
@@ -98,7 +106,7 @@ def main():
     if args.reuse_grid:
         best = read_json(ROOT / args.out / "val_grid_search.json")["selected"]
         det = TopHatDetector(best["kernel"], best["k"], bc["polarity"], bc["max_dets"], bc["min_area"], bc["pad"])
-        evaluate_all(cfg, make_predict_fn(det, bc["osd_rects"] if best["osd_mask"] else ()), name="baseline_tophat",
+        evaluate_all(cfg, make_predict_fn(det, bc["osd_rects"] if best["osd_mask"] else ()), name=_run_name(args, best),
                      out_dir=ROOT / args.out,
                      method_info={"method": "top-hat spot detector (training-free)",
                                   "params": {**bc, "kernel": best["kernel"], "k": best["k"], "osd_mask": best["osd_mask"]},
@@ -130,7 +138,7 @@ def main():
     out = ROOT / args.out
     write_json({"grid": grid, "selected": best, "selection": "max AP@0.5 on val (Anti-UAV, source-video split)",
                 "meta": run_metadata(cfg)}, out / "val_grid_search.json")
-    evaluate_all(cfg, make_predict_fn(det, bc["osd_rects"] if best["osd_mask"] else ()), name="baseline_tophat", out_dir=out,
+    evaluate_all(cfg, make_predict_fn(det, bc["osd_rects"] if best["osd_mask"] else ()), name=_run_name(args, best), out_dir=out,
                  method_info={"method": "top-hat spot detector (training-free)",
                               "params": {**bc, "kernel": best["kernel"], "k": best["k"],
                                          "osd_mask": best["osd_mask"]}})

@@ -32,7 +32,8 @@ def main():
     model.load_state_dict(torch.load(ckpt, map_location="cpu"))
     model.to(device)
     sha = hashlib.sha256(ckpt.read_bytes()).hexdigest()
-    predict = make_predict_fn(model, device, cfg["model"], batch_size=4, load_image=load_image)
+    predict = make_predict_fn(model, device, cfg["model"], batch_size=cfg["model"].get("eval_batch_size", 4),
+                              load_image=load_image)
     evaluate_all(cfg, predict, name=args.run, out_dir=ROOT / args.out, reuse=not args.no_reuse,
                  method_info={"method": "Faster R-CNN R50-FPN (torchvision, COCO-pretrained) fine-tuned on Anti-UAV300 IR train",
                               "checkpoint": f"runs/{args.run}/{args.ckpt}", "checkpoint_sha256": sha,

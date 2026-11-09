@@ -1,0 +1,204 @@
+{
+  "val": {
+    "frames": 1596,
+    "ap50": 0.9373820344028005,
+    "n_gt": 1596,
+    "selected_threshold": {
+      "threshold": 0.9541826248168945,
+      "f1": 0.9314712569015915,
+      "precision": 0.9669588671611599,
+      "recall": 0.8984962406015038
+    }
+  },
+  "test": {
+    "frames": 9582,
+    "ap50": 0.8846873018676265,
+    "precision": 0.9666261316038374,
+    "precision_ci95": [
+      0.9623,
+      0.9705
+    ],
+    "recall": 0.8487365049234785,
+    "recall_ci95": [
+      0.8409,
+      0.8562
+    ],
+    "tp": 7154,
+    "fp": 247,
+    "fn": 1275,
+    "gt_boxes": 8429,
+    "drone_free_frames": 1153,
+    "drone_free_frames_with_alarm": 40,
+    "false_alarm_rate_drone_free_frames": 0.03469210754553339,
+    "false_alarm_rate_ci95": [
+      0.0256,
+      0.0469
+    ],
+    "fp_per_drone_free_frame": 0.03469210754553339,
+    "per_sequence_recall": {
+      "n_sequences": 91,
+      "median": 0.96,
+      "p10": 0.5212765957446809,
+      "p90": 1.0
+    },
+    "recall_by_size": {
+      "tiny": {
+        "matched": 0,
+        "total": 17,
+        "recall": 0.0,
+        "ci95": [
+          0.0,
+          0.1843
+        ]
+      },
+      "small": {
+        "matched": 262,
+        "total": 365,
+        "recall": 0.7178082191780822,
+        "ci95": [
+          0.6696,
+          0.7615
+        ]
+      },
+      "medium": {
+        "matched": 1537,
+        "total": 1965,
+        "recall": 0.7821882951653945,
+        "ci95": [
+          0.7634,
+          0.7999
+        ]
+      },
+      "large": {
+        "matched": 5440,
+        "total": 6272,
+        "recall": 0.8673469387755102,
+        "ci95": [
+          0.8587,
+          0.8755
+        ]
+      },
+      "xlarge": {
+        "matched": 150,
+        "total": 150,
+        "recall": 1.0,
+        "ci95": [
+          0.975,
+          1.0
+        ]
+      }
+    },
+    "recall_by_size_frames": 9922,
+    "bootstrap": {
+      "unit": "sequence",
+      "n_units": 91,
+      "n_units_with_drone_free_frames": 21,
+      "B": 1000,
+      "seed": 0,
+      "ci95": {
+        "ap50": [
+          0.8388,
+          0.9262
+        ],
+        "precision": [
+          0.9516,
+          0.9781
+        ],
+        "recall": [
+          0.8005,
+          0.8957
+        ],
+        "false_alarm_rate_drone_free_frames": [
+          0.0081,
+          0.089
+        ]
+      }
+    }
+  },
+  "threshold": 0.9541826248168945,
+  "meta": {
+    "timestamp_utc": "2026-11-08T13:39:41+00:00",
+    "git_commit": "d6ae377350256f3b13d7d42f05c32de4a2029b45",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "method": {
+      "method": "Faster R-CNN R50-FPN (torchvision, COCO-pretrained) fine-tuned on Anti-UAV300 IR train",
+      "checkpoint": "runs/full_frcnn/best.pt",
+      "checkpoint_sha256": "354ac7bf6739c618fe70c17462d8354712db0c39d2c89550bd1a484699855fe3",
+      "model_cfg": {
+        "arch": "fasterrcnn_resnet50_fpn",
+        "weights": "DEFAULT",
+        "trainable_backbone_layers": 3,
+        "anchor_sizes": [
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "aspect_ratios": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "eval_min_size": 512,
+        "eval_max_size": 640,
+        "box_score_thresh": 0.001,
+        "detections_per_img": 20,
+        "eval_batch_size": 1
+      },
+      "train_cfg": {
+        "device": "mps",
+        "crop": 320,
+        "crop_contains_target_p": 0.8,
+        "include_empty_frames": true,
+        "hflip_p": 0.5,
+        "scale_jitter": {
+          "p": 0.5,
+          "min": 0.35,
+          "max": 1.0
+        },
+        "batch_size": 8,
+        "micro_batch_size": 2,
+        "epochs": 4,
+        "lr": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.0001,
+        "warmup_iters": 200,
+        "num_workers": 0,
+        "val_stride_during_training": 25
+      }
+    },
+    "timing_seconds": {
+      "val_s": 0.0,
+      "test_s": 2176.7244789600372,
+      "supp_s": 76.60887694358826
+    }
+  }
+}
