@@ -1,0 +1,237 @@
+{
+  "set": "cst_val",
+  "frames": 11335,
+  "sequences": 40,
+  "note": "reference row run after the final results were seen (addendum 5); not used for any verdict",
+  "reference": "S1_m1 (paired_diff is against it; its numbers are those of final__cst_val.json)",
+  "S1_m1": {
+    "tag": "s1_m1",
+    "threshold": 0.9541826248168945,
+    "ap50": 0.08076187747786741
+  },
+  "configs": {
+    "B_m1": {
+      "status": "ok",
+      "tag": "b_m1",
+      "model": "B",
+      "m": 1,
+      "checkpoint": "runs/stage2/r1/epoch1.pt",
+      "checkpoint_sha256": "31de9b73fa734a9b14367b7c9bbdc32f02cdfe05efd5b12cea3f9ce3df9115ac",
+      "anchor_sizes": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "threshold_source": "results/stage3/selection.json b_m1.V3.f1_threshold (max F1 on Anti-UAV val, cache b_m1__auv_val)",
+      "threshold": 0.9619976282119751,
+      "k": 1.0,
+      "frames": 11335,
+      "sequences": 40,
+      "gt_boxes": 9764,
+      "ap50": 0.12960351192005445,
+      "precision": 0.3259466437177281,
+      "recall_iou50": 0.1551618189266694,
+      "tp": 1515,
+      "fp": 3133,
+      "recall_center": 0.2940393281442032,
+      "drone_free_frames": 1571,
+      "drone_free_frames_with_alarm": 232,
+      "far_drone_free": 0.14767663908338638,
+      "recall_by_size": {
+        "tiny": {
+          "total": 3408,
+          "iou50": 0.03697183098591549,
+          "center": 0.21713615023474178
+        },
+        "small": {
+          "total": 5050,
+          "iou50": 0.19643564356435644,
+          "center": 0.3411881188118812
+        },
+        "medium": {
+          "total": 1216,
+          "iou50": 0.3215460526315789,
+          "center": 0.3305921052631579
+        },
+        "large": {
+          "total": 89,
+          "iou50": 0.06741573033707865,
+          "center": 0.06741573033707865
+        },
+        "xlarge": {
+          "total": 1,
+          "iou50": 0.0,
+          "center": 0.0
+        }
+      },
+      "at_far10_same_frames": {
+        "threshold": 0.9719942808151246,
+        "far_drone_free": 0.09993634627625717,
+        "recall_iou50": 0.13662433428922574,
+        "recall_center": 0.24211388775092174,
+        "recall_tiny_iou50": 0.026115023474178403,
+        "recall_tiny_center": 0.1467136150234742,
+        "recall_small_iou50": 0.1716831683168317,
+        "recall_small_center": 0.29227722772277226
+      },
+      "box_ratio_pred_over_label": {
+        "n": 2879,
+        "width_median": 1.2789965538260886,
+        "height_median": 1.5092771855392868
+      },
+      "ci95": {
+        "ap50": [
+          0.079,
+          0.184
+        ],
+        "recall_iou50": [
+          0.1013,
+          0.2093
+        ],
+        "recall_center": [
+          0.2096,
+          0.3811
+        ],
+        "precision": [
+          0.24,
+          0.4282
+        ],
+        "far_drone_free": [
+          0.0537,
+          0.2484
+        ],
+        "recall_tiny_iou50": [
+          0.0126,
+          0.0601
+        ],
+        "recall_tiny_center": [
+          0.0992,
+          0.3443
+        ],
+        "recall_small_iou50": [
+          0.1214,
+          0.2764
+        ],
+        "recall_small_center": [
+          0.2191,
+          0.4646
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "sequence",
+      "n_units": 40,
+      "paired_diff": {
+        "ap50": {
+          "diff": 0.048841634442187046,
+          "ci95": [
+            0.027,
+            0.0746
+          ]
+        },
+        "recall_iou50": {
+          "diff": 0.0393281442031954,
+          "ci95": [
+            0.0213,
+            0.0595
+          ]
+        },
+        "recall_center": {
+          "diff": 0.031954117165096274,
+          "ci95": [
+            0.0077,
+            0.064
+          ]
+        },
+        "precision": {
+          "diff": 0.12689701330590125,
+          "ci95": [
+            0.08,
+            0.1836
+          ]
+        },
+        "far_drone_free": {
+          "diff": -0.049649904519414395,
+          "ci95": [
+            -0.1256,
+            -0.0055
+          ]
+        },
+        "recall_tiny_iou50": {
+          "diff": 0.0085093896713615,
+          "ci95": [
+            -0.0018,
+            0.0207
+          ]
+        },
+        "recall_tiny_center": {
+          "diff": 0.07687793427230047,
+          "ci95": [
+            0.0195,
+            0.1498
+          ]
+        },
+        "recall_small_iou50": {
+          "diff": 0.07188118811881189,
+          "ci95": [
+            0.0417,
+            0.1049
+          ]
+        },
+        "recall_small_center": {
+          "diff": 0.014455445544554468,
+          "ci95": [
+            -0.009,
+            0.0402
+          ]
+        }
+      }
+    }
+  },
+  "reading_rule": {
+    "diff_ap50": {
+      "diff": 0.048841634442187046,
+      "ci95": [
+        0.027,
+        0.0746
+      ]
+    },
+    "sentence": "선택 규칙이 CST에서 도움이 됐을 구성을 받아들이지 않았다"
+  },
+  "frozen_config": "results/stage3/frozen_config.json",
+  "meta": {
+    "timestamp_utc": "2026-11-22T07:46:39+00:00",
+    "git_commit": "52f89e796776ddfa4adaaabde4c6141a5120755e",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 3
+  }
+}

@@ -1,0 +1,3 @@
+# Stage 3 track 2 training (run 3 of 3; addendum 2). Start = track 1 final model (S1), 6 Anti-UAV (small-target
+# augmentation 0.5) + 2 CST train frames of cst_tr_20 per batch, 1,075 iterations, lr 0.005.
+train_t2_20 | tdd.stage2.train --stage 3 --run t2_20 --epochs 1 --small-aug 0.5 --cst-split cst_tr_20 --init runs/full_frcnn/best.pt

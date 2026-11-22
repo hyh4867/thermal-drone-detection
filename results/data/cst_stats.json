@@ -1,0 +1,475 @@
+{
+  "dataset": "CST Anti-UAV (test split only)",
+  "source": "github.com/PCwenyue/CST-Anti-UAV",
+  "frame_stride": 4,
+  "fps_source": 25.0,
+  "sequences": 60,
+  "frames": 18060,
+  "frames_with_box": 14830,
+  "frames_without_box": 3230,
+  "boxes_by_size_sqrt_wh": {
+    "medium": 1489,
+    "small": 7781,
+    "tiny": 5407,
+    "large": 153
+  },
+  "sequences_by_scene": {
+    "building": 9,
+    "cn_mountains": 9,
+    "cn_sky": 6,
+    "jungle": 13,
+    "urban-areas": 17,
+    "water": 6
+  },
+  "per_sequence": {
+    "building_66": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 250,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_67": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 245,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_68": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 126,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_69": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 250,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_70": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 250,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_71": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 250,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_72": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 237,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_73": {
+      "frames_kept": 213,
+      "labels_in_file": 850,
+      "boxes_kept": 126,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "building_74": {
+      "frames_kept": 160,
+      "labels_in_file": 640,
+      "boxes_kept": 94,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_30": {
+      "frames_kept": 258,
+      "labels_in_file": 1029,
+      "boxes_kept": 199,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_31": {
+      "frames_kept": 258,
+      "labels_in_file": 1029,
+      "boxes_kept": 185,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_32": {
+      "frames_kept": 295,
+      "labels_in_file": 1179,
+      "boxes_kept": 274,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_33": {
+      "frames_kept": 458,
+      "labels_in_file": 1829,
+      "boxes_kept": 316,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_34": {
+      "frames_kept": 236,
+      "labels_in_file": 941,
+      "boxes_kept": 197,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_35": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 325,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_36": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 358,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_37": {
+      "frames_kept": 358,
+      "labels_in_file": 1429,
+      "boxes_kept": 294,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_mountains_38": {
+      "frames_kept": 260,
+      "labels_in_file": 1039,
+      "boxes_kept": 207,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_11": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 233,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_12": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 202,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_13": {
+      "frames_kept": 272,
+      "labels_in_file": 1085,
+      "boxes_kept": 181,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_14": {
+      "frames_kept": 224,
+      "labels_in_file": 895,
+      "boxes_kept": 204,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_15": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 235,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "cn_sky_16": {
+      "frames_kept": 427,
+      "labels_in_file": 1706,
+      "boxes_kept": 406,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_10": {
+      "frames_kept": 253,
+      "labels_in_file": 1012,
+      "boxes_kept": 253,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_11": {
+      "frames_kept": 208,
+      "labels_in_file": 830,
+      "boxes_kept": 208,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_12": {
+      "frames_kept": 369,
+      "labels_in_file": 1476,
+      "boxes_kept": 348,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_13": {
+      "frames_kept": 266,
+      "labels_in_file": 1062,
+      "boxes_kept": 227,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_14": {
+      "frames_kept": 324,
+      "labels_in_file": 1295,
+      "boxes_kept": 323,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_15": {
+      "frames_kept": 250,
+      "labels_in_file": 1000,
+      "boxes_kept": 244,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_16": {
+      "frames_kept": 324,
+      "labels_in_file": 1295,
+      "boxes_kept": 316,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_17": {
+      "frames_kept": 233,
+      "labels_in_file": 932,
+      "boxes_kept": 175,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_18": {
+      "frames_kept": 220,
+      "labels_in_file": 880,
+      "boxes_kept": 129,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_19": {
+      "frames_kept": 228,
+      "labels_in_file": 909,
+      "boxes_kept": 225,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_7": {
+      "frames_kept": 306,
+      "labels_in_file": 1223,
+      "boxes_kept": 283,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_8": {
+      "frames_kept": 243,
+      "labels_in_file": 969,
+      "boxes_kept": 243,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "jungle_9": {
+      "frames_kept": 216,
+      "labels_in_file": 862,
+      "boxes_kept": 185,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_24": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 284,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_25": {
+      "frames_kept": 257,
+      "labels_in_file": 1025,
+      "boxes_kept": 233,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_26": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 274,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_35": {
+      "frames_kept": 435,
+      "labels_in_file": 1740,
+      "boxes_kept": 278,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_36": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 319,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_37": {
+      "frames_kept": 464,
+      "labels_in_file": 1855,
+      "boxes_kept": 338,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_38": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 333,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_39": {
+      "frames_kept": 516,
+      "labels_in_file": 2062,
+      "boxes_kept": 347,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_40": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 235,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_41": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 195,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_42": {
+      "frames_kept": 373,
+      "labels_in_file": 1490,
+      "boxes_kept": 203,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_43": {
+      "frames_kept": 369,
+      "labels_in_file": 1475,
+      "boxes_kept": 208,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_44": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 240,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_45": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 354,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_46": {
+      "frames_kept": 375,
+      "labels_in_file": 1500,
+      "boxes_kept": 308,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_47": {
+      "frames_kept": 432,
+      "labels_in_file": 1725,
+      "boxes_kept": 239,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "urban-areas_48": {
+      "frames_kept": 512,
+      "labels_in_file": 2045,
+      "boxes_kept": 470,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_20": {
+      "frames_kept": 187,
+      "labels_in_file": 746,
+      "boxes_kept": 187,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_21": {
+      "frames_kept": 238,
+      "labels_in_file": 952,
+      "boxes_kept": 237,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_22": {
+      "frames_kept": 219,
+      "labels_in_file": 874,
+      "boxes_kept": 171,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_23": {
+      "frames_kept": 200,
+      "labels_in_file": 797,
+      "boxes_kept": 200,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_24": {
+      "frames_kept": 209,
+      "labels_in_file": 836,
+      "boxes_kept": 209,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    },
+    "water_25": {
+      "frames_kept": 165,
+      "labels_in_file": 657,
+      "boxes_kept": 165,
+      "label_file": "IR_label.json",
+      "resolution": "640x512"
+    }
+  },
+  "download": {
+    "parts": [
+      [
+        "CST-AntiUAV.z01",
+        "12il79A75af_ahfQEakKtzrA3LEqWTn2G"
+      ],
+      [
+        "CST-AntiUAV.z02",
+        "1bWscp-86dgeZ8mLUNQkoLCzLZGA7wvkt"
+      ],
+      [
+        "CST-AntiUAV.z03",
+        "1V6jql4Kiq6ReTv61sEh3Rx8Yxi2ZYcJw"
+      ],
+      [
+        "CST-AntiUAV.z04",
+        "1pq7XRB34DI3oMANx1HqU8M3Ah11VJESa"
+      ]
+    ],
+    "bytes_consumed": 6654933195,
+    "sha256_of_consumed_stream": "9fccc0c0502098135f83c00cd71b11637b92ce48bf50bc2b02f96da649b816a3",
+    "stopped_at": "first entry outside test/: CST-AntiUAV/CST-AntiUAV/train/",
+    "kept_files": 18240,
+    "skipped_entries": 54178,
+    "sequences": 60,
+    "frame_stride": 4,
+    "minutes": 2.7,
+    "date": "2026-11-19 22:40:25 KST"
+  }
+}

@@ -1,0 +1,5 @@
+# Stage 3 track 1 training (2 of the 4 runs). No CST data. Pre-registration 3, section 5.
+# T1a: the R1 recipe (start S1, Anti-UAV only, 2 epochs, small-target augmentation 0.5, lr 0.005) with anchors (4,8,16,32,64)
+train_t1a | tdd.stage2.train --stage 3 --run t1a --epochs 2 --small-aug 0.5 --anchors 4,8,16,32,64
+# T1b: start B (stage 2 R1), the R2 N=37 recipe (2 of 8 images from Svanström dev_a, 1,075 iterations) plus small-target augmentation 0.5
+train_t1b | tdd.stage2.train --stage 3 --run t1b --epochs 1 --small-aug 0.5 --svan-n 37 --init runs/stage2/r1/epoch1.pt

@@ -1,0 +1,6 @@
+# TTA was adopted by the pre-registered rule (results/stage2/dev_compare__tta.json), so the
+# frozen input is x1 + flip TTA. Stage 1 model on the other half of the dev frames
+# (dev = dev10 + dev5), then both R1 epochs on dev_b for the checkpoint choice.
+dev5_x1tta | tdd.stage2.infer --tag s1_x1tta --set svan_dev5 --scale 1 --tta
+r1e0_devb | tdd.stage2.infer --tag r1e0_x1tta --set svan_dev_b --ckpt runs/stage2/r1/epoch0.pt --scale 1 --tta
+r1e1_devb | tdd.stage2.infer --tag r1e1_x1tta --set svan_dev_b --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta

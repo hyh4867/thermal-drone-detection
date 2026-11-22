@@ -1,0 +1,6 @@
+# After the input experiment selected x1 (results/stage2/inputs.json):
+# TTA check on the input-experiment frames, the stage 1 model at x1 on all dev frames
+# (tracker tuning, calibration), then training run R1 (run 1 of at most 4).
+in_x1tta | tdd.stage2.infer --tag s1_x1tta --set svan_dev10 --scale 1 --tta
+dev_x1 | tdd.stage2.infer --tag s1_x1 --set svan_dev --scale 1
+train_r1 | tdd.stage2.train --run r1 --epochs 2 --small-aug 0.5

@@ -1,0 +1,4 @@
+# Stage 3 final inference, group 1: CST val (the new final test), each configuration once. One heavy lock for the file.
+# Track 1 final = (S1, m = 1), the same configuration as the baseline, so one inference serves both rows.
+f_cstval_s1_m1 | tdd.stage3.infer --tag s1_m1 --set cst_val --model S1 --m 1
+f_cstval_t2_20_m1 | tdd.stage3.infer --tag t2_20_m1 --set cst_val --model T2_20 --m 1

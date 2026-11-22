@@ -1,0 +1,27 @@
+# Stage 3 track 1 selection inference (no CST data). S1 on svan_dev10 is read from the stage 2 caches.
+# V2 / V3: Anti-UAV val reduced to 1/4 and Anti-UAV val, 5 models x m in (1, 2)
+q_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_val_q --model S1 --m 1
+q_s1_m2 | tdd.stage3.infer --tag s1_m2 --set auv_val_q --model S1 --m 2
+q_b_m1 | tdd.stage3.infer --tag b_m1 --set auv_val_q --model B --m 1
+q_b_m2 | tdd.stage3.infer --tag b_m2 --set auv_val_q --model B --m 2
+q_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set auv_val_q --model T1a --m 1
+q_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set auv_val_q --model T1a --m 2
+q_c37_m1 | tdd.stage3.infer --tag c37_m1 --set auv_val_q --model C37 --m 1
+q_c37_m2 | tdd.stage3.infer --tag c37_m2 --set auv_val_q --model C37 --m 2
+q_t1b_m1 | tdd.stage3.infer --tag t1b_m1 --set auv_val_q --model T1b --m 1
+q_t1b_m2 | tdd.stage3.infer --tag t1b_m2 --set auv_val_q --model T1b --m 2
+v_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_val --model S1 --m 1
+v_b_m1 | tdd.stage3.infer --tag b_m1 --set auv_val --model B --m 1
+v_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set auv_val --model T1a --m 1
+v_c37_m1 | tdd.stage3.infer --tag c37_m1 --set auv_val --model C37 --m 1
+v_t1b_m1 | tdd.stage3.infer --tag t1b_m1 --set auv_val --model T1b --m 1
+v_s1_m2 | tdd.stage3.infer --tag s1_m2 --set auv_val --model S1 --m 2 --limit-s-per-frame 3.0
+v_b_m2 | tdd.stage3.infer --tag b_m2 --set auv_val --model B --m 2 --limit-s-per-frame 3.0
+v_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set auv_val --model T1a --m 2 --limit-s-per-frame 3.0
+v_c37_m2 | tdd.stage3.infer --tag c37_m2 --set auv_val --model C37 --m 2 --limit-s-per-frame 3.0
+v_t1b_m2 | tdd.stage3.infer --tag t1b_m2 --set auv_val --model T1b --m 2 --limit-s-per-frame 3.0
+# V1 (addendum 2: every 20th frame, svan_dev20): Svanström dev, the two new parents x m in (1, 2)  (Svanström x2 and x4)
+s_b_m1 | tdd.stage3.infer --tag b_m1 --set svan_dev20 --model B --m 1
+s_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set svan_dev20 --model T1a --m 1
+s_b_m2 | tdd.stage3.infer --tag b_m2 --set svan_dev20 --model B --m 2 --limit-s-per-frame 2.0
+s_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set svan_dev20 --model T1a --m 2 --limit-s-per-frame 2.0

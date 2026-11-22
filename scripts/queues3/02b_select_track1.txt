@@ -1,0 +1,6 @@
+# Part of 02_select_track1.txt, run under one heavy lock per file (GROUP_LOCK=1). Finished labels are skipped.
+v_s1_m2 | tdd.stage3.infer --tag s1_m2 --set auv_val --model S1 --m 2 --limit-s-per-frame 3.0
+v_b_m2 | tdd.stage3.infer --tag b_m2 --set auv_val --model B --m 2 --limit-s-per-frame 3.0
+v_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set auv_val --model T1a --m 2 --limit-s-per-frame 3.0
+v_c37_m2 | tdd.stage3.infer --tag c37_m2 --set auv_val --model C37 --m 2 --limit-s-per-frame 3.0
+v_t1b_m2 | tdd.stage3.infer --tag t1b_m2 --set auv_val --model T1b --m 2 --limit-s-per-frame 3.0

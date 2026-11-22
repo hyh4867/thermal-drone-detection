@@ -1,0 +1,2243 @@
+{
+ "seed": 20261119,
+ "fractions": {
+  "test": 0.5,
+  "dev_b": 0.25,
+  "dev_a": 0.25
+ },
+ "stratified_by": [
+  "cls",
+  "bin"
+ ],
+ "n_videos": 360,
+ "counts_by_stratum": {
+  "AIRPLANE/CLOSE": {
+   "dev_a": 2,
+   "dev_b": 2,
+   "test": 5
+  },
+  "AIRPLANE/DISTANT": {
+   "dev_a": 10,
+   "dev_b": 10,
+   "test": 20
+  },
+  "AIRPLANE/MEDIUM": {
+   "dev_a": 6,
+   "dev_b": 6,
+   "test": 13
+  },
+  "BIRD/CLOSE": {
+   "dev_a": 2,
+   "dev_b": 2,
+   "test": 4
+  },
+  "BIRD/DISTANT": {
+   "dev_a": 11,
+   "dev_b": 12,
+   "test": 23
+  },
+  "BIRD/MEDIUM": {
+   "dev_a": 5,
+   "dev_b": 6,
+   "test": 12
+  },
+  "DRONE/CLOSE": {
+   "dev_a": 5,
+   "dev_b": 6,
+   "test": 12
+  },
+  "DRONE/DISTANT": {
+   "dev_a": 9,
+   "dev_b": 10,
+   "test": 19
+  },
+  "DRONE/MEDIUM": {
+   "dev_a": 23,
+   "dev_b": 23,
+   "test": 47
+  },
+  "HELICOPTER/CLOSE": {
+   "dev_a": 3,
+   "dev_b": 4,
+   "test": 8
+  },
+  "HELICOPTER/DISTANT": {
+   "dev_a": 5,
+   "dev_b": 5,
+   "test": 10
+  },
+  "HELICOPTER/MEDIUM": {
+   "dev_a": 5,
+   "dev_b": 5,
+   "test": 10
+  }
+ },
+ "counts_by_split": {
+  "test": 183,
+  "dev_a": 86,
+  "dev_b": 91
+ },
+ "listing_sha256": "49d0386086df6dec075115920470508b582c8bb8845e2b5f033a6140aa8a6f8d",
+ "videos": [
+  {
+   "video": "IR_AIRPLANE_001",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_002",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_003",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_004",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_005",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_006",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_007",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_008",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_009",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_010",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_011",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_012",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_013",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_014",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_015",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_016",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_017",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_018",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_019",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_020",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_021",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_022",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_023",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_024",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_025",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_026",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_027",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_028",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_029",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_030",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_031",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_032",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_033",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_034",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_035",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_036",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_037",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_038",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_039",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_040",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_041",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_042",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_043",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_044",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_045",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_046",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_047",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_048",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_049",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_050",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_051",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_052",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_053",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_054",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_055",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_056",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_057",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_058",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_059",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_060",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_061",
+   "cls": "AIRPLANE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_062",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_063",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_064",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_065",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_066",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_067",
+   "cls": "AIRPLANE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_068",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_AIRPLANE_069",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_070",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_071",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_AIRPLANE_072",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_073",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_AIRPLANE_074",
+   "cls": "AIRPLANE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_001",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_002",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_003",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_004",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_005",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_006",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_007",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_008",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_009",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_010",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_011",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_012",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_013",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_014",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_015",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_016",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_017",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_018",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_019",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_020",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_021",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_022",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_023",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_024",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_025",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_026",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_028",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_029",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_030",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_031",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_032",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_033",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_034",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_036",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_037",
+   "cls": "BIRD",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_038",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_039",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_040",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_041",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_042",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_043",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_044",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_045",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_046",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_047",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_048",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_049",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_050",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_051",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_052",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_053",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_054",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_055",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_056",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_057",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_058",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_059",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_060",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_061",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_062",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_063",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_064",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_065",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_066",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_067",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_068",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_069",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_070",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_071",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_072",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_073",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_BIRD_074",
+   "cls": "BIRD",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_075",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_076",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_077",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_BIRD_078",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_BIRD_079",
+   "cls": "BIRD",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_001",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_002",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_003",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_004",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_005",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_006",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_007",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_008",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_009",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_010",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_011",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_012",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_013",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_014",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_015",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_016",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_017",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_018",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_019",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_020",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_021",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_022",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_023",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_024",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_025",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_026",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_027",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_028",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_029",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_030",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_031",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_032",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_033",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_034",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_035",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_036",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_037",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_038",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_039",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_040",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_041",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_042",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_043",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_044",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_045",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_046",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_047",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_048",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_049",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_050",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_051",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_052",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_053",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_054",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_055",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_056",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_057",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_058",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_059",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_060",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_061",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_062",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_063",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_064",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_065",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_066",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_067",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_068",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_069",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_070",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_071",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_072",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_073",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_074",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_075",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_076",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_077",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_078",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_079",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_080",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_081",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_082",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_083",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_084",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_085",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_086",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_087",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_088",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_089",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_090",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_091",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_092",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_093",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_094",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_095",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_097",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_098",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_099",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_100",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_102",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_103",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_105",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_106",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_107",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_108",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_109",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_110",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_111",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_112",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_113",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_114",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_115",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_116",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_117",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_118",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_119",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_120",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_121",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_122",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_123",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_124",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_125",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_126",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_127",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_128",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_129",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_130",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_131",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_132",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_133",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_134",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_135",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_136",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_137",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_138",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_139",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_140",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_141",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_142",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_143",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_144",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_145",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_146",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_147",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_148",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_149",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_150",
+   "cls": "DRONE",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_DRONE_151",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_152",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_153",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_154",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_155",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_DRONE_156",
+   "cls": "DRONE",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_DRONE_157",
+   "cls": "DRONE",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_001",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_002",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_003",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_004",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_005",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_006",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_007",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_008",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_009",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_010",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_011",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_012",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_013",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_014",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_015",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_016",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_017",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_018",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_019",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_020",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_021",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_022",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_023",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_024",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_025",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_026",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_027",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_028",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_029",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_030",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_031",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_032",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_033",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_034",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_035",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_036",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_037",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_038",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_039",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_040",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_041",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_042",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_043",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_044",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_045",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_046",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_047",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_048",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_049",
+   "cls": "HELICOPTER",
+   "bin": "DISTANT",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_050",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_b"
+  },
+  {
+   "video": "IR_HELICOPTER_051",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_052",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_053",
+   "cls": "HELICOPTER",
+   "bin": "MEDIUM",
+   "split": "test"
+  },
+  {
+   "video": "IR_HELICOPTER_054",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "dev_a"
+  },
+  {
+   "video": "IR_HELICOPTER_055",
+   "cls": "HELICOPTER",
+   "bin": "CLOSE",
+   "split": "test"
+  }
+ ]
+}

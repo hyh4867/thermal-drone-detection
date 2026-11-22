@@ -1,0 +1,79 @@
+{
+  "run": "r1",
+  "status": "complete",
+  "args": {
+    "run": "r1",
+    "config": "configs/full.yaml",
+    "init": "runs/full_frcnn/best.pt",
+    "epochs": 2,
+    "lr": 0.005,
+    "warmup": 100,
+    "small_aug": 0.5,
+    "svan_n": 0,
+    "svan_per_batch": 2,
+    "svan_scale": 2.0,
+    "time_limit_min": 150.0,
+    "max_iters": 0,
+    "smoke_persist": false
+  },
+  "iterations": 2150,
+  "planned_iterations": 2150,
+  "steps_per_epoch": 1075,
+  "minutes_used": 85.08799066146214,
+  "time_limit_min": 150.0,
+  "history": [
+    {
+      "epoch": 0,
+      "iter": 1075,
+      "train_loss": 0.040212717597823196,
+      "val_ap50": 0.9329172579081739,
+      "val_frames": 1596,
+      "minutes": 42.3
+    },
+    {
+      "epoch": 1,
+      "iter": 2150,
+      "train_loss": 0.03875774489382271,
+      "val_ap50": 0.927182996041353,
+      "val_frames": 1596,
+      "minutes": 85.0
+    }
+  ],
+  "adaptation_data": null,
+  "train_frames_antiuav": 8606,
+  "final": true,
+  "meta": {
+    "timestamp_utc": "2026-11-19T20:38:59+00:00",
+    "git_commit": "a2007a36dc63346dcc4b94ac5c986cb682259748",
+    "git_dirty": true,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 2,
+    "init": "runs/full_frcnn/best.pt"
+  }
+}

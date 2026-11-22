@@ -1,0 +1,3 @@
+# Stage 3 reference row (addendum 5): B (stage 2 R1) at m = 1 on CST val, same inference settings as the final evaluation.
+r_cstval_b_m1 | tdd.stage3.infer --tag b_m1 --set cst_val --model B --m 1
+verify_reference | tdd.stage3.verify_caches --scope reference

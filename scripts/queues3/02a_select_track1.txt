@@ -1,0 +1,16 @@
+# Part of 02_select_track1.txt, run under one heavy lock per file (GROUP_LOCK=1). Finished labels are skipped.
+q_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_val_q --model S1 --m 1
+q_s1_m2 | tdd.stage3.infer --tag s1_m2 --set auv_val_q --model S1 --m 2
+q_b_m1 | tdd.stage3.infer --tag b_m1 --set auv_val_q --model B --m 1
+q_b_m2 | tdd.stage3.infer --tag b_m2 --set auv_val_q --model B --m 2
+q_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set auv_val_q --model T1a --m 1
+q_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set auv_val_q --model T1a --m 2
+q_c37_m1 | tdd.stage3.infer --tag c37_m1 --set auv_val_q --model C37 --m 1
+q_c37_m2 | tdd.stage3.infer --tag c37_m2 --set auv_val_q --model C37 --m 2
+q_t1b_m1 | tdd.stage3.infer --tag t1b_m1 --set auv_val_q --model T1b --m 1
+q_t1b_m2 | tdd.stage3.infer --tag t1b_m2 --set auv_val_q --model T1b --m 2
+v_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_val --model S1 --m 1
+v_b_m1 | tdd.stage3.infer --tag b_m1 --set auv_val --model B --m 1
+v_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set auv_val --model T1a --m 1
+v_c37_m1 | tdd.stage3.infer --tag c37_m1 --set auv_val --model C37 --m 1
+v_t1b_m1 | tdd.stage3.infer --tag t1b_m1 --set auv_val --model T1b --m 1

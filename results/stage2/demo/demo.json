@@ -1,0 +1,43 @@
+{
+  "clip": {
+    "rule": "dev_b MEDIUM drone video whose stage 1 per-video recall (thr 0.954, IoU 0.5) is closest to the dev_b drone-video median",
+    "dev_b_drone_videos": 39,
+    "median_recall": 0.359375,
+    "video": "IR_DRONE_136",
+    "video_recall_stage1": 0.42857142857142855,
+    "medium_candidates": 23
+  },
+  "model": "C37",
+  "model_choice": "Chosen before any test evaluation: the configuration with the highest dev_b iso-FAR IoU 0.5 recall (results/stage2/dev_compare__models_dev_b.json). The clip is a dev_b video: not used for training C37, but dev_b was used to set its thresholds and tracker values.",
+  "svanstrom_tag": "r2n37_x1tta",
+  "k": 1.0,
+  "detector_threshold": 0.7459598779678346,
+  "track_score_threshold": 0.6308343344264561,
+  "tracker": {
+    "model": "cv",
+    "q": 654.5671530581313,
+    "confirm_m": 2,
+    "confirm_n": 3,
+    "delete_misses": 5,
+    "det_threshold": 0.2,
+    "coast_outputs": 2
+  },
+  "source_fps": 30.0,
+  "source_frames": 300,
+  "output": {
+    "file": "results/stage2/demo/demo.mp4 (not in git)",
+    "fps": 15.0,
+    "seconds": 20.0,
+    "size": [
+      960,
+      900
+    ]
+  },
+  "this_clip_only": {
+    "frames_with_label": 60,
+    "label_frames_with_track_on_target": 59,
+    "label_frames_with_detection_on_target": 60,
+    "track_ids": 3
+  },
+  "note": "One clip, half speed. Illustration only, not a performance summary."
+}

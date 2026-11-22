@@ -1,0 +1,7 @@
+# Q1 input experiment (pre-registration 5/Q1): stage 1 model on dev videos, every 10th frame.
+# x2 is the stage 1 cache. Settings slower than 1.5 s/frame are recorded as failed.
+in_x1 | tdd.stage2.infer --tag s1_x1 --set svan_dev10 --scale 1
+in_x3 | tdd.stage2.infer --tag s1_x3 --set svan_dev10 --scale 3
+?in_x4 | tdd.stage2.infer --tag s1_x4 --set svan_dev10 --scale 4 --limit-s-per-frame 1.5
+in_t3 | tdd.stage2.infer --tag s1_t3 --set svan_dev10 --scale 3 --tile 2
+?in_t4 | tdd.stage2.infer --tag s1_t4 --set svan_dev10 --scale 4 --tile 2 --limit-s-per-frame 1.5

@@ -1,0 +1,118 @@
+{
+ "scope": "reference",
+ "all_ok": true,
+ "tolerance_mean_abs_score_diff": 0.01,
+ "scores_per_frame": 5,
+ "checkpoints_sha256": {
+  "runs/stage2/r1/epoch1.pt": "31de9b73fa734a9b14367b7c9bbdc32f02cdfe05efd5b12cea3f9ce3df9115ac",
+  "runs/full_frcnn/best.pt": "354ac7bf6739c618fe70c17462d8354712db0c39d2c89550bd1a484699855fe3",
+  "runs/stage3/t2_20/last.pt": "ca8336d1fe86124de0829d844bc36c8d4377222613e9cf8f9eec3d801265aa63"
+ },
+ "caches": [
+  {
+   "tag": "b_m1",
+   "set": "cst_val",
+   "required": true,
+   "expected": {
+    "model": "B",
+    "m": 1.0,
+    "ckpt": "runs/stage2/r1/epoch1.pt",
+    "anchor_sizes": [
+     8,
+     16,
+     32,
+     64,
+     128
+    ],
+    "scale": 1.0,
+    "tile": 1,
+    "tta": false
+   },
+   "lines": 11335,
+   "frames": 11335,
+   "bad_lines": 0,
+   "ends_with_newline": true,
+   "meta_matches": true,
+   "meta_sha_matches_file": true,
+   "resumed_from": 0,
+   "log": "r_cstval_b_m1.log",
+   "log_matches": true,
+   "recheck_frames": 5,
+   "recheck_own_diff": 0.0,
+   "recheck_nearest_other": "s1_m1",
+   "recheck_nearest_other_diff": 0.07173336245119571,
+   "checkpoint_sha256": "31de9b73fa73",
+   "status": "ok"
+  },
+  {
+   "tag": "s1_m1",
+   "set": "cst_val",
+   "required": false,
+   "expected": {
+    "model": "S1",
+    "m": 1.0,
+    "ckpt": "runs/full_frcnn/best.pt",
+    "anchor_sizes": [
+     8,
+     16,
+     32,
+     64,
+     128
+    ],
+    "scale": 1.0,
+    "tile": 1,
+    "tta": false
+   },
+   "lines": 11335,
+   "frames": 11335,
+   "bad_lines": 0,
+   "ends_with_newline": true,
+   "meta_matches": true,
+   "meta_sha_matches_file": true,
+   "resumed_from": 0,
+   "log": "f_cstval_s1_m1.log",
+   "log_matches": true,
+   "recheck_frames": 5,
+   "recheck_own_diff": 0.0,
+   "recheck_nearest_other": "b_m1",
+   "recheck_nearest_other_diff": 0.07173336245119571,
+   "checkpoint_sha256": "354ac7bf6739",
+   "status": "ok"
+  },
+  {
+   "tag": "t2_20_m1",
+   "set": "cst_val",
+   "required": false,
+   "expected": {
+    "model": "T2_20",
+    "m": 1.0,
+    "ckpt": "runs/stage3/t2_20/last.pt",
+    "anchor_sizes": [
+     8,
+     16,
+     32,
+     64,
+     128
+    ],
+    "scale": 1.0,
+    "tile": 1,
+    "tta": false
+   },
+   "lines": 11335,
+   "frames": 11335,
+   "bad_lines": 0,
+   "ends_with_newline": true,
+   "meta_matches": true,
+   "meta_sha_matches_file": true,
+   "resumed_from": 0,
+   "log": "f_cstval_t2_20_m1.log",
+   "log_matches": true,
+   "recheck_frames": 5,
+   "recheck_own_diff": 0.0,
+   "recheck_nearest_other": "s1_m1",
+   "recheck_nearest_other_diff": 0.09726680129766466,
+   "checkpoint_sha256": "ca8336d1fe86",
+   "status": "ok"
+  }
+ ]
+}

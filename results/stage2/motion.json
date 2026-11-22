@@ -1,0 +1,157 @@
+{
+  "svanstrom_dev": {
+    "non_drone_object": {
+      "static": {
+        "n": 5904,
+        "median": 2.053719221844634,
+        "p75": 5.173525303970523,
+        "p90": 10.437600177060077,
+        "p99": 40.29162984234019
+      },
+      "cv": {
+        "n": 5904,
+        "median": 0.10091855800837475,
+        "p75": 0.7575993464520435,
+        "p90": 5.0,
+        "p99": 23.87988908386403
+      },
+      "static_compensated": {
+        "n": 5904,
+        "median": 1.366649762244546,
+        "p75": 4.4463448544399204,
+        "p90": 8.416345942656104,
+        "p99": 38.996992041545
+      },
+      "cv_compensated": {
+        "n": 5904,
+        "median": 0.25796086336959845,
+        "p75": 0.7579460803773083,
+        "p90": 3.503243571950122,
+        "p99": 19.010719476589248
+      },
+      "cv_component_std": 18.333900507409428,
+      "static_component_std": 13.6077401639767,
+      "cv_component_abs_quantiles": {
+        "0.5": 0.02490997314453125,
+        "0.75": 0.42043304443359375,
+        "0.9": 2.508721135687066
+      }
+    },
+    "drone": {
+      "static": {
+        "n": 4509,
+        "median": 3.394349803819207,
+        "p75": 5.572185061501145,
+        "p90": 8.38140362539482,
+        "p99": 17.593657892632066
+      },
+      "cv": {
+        "n": 4509,
+        "median": 0.541229045051599,
+        "p75": 0.8958983888092281,
+        "p90": 1.4363625994512512,
+        "p99": 6.36230076968053
+      },
+      "static_compensated": {
+        "n": 4509,
+        "median": 3.074736719294707,
+        "p75": 5.387870289062088,
+        "p90": 8.417295052597137,
+        "p99": 17.7944358947129
+      },
+      "cv_compensated": {
+        "n": 4509,
+        "median": 0.5288556473832643,
+        "p75": 0.8758317769557007,
+        "p90": 1.4137530394215316,
+        "p99": 6.3778531695812255
+      },
+      "cv_component_std": 6.439357052372107,
+      "static_component_std": 5.811250985662479,
+      "cv_component_abs_quantiles": {
+        "0.5": 0.2956409454345703,
+        "0.75": 0.5835113525390625,
+        "0.9": 1.0050544738769531
+      }
+    },
+    "global_shift_px_per_step": {
+      "n": 10962,
+      "median": 0.14362171162759688,
+      "p75": 0.4296035320455367,
+      "p90": 1.1864872296003288,
+      "p99": 27.30001456322006
+    },
+    "phase_correlation_response": {
+      "n": 10962,
+      "median": 0.9825311928754672,
+      "p75": 0.9983347870991566,
+      "p90": 1.0140753997908905,
+      "p99": 1.0900800814852118
+    }
+  },
+  "antiuav_val": {
+    "sequences": 43,
+    "dt_s": 0.15,
+    "static": {
+      "n": 13162,
+      "median": 8.94427190999916,
+      "p75": 15.5,
+      "p90": 25.004999500099974,
+      "p99": 121.89290820308096
+    },
+    "cv": {
+      "n": 13162,
+      "median": 1.5811388300841898,
+      "p75": 8.73212459828649,
+      "p90": 38.52920969861697,
+      "p99": 149.50980734337026
+    },
+    "cv_component_std": 21.960008677052098
+  },
+  "dt_svanstrom_s": 0.16666666666666666,
+  "decision": {
+    "model": "cv",
+    "rule_model": "cv if median CV residual < median static residual (dev drone tracks)",
+    "global_shift_compensation": false,
+    "cv_residual_reduction_by_compensation": 0.022861666020076665,
+    "q_levels_px2_per_s3": {
+      "0.5": 56.6375124641054,
+      "0.75": 220.63460305519408,
+      "0.9": 654.5671530581313
+    },
+    "q_rule": "q = 3 r^2 / dt^3 with r = 50th / 75th / 90th percentile of |CV residual| per axis"
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-19T13:51:34+00:00",
+    "git_commit": "3ac15020c5fc1822a6ebca90e53b57ed563b8b71",
+    "git_dirty": true,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 2
+  }
+}

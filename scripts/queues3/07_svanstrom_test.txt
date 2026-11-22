@@ -1,0 +1,4 @@
+# Stage 3 addendum 6: the cost of T2-20 on Svanström test (every other stage 2 test frame), both configurations inferred anew.
+x_svan_s1_m1 | tdd.stage3.infer --tag s1_m1 --set svan_test_h --model S1 --m 1
+x_svan_t2_20_m1 | tdd.stage3.infer --tag t2_20_m1 --set svan_test_h --model T2_20 --m 1
+verify_svanstrom | tdd.stage3.verify_caches --scope svanstrom

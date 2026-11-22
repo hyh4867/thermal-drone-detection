@@ -1,0 +1,5 @@
+# Stage 3 final inference, group 2: Anti-UAV test and its small-target supplement (regression check J5). One heavy lock for the file.
+f_auv_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_test --model S1 --m 1
+f_auvs_s1_m1 | tdd.stage3.infer --tag s1_m1 --set auv_test_small --model S1 --m 1
+f_auv_t2_20_m1 | tdd.stage3.infer --tag t2_20_m1 --set auv_test --model T2_20 --m 1
+f_auvs_t2_20_m1 | tdd.stage3.infer --tag t2_20_m1 --set auv_test_small --model T2_20 --m 1

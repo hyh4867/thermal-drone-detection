@@ -1,0 +1,912 @@
+{
+  "set": "auv_test",
+  "frames": 9582,
+  "models": {
+    "A": {
+      "status": "ok",
+      "tag": "s1_ntta",
+      "detector": {
+        "threshold": 0.9511470198631287,
+        "k": 1.0,
+        "frames": 9582,
+        "sequences": 91,
+        "gt_boxes": 8429,
+        "ap50": 0.8852254557663057,
+        "precision": 0.969384990517475,
+        "recall_iou50": 0.8489737809941867,
+        "tp": 7156,
+        "fp": 226,
+        "recall_center": 0.8545497686558311,
+        "drone_free_frames": 1153,
+        "drone_free_frames_with_alarm": 38,
+        "far_drone_free": 0.03295750216825672,
+        "recall_by_size": {
+          "tiny": {
+            "total": 2,
+            "iou50": 0.0,
+            "center": 0.0
+          },
+          "small": {
+            "total": 40,
+            "iou50": 0.675,
+            "center": 0.75
+          },
+          "medium": {
+            "total": 1965,
+            "iou50": 0.7857506361323155,
+            "center": 0.794910941475827
+          },
+          "large": {
+            "total": 6272,
+            "iou50": 0.8667091836734694,
+            "center": 0.8706951530612245
+          },
+          "xlarge": {
+            "total": 150,
+            "iou50": 0.9933333333333333,
+            "center": 1.0
+          }
+        },
+        "ci95": {
+          "ap50": [
+            0.8397,
+            0.9262
+          ],
+          "recall_iou50": [
+            0.8013,
+            0.8951
+          ],
+          "recall_center": [
+            0.8062,
+            0.9011
+          ],
+          "precision": [
+            0.9563,
+            0.9799
+          ],
+          "far_drone_free": [
+            0.0072,
+            0.0875
+          ]
+        },
+        "B": 1000,
+        "seed": 0,
+        "unit": "sequence",
+        "n_units": 91,
+        "paired_diff": {
+          "ap50": {
+            "diff": 0.0005381538986792833,
+            "ci95": [
+              -0.0005,
+              0.0015
+            ]
+          },
+          "recall_iou50": {
+            "diff": 0.00023727607070822554,
+            "ci95": [
+              -0.0015,
+              0.002
+            ]
+          },
+          "recall_center": {
+            "diff": 0.0003559141060623938,
+            "ci95": [
+              -0.0014,
+              0.0022
+            ]
+          },
+          "precision": {
+            "diff": 0.002758858913637585,
+            "ci95": [
+              0.0006,
+              0.0054
+            ]
+          },
+          "far_drone_free": {
+            "diff": -0.0017346053772766684,
+            "ci95": [
+              -0.0048,
+              0.0019
+            ]
+          }
+        },
+        "sequence": {
+          "drone_videos": 91,
+          "non_drone_minutes": 0.0,
+          "non_drone_alarm_frames_per_minute": null,
+          "iou50": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.866233447768514
+          },
+          "center": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8718891749417678
+          }
+        }
+      }
+    },
+    "B": {
+      "status": "ok",
+      "tag": "r1e1_ntta",
+      "detector": {
+        "threshold": 0.9400007128715515,
+        "k": 1.0,
+        "frames": 9582,
+        "sequences": 91,
+        "gt_boxes": 8429,
+        "ap50": 0.8825850533070627,
+        "precision": 0.9542500994563056,
+        "recall_iou50": 0.8537193024083521,
+        "tp": 7196,
+        "fp": 345,
+        "recall_center": 0.8606003084588919,
+        "drone_free_frames": 1153,
+        "drone_free_frames_with_alarm": 57,
+        "far_drone_free": 0.049436253252385085,
+        "recall_by_size": {
+          "tiny": {
+            "total": 2,
+            "iou50": 0.0,
+            "center": 0.0
+          },
+          "small": {
+            "total": 40,
+            "iou50": 0.675,
+            "center": 0.8
+          },
+          "medium": {
+            "total": 1965,
+            "iou50": 0.7842239185750636,
+            "center": 0.7928753180661577
+          },
+          "large": {
+            "total": 6272,
+            "iou50": 0.873405612244898,
+            "center": 0.8791454081632653
+          },
+          "xlarge": {
+            "total": 150,
+            "iou50": 1.0,
+            "center": 1.0
+          }
+        },
+        "ci95": {
+          "ap50": [
+            0.8381,
+            0.9252
+          ],
+          "recall_iou50": [
+            0.8078,
+            0.8976
+          ],
+          "recall_center": [
+            0.8135,
+            0.9067
+          ],
+          "precision": [
+            0.9409,
+            0.9669
+          ],
+          "far_drone_free": [
+            0.0145,
+            0.125
+          ]
+        },
+        "B": 1000,
+        "seed": 0,
+        "unit": "sequence",
+        "n_units": 91,
+        "paired_diff": {
+          "ap50": {
+            "diff": -0.0021022485605637353,
+            "ci95": [
+              -0.0052,
+              0.0008
+            ]
+          },
+          "recall_iou50": {
+            "diff": 0.0049827974848736245,
+            "ci95": [
+              -0.0006,
+              0.0109
+            ]
+          },
+          "recall_center": {
+            "diff": 0.0064064539091232,
+            "ci95": [
+              0.0006,
+              0.0126
+            ]
+          },
+          "precision": {
+            "diff": -0.012376032147531801,
+            "ci95": [
+              -0.0208,
+              -0.0043
+            ]
+          },
+          "far_drone_free": {
+            "diff": 0.014744145706851695,
+            "ci95": [
+              -0.0018,
+              0.0512
+            ]
+          }
+        },
+        "sequence": {
+          "drone_videos": 91,
+          "non_drone_minutes": 0.0,
+          "non_drone_alarm_frames_per_minute": null,
+          "iou50": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8679452724163206
+          },
+          "center": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8749236594601197
+          }
+        }
+      }
+    },
+    "C4": {
+      "status": "ok",
+      "tag": "r2n4_ntta",
+      "detector": {
+        "threshold": 0.9709224700927734,
+        "k": 1.0,
+        "frames": 9582,
+        "sequences": 91,
+        "gt_boxes": 8429,
+        "ap50": 0.8861728434524702,
+        "precision": 0.9722260797111513,
+        "recall_iou50": 0.8305848855142959,
+        "tp": 7001,
+        "fp": 200,
+        "recall_center": 0.8358049590698778,
+        "drone_free_frames": 1153,
+        "drone_free_frames_with_alarm": 28,
+        "far_drone_free": 0.024284475281873375,
+        "recall_by_size": {
+          "tiny": {
+            "total": 2,
+            "iou50": 0.0,
+            "center": 0.0
+          },
+          "small": {
+            "total": 40,
+            "iou50": 0.5,
+            "center": 0.5
+          },
+          "medium": {
+            "total": 1965,
+            "iou50": 0.7399491094147582,
+            "center": 0.7480916030534351
+          },
+          "large": {
+            "total": 6272,
+            "iou50": 0.8576211734693877,
+            "center": 0.8619260204081632
+          },
+          "xlarge": {
+            "total": 150,
+            "iou50": 0.9866666666666667,
+            "center": 0.9933333333333333
+          }
+        },
+        "ci95": {
+          "ap50": [
+            0.8401,
+            0.9268
+          ],
+          "recall_iou50": [
+            0.7788,
+            0.8765
+          ],
+          "recall_center": [
+            0.784,
+            0.8822
+          ],
+          "precision": [
+            0.9621,
+            0.9816
+          ],
+          "far_drone_free": [
+            0.0033,
+            0.0727
+          ]
+        },
+        "B": 1000,
+        "seed": 0,
+        "unit": "sequence",
+        "n_units": 91,
+        "paired_diff": {
+          "ap50": {
+            "diff": 0.0014855415848437081,
+            "ci95": [
+              -0.0011,
+              0.0038
+            ]
+          },
+          "recall_iou50": {
+            "diff": -0.01815161940918264,
+            "ci95": [
+              -0.0294,
+              -0.0093
+            ]
+          },
+          "recall_center": {
+            "diff": -0.018388895479890865,
+            "ci95": [
+              -0.0296,
+              -0.0094
+            ]
+          },
+          "precision": {
+            "diff": 0.005599948107313901,
+            "ci95": [
+              -0.001,
+              0.013
+            ]
+          },
+          "far_drone_free": {
+            "diff": -0.010407632263660014,
+            "ci95": [
+              -0.0283,
+              -0.0014
+            ]
+          }
+        },
+        "sequence": {
+          "drone_videos": 91,
+          "non_drone_minutes": 0.0,
+          "non_drone_alarm_frames_per_minute": null,
+          "iou50": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.853824292598542
+          },
+          "center": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8571428571428571
+          }
+        }
+      }
+    },
+    "C12": {
+      "status": "ok",
+      "tag": "r2n12_ntta",
+      "detector": {
+        "threshold": 0.9512110352516174,
+        "k": 1.0,
+        "frames": 9582,
+        "sequences": 91,
+        "gt_boxes": 8429,
+        "ap50": 0.8868049937015124,
+        "precision": 0.9708605664488017,
+        "recall_iou50": 0.8458891920749793,
+        "tp": 7130,
+        "fp": 214,
+        "recall_center": 0.8515838177719777,
+        "drone_free_frames": 1153,
+        "drone_free_frames_with_alarm": 36,
+        "far_drone_free": 0.031222896790980052,
+        "recall_by_size": {
+          "tiny": {
+            "total": 2,
+            "iou50": 0.0,
+            "center": 0.0
+          },
+          "small": {
+            "total": 40,
+            "iou50": 0.5,
+            "center": 0.625
+          },
+          "medium": {
+            "total": 1965,
+            "iou50": 0.776590330788804,
+            "center": 0.7852417302798982
+          },
+          "large": {
+            "total": 6272,
+            "iou50": 0.8665497448979592,
+            "center": 0.8705357142857143
+          },
+          "xlarge": {
+            "total": 150,
+            "iou50": 0.9933333333333333,
+            "center": 1.0
+          }
+        },
+        "ci95": {
+          "ap50": [
+            0.8415,
+            0.9274
+          ],
+          "recall_iou50": [
+            0.7963,
+            0.8907
+          ],
+          "recall_center": [
+            0.8016,
+            0.8979
+          ],
+          "precision": [
+            0.9595,
+            0.9807
+          ],
+          "far_drone_free": [
+            0.0077,
+            0.0843
+          ]
+        },
+        "B": 1000,
+        "seed": 0,
+        "unit": "sequence",
+        "n_units": 91,
+        "paired_diff": {
+          "ap50": {
+            "diff": 0.002117691833885993,
+            "ci95": [
+              -0.0005,
+              0.0045
+            ]
+          },
+          "recall_iou50": {
+            "diff": -0.0028473128484992616,
+            "ci95": [
+              -0.0082,
+              0.0021
+            ]
+          },
+          "recall_center": {
+            "diff": -0.002610036777791036,
+            "ci95": [
+              -0.0073,
+              0.0021
+            ]
+          },
+          "precision": {
+            "diff": 0.00423443484496433,
+            "ci95": [
+              -0.001,
+              0.0099
+            ]
+          },
+          "far_drone_free": {
+            "diff": -0.003469210754553337,
+            "ci95": [
+              -0.012,
+              0.0025
+            ]
+          }
+        },
+        "sequence": {
+          "drone_videos": 91,
+          "non_drone_minutes": 0.0,
+          "non_drone_alarm_frames_per_minute": null,
+          "iou50": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8609344422700587
+          },
+          "center": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8666992784639843
+          }
+        }
+      }
+    },
+    "C37": {
+      "status": "ok",
+      "tag": "r2n37_ntta",
+      "detector": {
+        "threshold": 0.9530181884765625,
+        "k": 1.0,
+        "frames": 9582,
+        "sequences": 91,
+        "gt_boxes": 8429,
+        "ap50": 0.8864502838236312,
+        "precision": 0.973247359034161,
+        "recall_iou50": 0.8416182228022304,
+        "tp": 7094,
+        "fp": 195,
+        "recall_center": 0.8470755724285206,
+        "drone_free_frames": 1153,
+        "drone_free_frames_with_alarm": 35,
+        "far_drone_free": 0.030355594102341718,
+        "recall_by_size": {
+          "tiny": {
+            "total": 2,
+            "iou50": 0.0,
+            "center": 0.0
+          },
+          "small": {
+            "total": 40,
+            "iou50": 0.5,
+            "center": 0.6
+          },
+          "medium": {
+            "total": 1965,
+            "iou50": 0.7735368956743003,
+            "center": 0.7821882951653945
+          },
+          "large": {
+            "total": 6272,
+            "iou50": 0.8617665816326531,
+            "center": 0.865593112244898
+          },
+          "xlarge": {
+            "total": 150,
+            "iou50": 0.9933333333333333,
+            "center": 1.0
+          }
+        },
+        "ci95": {
+          "ap50": [
+            0.8411,
+            0.9271
+          ],
+          "recall_iou50": [
+            0.7908,
+            0.8875
+          ],
+          "recall_center": [
+            0.7967,
+            0.8939
+          ],
+          "precision": [
+            0.9614,
+            0.9833
+          ],
+          "far_drone_free": [
+            0.0069,
+            0.0832
+          ]
+        },
+        "B": 1000,
+        "seed": 0,
+        "unit": "sequence",
+        "n_units": 91,
+        "paired_diff": {
+          "ap50": {
+            "diff": 0.0017629819560047721,
+            "ci95": [
+              -0.0002,
+              0.0035
+            ]
+          },
+          "recall_iou50": {
+            "diff": -0.0071182821212480984,
+            "ci95": [
+              -0.0122,
+              -0.0029
+            ]
+          },
+          "recall_center": {
+            "diff": -0.0071182821212480984,
+            "ci95": [
+              -0.0117,
+              -0.0029
+            ]
+          },
+          "precision": {
+            "diff": 0.006621227430323673,
+            "ci95": [
+              0.0024,
+              0.0112
+            ]
+          },
+          "far_drone_free": {
+            "diff": -0.004336513443191671,
+            "ci95": [
+              -0.0128,
+              0.0013
+            ]
+          }
+        },
+        "sequence": {
+          "drone_videos": 91,
+          "non_drone_minutes": 0.0,
+          "non_drone_alarm_frames_per_minute": null,
+          "iou50": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8568457114890493
+          },
+          "center": {
+            "never_found_videos": 0,
+            "never_found_share": 0.0,
+            "first_found_latency_s_median": 0.0,
+            "first_found_latency_s_p90": 0.5,
+            "maintenance_after_first": 0.8623684854416442
+          }
+        }
+      }
+    }
+  },
+  "reference_S1": {
+    "detector": {
+      "threshold": 0.9541826248168945,
+      "k": 1.0,
+      "frames": 9582,
+      "sequences": 91,
+      "gt_boxes": 8429,
+      "ap50": 0.8846873018676265,
+      "precision": 0.9666261316038374,
+      "recall_iou50": 0.8487365049234785,
+      "tp": 7154,
+      "fp": 247,
+      "recall_center": 0.8541938545497687,
+      "drone_free_frames": 1153,
+      "drone_free_frames_with_alarm": 40,
+      "far_drone_free": 0.03469210754553339,
+      "recall_by_size": {
+        "tiny": {
+          "total": 2,
+          "iou50": 0.0,
+          "center": 0.0
+        },
+        "small": {
+          "total": 40,
+          "iou50": 0.675,
+          "center": 0.75
+        },
+        "medium": {
+          "total": 1965,
+          "iou50": 0.7821882951653945,
+          "center": 0.7913486005089059
+        },
+        "large": {
+          "total": 6272,
+          "iou50": 0.8673469387755102,
+          "center": 0.8713329081632653
+        },
+        "xlarge": {
+          "total": 150,
+          "iou50": 1.0,
+          "center": 1.0
+        }
+      },
+      "ci95": {
+        "ap50": [
+          0.8388,
+          0.9262
+        ],
+        "recall_iou50": [
+          0.8005,
+          0.8957
+        ],
+        "recall_center": [
+          0.8059,
+          0.9003
+        ],
+        "precision": [
+          0.9516,
+          0.9781
+        ],
+        "far_drone_free": [
+          0.0081,
+          0.089
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "sequence",
+      "n_units": 91
+    },
+    "sequence": {
+      "drone_videos": 91,
+      "non_drone_minutes": 0.0,
+      "non_drone_alarm_frames_per_minute": null,
+      "iou50": {
+        "never_found_videos": 0,
+        "never_found_share": 0.0,
+        "first_found_latency_s_median": 0.0,
+        "first_found_latency_s_p90": 0.5,
+        "maintenance_after_first": 0.8642927068037201
+      },
+      "center": {
+        "never_found_videos": 0,
+        "never_found_share": 0.0,
+        "first_found_latency_s_median": 0.0,
+        "first_found_latency_s_p90": 0.5,
+        "maintenance_after_first": 0.8698152453199559
+      }
+    }
+  },
+  "recall_by_size_with_supplement": {
+    "A": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7150684931506849,
+        "center": 0.7863013698630137
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7857506361323155,
+        "center": 0.794910941475827
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8667091836734694,
+        "center": 0.8706951530612245
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 0.9933333333333333,
+        "center": 1.0
+      }
+    },
+    "B": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7397260273972602,
+        "center": 0.8164383561643835
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7842239185750636,
+        "center": 0.7928753180661577
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.873405612244898,
+        "center": 0.8791454081632653
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    },
+    "C4": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.5287671232876713,
+        "center": 0.5643835616438356
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7399491094147582,
+        "center": 0.7480916030534351
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8576211734693877,
+        "center": 0.8619260204081632
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 0.9866666666666667,
+        "center": 0.9933333333333333
+      }
+    },
+    "C12": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.5972602739726027,
+        "center": 0.7013698630136986
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.776590330788804,
+        "center": 0.7852417302798982
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8665497448979592,
+        "center": 0.8705357142857143
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 0.9933333333333333,
+        "center": 1.0
+      }
+    },
+    "C37": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.6191780821917808,
+        "center": 0.6986301369863014
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7735368956743003,
+        "center": 0.7821882951653945
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8617665816326531,
+        "center": 0.865593112244898
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 0.9933333333333333,
+        "center": 1.0
+      }
+    }
+  },
+  "frozen_config": "results/stage2/frozen_config.json",
+  "meta": {
+    "timestamp_utc": "2026-11-21T05:14:08+00:00",
+    "git_commit": "0d28f67111ce53e03e1cb88bea1a3de99fd21653",
+    "git_dirty": true,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 2
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "hold_sequences": 20,
+  "hold_frames": 5596,
+  "T2_20": {
+    "m1": {
+      "ap50": 0.6392255413061486,
+      "f1_threshold": 0.9210467338562012,
+      "f1": 0.6437323279924598,
+      "precision": 0.7484931506849315,
+      "recall": 0.5646961554361306
+    },
+    "m2": {
+      "ap50": 0.6384736887211383,
+      "f1_threshold": 0.9533913135528564,
+      "f1": 0.6559283032578419,
+      "precision": 0.792044457443697,
+      "recall": 0.5597354278627532
+    }
+  },
+  "m": 1,
+  "rule": "m = 2 only if AP@0.5 on cst_tr_hold is more than 0.01 above m = 1",
+  "meta": {
+    "timestamp_utc": "2026-11-22T00:50:01+00:00",
+    "git_commit": "c241d7cefed30410e75f51ce7da0bcee986c743d",
+    "git_dirty": true,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 3
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "model": "stage 1 full run (runs/full_frcnn/best.pt)",
+  "threshold": 0.9541826248168945,
+  "set": "svan_dev",
+  "candidates_per_category": {
+    "drone_found_box_too_tight": 1700,
+    "drone_missed_distant": 629,
+    "bird_flagged": 332,
+    "airplane_flagged": 833,
+    "helicopter_flagged": 795,
+    "alarm_away_from_label": 442
+  },
+  "videos_per_category": {
+    "drone_found_box_too_tight": 60,
+    "drone_missed_distant": 18,
+    "bird_flagged": 20,
+    "airplane_flagged": 26,
+    "helicopter_flagged": 23,
+    "alarm_away_from_label": 18
+  },
+  "cases": [
+    {
+      "file": "drone_found_box_too_tight_01.jpg",
+      "category": "drone_found_box_too_tight",
+      "video": "IR_DRONE_040",
+      "frame": 105,
+      "class": "DRONE",
+      "distance_bin": "MEDIUM",
+      "label_size_ref_px": 45.48,
+      "note": "IoU 0.09, centre inside the label",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "drone_found_box_too_tight_02.jpg",
+      "category": "drone_found_box_too_tight",
+      "video": "IR_DRONE_125",
+      "frame": 10,
+      "class": "DRONE",
+      "distance_bin": "DISTANT",
+      "label_size_ref_px": 39.96,
+      "note": "IoU 0.11, centre inside the label",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "drone_found_box_too_tight_03.jpg",
+      "category": "drone_found_box_too_tight",
+      "video": "IR_DRONE_124",
+      "frame": 85,
+      "class": "DRONE",
+      "distance_bin": "DISTANT",
+      "label_size_ref_px": 37.04,
+      "note": "IoU 0.13, centre inside the label",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "drone_missed_distant_01.jpg",
+      "category": "drone_missed_distant",
+      "video": "IR_DRONE_060",
+      "frame": 305,
+      "class": "DRONE",
+      "distance_bin": "DISTANT",
+      "label_size_ref_px": 18.34,
+      "note": "best score inside the label 0.02 < 0.95",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "drone_missed_distant_02.jpg",
+      "category": "drone_missed_distant",
+      "video": "IR_DRONE_154",
+      "frame": 0,
+      "class": "DRONE",
+      "distance_bin": "DISTANT",
+      "label_size_ref_px": 16.0,
+      "note": "best score inside the label 0.05 < 0.95",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "drone_missed_distant_03.jpg",
+      "category": "drone_missed_distant",
+      "video": "IR_DRONE_153",
+      "frame": 155,
+      "class": "DRONE",
+      "distance_bin": "DISTANT",
+      "label_size_ref_px": 17.62,
+      "note": "best score inside the label 0.08 < 0.95",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "bird_flagged_01.jpg",
+      "category": "bird_flagged",
+      "video": "IR_BIRD_032",
+      "frame": 40,
+      "class": "BIRD",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 40.98,
+      "note": "bird boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "bird_flagged_02.jpg",
+      "category": "bird_flagged",
+      "video": "IR_BIRD_036",
+      "frame": 325,
+      "class": "BIRD",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 35.1,
+      "note": "bird boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "bird_flagged_03.jpg",
+      "category": "bird_flagged",
+      "video": "IR_BIRD_024",
+      "frame": 160,
+      "class": "BIRD",
+      "distance_bin": "MEDIUM",
+      "label_size_ref_px": 32.94,
+      "note": "bird boxed as drone, score 0.99",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "airplane_flagged_01.jpg",
+      "category": "airplane_flagged",
+      "video": "IR_AIRPLANE_066",
+      "frame": 240,
+      "class": "AIRPLANE",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 62.6,
+      "note": "airplane boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "airplane_flagged_02.jpg",
+      "category": "airplane_flagged",
+      "video": "IR_AIRPLANE_064",
+      "frame": 255,
+      "class": "AIRPLANE",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 44.34,
+      "note": "airplane boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "airplane_flagged_03.jpg",
+      "category": "airplane_flagged",
+      "video": "IR_AIRPLANE_063",
+      "frame": 215,
+      "class": "AIRPLANE",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 50.04,
+      "note": "airplane boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "helicopter_flagged_01.jpg",
+      "category": "helicopter_flagged",
+      "video": "IR_HELICOPTER_027",
+      "frame": 45,
+      "class": "HELICOPTER",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 71.7,
+      "note": "helicopter boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "helicopter_flagged_02.jpg",
+      "category": "helicopter_flagged",
+      "video": "IR_HELICOPTER_054",
+      "frame": 300,
+      "class": "HELICOPTER",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 71.42,
+      "note": "helicopter boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "helicopter_flagged_03.jpg",
+      "category": "helicopter_flagged",
+      "video": "IR_HELICOPTER_023",
+      "frame": 170,
+      "class": "HELICOPTER",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 55.14,
+      "note": "helicopter boxed as drone, score 1.00",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "alarm_away_from_label_01.jpg",
+      "category": "alarm_away_from_label",
+      "video": "IR_BIRD_030",
+      "frame": 60,
+      "class": "BIRD",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": null,
+      "note": "alarm away from the labelled object, score 0.99",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "alarm_away_from_label_02.jpg",
+      "category": "alarm_away_from_label",
+      "video": "IR_BIRD_024",
+      "frame": 140,
+      "class": "BIRD",
+      "distance_bin": "MEDIUM",
+      "label_size_ref_px": null,
+      "note": "alarm away from the labelled object, score 0.99",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    },
+    {
+      "file": "alarm_away_from_label_03.jpg",
+      "category": "alarm_away_from_label",
+      "video": "IR_AIRPLANE_064",
+      "frame": 85,
+      "class": "AIRPLANE",
+      "distance_bin": "CLOSE",
+      "label_size_ref_px": 36.94,
+      "note": "alarm away from the labelled object, score 0.99",
+      "dataset": "Svanström et al. 2021 (Zenodo 10.5281/zenodo.5500576, CC0), dev split"
+    }
+  ]
+}

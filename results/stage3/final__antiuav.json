@@ -1,0 +1,699 @@
+{
+  "set": "auv_test",
+  "frames": 9582,
+  "reference_S1_stage1": {
+    "threshold": 0.9541826248168945,
+    "k": 1.0,
+    "frames": 9582,
+    "sequences": 91,
+    "gt_boxes": 8429,
+    "ap50": 0.8846873018676265,
+    "precision": 0.9666261316038374,
+    "recall_iou50": 0.8487365049234785,
+    "tp": 7154,
+    "fp": 247,
+    "recall_center": 0.8541938545497687,
+    "drone_free_frames": 1153,
+    "drone_free_frames_with_alarm": 40,
+    "far_drone_free": 0.03469210754553339,
+    "recall_by_size": {
+      "tiny": {
+        "total": 2,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 40,
+        "iou50": 0.675,
+        "center": 0.75
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7821882951653945,
+        "center": 0.7913486005089059
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8673469387755102,
+        "center": 0.8713329081632653
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    },
+    "at_far10_same_frames": {
+      "threshold": 0.7701272368431092,
+      "far_drone_free": 0.0997398091934085,
+      "recall_iou50": 0.8768537193024084,
+      "recall_center": 0.8853956578479061,
+      "recall_tiny_iou50": 0.0,
+      "recall_tiny_center": 0.0,
+      "recall_small_iou50": 0.8,
+      "recall_small_center": 0.9
+    },
+    "box_ratio_pred_over_label": {
+      "n": 7201,
+      "width_median": 1.0063568115234376,
+      "height_median": 0.9701951549899194
+    },
+    "ci95": {
+      "ap50": [
+        0.8388,
+        0.9262
+      ],
+      "recall_iou50": [
+        0.8005,
+        0.8957
+      ],
+      "recall_center": [
+        0.8059,
+        0.9003
+      ],
+      "precision": [
+        0.9516,
+        0.9781
+      ],
+      "far_drone_free": [
+        0.0081,
+        0.089
+      ],
+      "recall_tiny_iou50": [
+        0.0,
+        0.0
+      ],
+      "recall_tiny_center": [
+        0.0,
+        0.0
+      ],
+      "recall_small_iou50": [
+        0.2,
+        0.7778
+      ],
+      "recall_small_center": [
+        0.3636,
+        0.8393
+      ]
+    },
+    "B": 1000,
+    "seed": 0,
+    "unit": "sequence",
+    "n_units": 91
+  },
+  "configs": {
+    "T1": {
+      "status": "ok",
+      "tag": "s1_m1",
+      "model": "S1",
+      "m": 1,
+      "same_as": null,
+      "threshold": 0.9541826248168945,
+      "k": 1.0,
+      "frames": 9582,
+      "sequences": 91,
+      "gt_boxes": 8429,
+      "ap50": 0.8846873018676265,
+      "precision": 0.9666261316038374,
+      "recall_iou50": 0.8487365049234785,
+      "tp": 7154,
+      "fp": 247,
+      "recall_center": 0.8541938545497687,
+      "drone_free_frames": 1153,
+      "drone_free_frames_with_alarm": 40,
+      "far_drone_free": 0.03469210754553339,
+      "recall_by_size": {
+        "tiny": {
+          "total": 2,
+          "iou50": 0.0,
+          "center": 0.0
+        },
+        "small": {
+          "total": 40,
+          "iou50": 0.675,
+          "center": 0.75
+        },
+        "medium": {
+          "total": 1965,
+          "iou50": 0.7821882951653945,
+          "center": 0.7913486005089059
+        },
+        "large": {
+          "total": 6272,
+          "iou50": 0.8673469387755102,
+          "center": 0.8713329081632653
+        },
+        "xlarge": {
+          "total": 150,
+          "iou50": 1.0,
+          "center": 1.0
+        }
+      },
+      "at_far10_same_frames": {
+        "threshold": 0.7701272368431092,
+        "far_drone_free": 0.0997398091934085,
+        "recall_iou50": 0.8768537193024084,
+        "recall_center": 0.8853956578479061,
+        "recall_tiny_iou50": 0.0,
+        "recall_tiny_center": 0.0,
+        "recall_small_iou50": 0.8,
+        "recall_small_center": 0.9
+      },
+      "box_ratio_pred_over_label": {
+        "n": 7201,
+        "width_median": 1.00635,
+        "height_median": 0.9702258064516128
+      },
+      "ci95": {
+        "ap50": [
+          0.8388,
+          0.9262
+        ],
+        "recall_iou50": [
+          0.8005,
+          0.8957
+        ],
+        "recall_center": [
+          0.8059,
+          0.9003
+        ],
+        "precision": [
+          0.9516,
+          0.9781
+        ],
+        "far_drone_free": [
+          0.0081,
+          0.089
+        ],
+        "recall_tiny_iou50": [
+          0.0,
+          0.0
+        ],
+        "recall_tiny_center": [
+          0.0,
+          0.0
+        ],
+        "recall_small_iou50": [
+          0.2,
+          0.7778
+        ],
+        "recall_small_center": [
+          0.3636,
+          0.8393
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "sequence",
+      "n_units": 91,
+      "paired_diff": {
+        "ap50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_iou50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_center": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "precision": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "far_drone_free": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_tiny_iou50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_tiny_center": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_small_iou50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_small_center": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "T2_20": {
+      "status": "ok",
+      "tag": "t2_20_m1",
+      "model": "T2_20",
+      "m": 1,
+      "same_as": null,
+      "threshold": 0.9210467338562012,
+      "k": 1.0,
+      "frames": 9582,
+      "sequences": 91,
+      "gt_boxes": 8429,
+      "ap50": 0.8626143347982238,
+      "precision": 0.9259307642064011,
+      "recall_iou50": 0.8409063945901056,
+      "tp": 7088,
+      "fp": 567,
+      "recall_center": 0.852651560090165,
+      "drone_free_frames": 1153,
+      "drone_free_frames_with_alarm": 79,
+      "far_drone_free": 0.06851691240242845,
+      "recall_by_size": {
+        "tiny": {
+          "total": 2,
+          "iou50": 0.0,
+          "center": 0.0
+        },
+        "small": {
+          "total": 40,
+          "iou50": 0.825,
+          "center": 0.85
+        },
+        "medium": {
+          "total": 1965,
+          "iou50": 0.7684478371501272,
+          "center": 0.7974554707379135
+        },
+        "large": {
+          "total": 6272,
+          "iou50": 0.8601721938775511,
+          "center": 0.8667091836734694
+        },
+        "xlarge": {
+          "total": 150,
+          "iou50": 1.0,
+          "center": 1.0
+        }
+      },
+      "at_far10_same_frames": {
+        "threshold": 0.8940314650535585,
+        "far_drone_free": 0.0997398091934085,
+        "recall_iou50": 0.8458891920749793,
+        "recall_center": 0.8590580139992882,
+        "recall_tiny_iou50": 0.0,
+        "recall_tiny_center": 0.0,
+        "recall_small_iou50": 0.825,
+        "recall_small_center": 0.85
+      },
+      "box_ratio_pred_over_label": {
+        "n": 7186,
+        "width_median": 1.0044012382075462,
+        "height_median": 0.9558786764705878
+      },
+      "ci95": {
+        "ap50": [
+          0.8171,
+          0.9066
+        ],
+        "recall_iou50": [
+          0.7924,
+          0.8873
+        ],
+        "recall_center": [
+          0.8071,
+          0.8978
+        ],
+        "precision": [
+          0.9057,
+          0.9446
+        ],
+        "far_drone_free": [
+          0.0291,
+          0.1388
+        ],
+        "recall_tiny_iou50": [
+          0.0,
+          0.0
+        ],
+        "recall_tiny_center": [
+          0.0,
+          0.0
+        ],
+        "recall_small_iou50": [
+          0.3992,
+          0.9231
+        ],
+        "recall_small_center": [
+          0.4,
+          0.9286
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "sequence",
+      "n_units": 91,
+      "paired_diff": {
+        "ap50": {
+          "diff": -0.02207296706940265,
+          "ci95": [
+            -0.0309,
+            -0.0142
+          ]
+        },
+        "recall_iou50": {
+          "diff": -0.007830110333372886,
+          "ci95": [
+            -0.0147,
+            -0.0013
+          ]
+        },
+        "recall_center": {
+          "diff": -0.0015422944596037436,
+          "ci95": [
+            -0.0071,
+            0.0043
+          ]
+        },
+        "precision": {
+          "diff": -0.04069536739743629,
+          "ci95": [
+            -0.0581,
+            -0.0259
+          ]
+        },
+        "far_drone_free": {
+          "diff": 0.03382480485689506,
+          "ci95": [
+            0.0033,
+            0.0721
+          ]
+        },
+        "recall_tiny_iou50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_tiny_center": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_small_iou50": {
+          "diff": 0.1499999999999999,
+          "ci95": [
+            0.0815,
+            0.3333
+          ]
+        },
+        "recall_small_center": {
+          "diff": 0.09999999999999998,
+          "ci95": [
+            0.0,
+            0.2609
+          ]
+        }
+      }
+    }
+  },
+  "pairs": {
+    "T2_20_minus_T1": {
+      "ap50": {
+        "diff": -0.02207296706940265,
+        "ci95": [
+          -0.0309,
+          -0.0142
+        ]
+      },
+      "recall_iou50": {
+        "diff": -0.007830110333372886,
+        "ci95": [
+          -0.0147,
+          -0.0013
+        ]
+      },
+      "recall_center": {
+        "diff": -0.0015422944596037436,
+        "ci95": [
+          -0.0071,
+          0.0043
+        ]
+      },
+      "precision": {
+        "diff": -0.04069536739743629,
+        "ci95": [
+          -0.0581,
+          -0.0259
+        ]
+      },
+      "far_drone_free": {
+        "diff": 0.03382480485689506,
+        "ci95": [
+          0.0033,
+          0.0721
+        ]
+      },
+      "recall_tiny_iou50": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall_tiny_center": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall_small_iou50": {
+        "diff": 0.1499999999999999,
+        "ci95": [
+          0.0815,
+          0.3333
+        ]
+      },
+      "recall_small_center": {
+        "diff": 0.09999999999999998,
+        "ci95": [
+          0.0,
+          0.2609
+        ]
+      }
+    }
+  },
+  "verdicts": {
+    "J5_T1": {
+      "diffs": {
+        "recall_iou50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "ap50": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "far_drone_free": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "over_limit": {
+        "recall_iou50": false,
+        "ap50": false,
+        "far_drone_free": false
+      },
+      "regression": false
+    },
+    "J5_T2_20": {
+      "diffs": {
+        "recall_iou50": {
+          "diff": -0.007830110333372886,
+          "ci95": [
+            -0.0147,
+            -0.0013
+          ]
+        },
+        "ap50": {
+          "diff": -0.02207296706940265,
+          "ci95": [
+            -0.0309,
+            -0.0142
+          ]
+        },
+        "far_drone_free": {
+          "diff": 0.03382480485689506,
+          "ci95": [
+            0.0033,
+            0.0721
+          ]
+        }
+      },
+      "over_limit": {
+        "recall_iou50": false,
+        "ap50": true,
+        "far_drone_free": true
+      },
+      "regression": true
+    }
+  },
+  "limits_J5": {
+    "recall_iou50": -0.02,
+    "ap50": -0.02,
+    "far_drone_free": 0.02
+  },
+  "recall_by_size_with_supplement": {
+    "T1": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7178082191780822,
+        "center": 0.7863013698630137
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7821882951653945,
+        "center": 0.7913486005089059
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8673469387755102,
+        "center": 0.8713329081632653
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    },
+    "T2_20": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7972602739726027,
+        "center": 0.8356164383561644
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7684478371501272,
+        "center": 0.7974554707379135
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8601721938775511,
+        "center": 0.8667091836734694
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    },
+    "S1_stage1": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7178082191780822,
+        "center": 0.7863013698630137
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7821882951653945,
+        "center": 0.7913486005089059
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8673469387755102,
+        "center": 0.8713329081632653
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    }
+  },
+  "frozen_config": "results/stage3/frozen_config.json",
+  "meta": {
+    "timestamp_utc": "2026-11-22T05:44:14+00:00",
+    "git_commit": "846ad5e4d149483e8d5724f5eeb50ab9c0cdfc95",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 3
+  }
+}

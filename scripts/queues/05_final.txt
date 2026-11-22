@@ -1,0 +1,30 @@
+# Final evaluation inference. Start only after results/stage2/frozen_config.json is committed.
+# Each configuration once. Order = importance (addendum 2): Svanström test, Anti-UAV test, CST, Anti-UAV track subset.
+# Input for every configuration: x1 + flip TTA. S1 reference: stage 1 caches; s1_n = stage 1 settings on sets stage 1 never ran.
+# --- Svanström test (183 videos, 11,523 frames)
+test_A | tdd.stage2.infer --tag s1_x1tta --set svan_test --scale 1 --tta
+test_B | tdd.stage2.infer --tag r1e1_x1tta --set svan_test --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+test_C37 | tdd.stage2.infer --tag r2n37_x1tta --set svan_test --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta
+test_C12 | tdd.stage2.infer --tag r2n12_x1tta --set svan_test --ckpt runs/stage2/r2_n12/last.pt --scale 1 --tta
+test_C4 | tdd.stage2.infer --tag r2n4_x1tta --set svan_test --ckpt runs/stage2/r2_n4/last.pt --scale 1 --tta
+# --- Anti-UAV test (regression) and its small-target supplement
+auv_A | tdd.stage2.infer --tag s1_ntta --set auv_test --scale 1 --tta
+auvs_A | tdd.stage2.infer --tag s1_ntta --set auv_test_small --scale 1 --tta
+auv_B | tdd.stage2.infer --tag r1e1_ntta --set auv_test --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+auvs_B | tdd.stage2.infer --tag r1e1_ntta --set auv_test_small --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+auv_C37 | tdd.stage2.infer --tag r2n37_ntta --set auv_test --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta
+auvs_C37 | tdd.stage2.infer --tag r2n37_ntta --set auv_test_small --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta
+auv_C12 | tdd.stage2.infer --tag r2n12_ntta --set auv_test --ckpt runs/stage2/r2_n12/last.pt --scale 1 --tta
+auvs_C12 | tdd.stage2.infer --tag r2n12_ntta --set auv_test_small --ckpt runs/stage2/r2_n12/last.pt --scale 1 --tta
+auv_C4 | tdd.stage2.infer --tag r2n4_ntta --set auv_test --ckpt runs/stage2/r2_n4/last.pt --scale 1 --tta
+auvs_C4 | tdd.stage2.infer --tag r2n4_ntta --set auv_test_small --ckpt runs/stage2/r2_n4/last.pt --scale 1 --tta
+# --- third dataset: CST Anti-UAV test (never used for any choice)
+cst_S1 | tdd.stage2.infer --tag s1_n --set cst_test --scale 1
+cst_A | tdd.stage2.infer --tag s1_ntta --set cst_test --scale 1 --tta
+cst_B | tdd.stage2.infer --tag r1e1_ntta --set cst_test --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+cst_C37 | tdd.stage2.infer --tag r2n37_ntta --set cst_test --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta
+# --- Anti-UAV test track subset (first 300 frames of each sequence, every 3rd frame)
+trk_S1 | tdd.stage2.infer --tag s1_n --set auv_track --scale 1
+trk_A | tdd.stage2.infer --tag s1_ntta --set auv_track --scale 1 --tta
+trk_B | tdd.stage2.infer --tag r1e1_ntta --set auv_track --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+trk_C37 | tdd.stage2.infer --tag r2n37_ntta --set auv_track --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta

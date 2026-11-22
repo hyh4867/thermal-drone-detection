@@ -1,0 +1,1243 @@
+{
+  "dataset": "CST Anti-UAV (val and train splits)",
+  "source": "github.com/PCwenyue/CST-Anti-UAV",
+  "frame_stride": 4,
+  "fps_source": 25.0,
+  "val": {
+    "sequences": 40,
+    "frames": 11335,
+    "frames_with_box": 9764,
+    "frames_without_box": 1571,
+    "boxes_by_size_sqrt_wh": {
+      "small": 5050,
+      "tiny": 3408,
+      "medium": 1216,
+      "large": 89,
+      "xlarge": 1
+    },
+    "sequences_by_scene": {
+      "building": 14,
+      "cn_mountains": 9,
+      "cn_sky": 2,
+      "jungle": 1,
+      "urban-areas": 8,
+      "water": 6
+    },
+    "resolutions": {
+      "640x512": 40
+    },
+    "per_sequence": {
+      "building_41": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 248,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_42": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_43": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_44": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 240,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_45": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 223,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_46": {
+        "frames_kept": 219,
+        "labels_in_file": 875,
+        "boxes_kept": 219,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_47": {
+        "frames_kept": 242,
+        "labels_in_file": 965,
+        "boxes_kept": 197,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_48": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 248,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_49": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_50": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 247,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_51": {
+        "frames_kept": 238,
+        "labels_in_file": 950,
+        "boxes_kept": 235,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_52": {
+        "frames_kept": 259,
+        "labels_in_file": 1035,
+        "boxes_kept": 256,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_53": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 229,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_54": {
+        "frames_kept": 311,
+        "labels_in_file": 1244,
+        "boxes_kept": 277,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_21": {
+        "frames_kept": 249,
+        "labels_in_file": 995,
+        "boxes_kept": 234,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_22": {
+        "frames_kept": 248,
+        "labels_in_file": 989,
+        "boxes_kept": 218,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_23": {
+        "frames_kept": 248,
+        "labels_in_file": 989,
+        "boxes_kept": 233,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_24": {
+        "frames_kept": 290,
+        "labels_in_file": 1160,
+        "boxes_kept": 263,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_25": {
+        "frames_kept": 480,
+        "labels_in_file": 1918,
+        "boxes_kept": 375,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_26": {
+        "frames_kept": 291,
+        "labels_in_file": 1164,
+        "boxes_kept": 251,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_27": {
+        "frames_kept": 298,
+        "labels_in_file": 1189,
+        "boxes_kept": 298,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_28": {
+        "frames_kept": 293,
+        "labels_in_file": 1170,
+        "boxes_kept": 219,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_29": {
+        "frames_kept": 314,
+        "labels_in_file": 1254,
+        "boxes_kept": 274,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_10": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 243,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_9": {
+        "frames_kept": 315,
+        "labels_in_file": 1260,
+        "boxes_kept": 179,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_6": {
+        "frames_kept": 305,
+        "labels_in_file": 1220,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_27": {
+        "frames_kept": 375,
+        "labels_in_file": 1500,
+        "boxes_kept": 291,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_28": {
+        "frames_kept": 226,
+        "labels_in_file": 904,
+        "boxes_kept": 226,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_29": {
+        "frames_kept": 430,
+        "labels_in_file": 1720,
+        "boxes_kept": 297,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_30": {
+        "frames_kept": 375,
+        "labels_in_file": 1500,
+        "boxes_kept": 238,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_31": {
+        "frames_kept": 387,
+        "labels_in_file": 1545,
+        "boxes_kept": 275,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_32": {
+        "frames_kept": 401,
+        "labels_in_file": 1604,
+        "boxes_kept": 256,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_33": {
+        "frames_kept": 427,
+        "labels_in_file": 1707,
+        "boxes_kept": 347,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_34": {
+        "frames_kept": 399,
+        "labels_in_file": 1595,
+        "boxes_kept": 287,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_14": {
+        "frames_kept": 151,
+        "labels_in_file": 603,
+        "boxes_kept": 151,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_15": {
+        "frames_kept": 265,
+        "labels_in_file": 1059,
+        "boxes_kept": 212,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_16": {
+        "frames_kept": 181,
+        "labels_in_file": 722,
+        "boxes_kept": 181,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_17": {
+        "frames_kept": 206,
+        "labels_in_file": 823,
+        "boxes_kept": 206,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_18": {
+        "frames_kept": 206,
+        "labels_in_file": 823,
+        "boxes_kept": 206,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_19": {
+        "frames_kept": 206,
+        "labels_in_file": 823,
+        "boxes_kept": 185,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      }
+    }
+  },
+  "train": {
+    "sequences": 120,
+    "frames": 32020,
+    "frames_with_box": 27512,
+    "frames_without_box": 4508,
+    "boxes_by_size_sqrt_wh": {
+      "tiny": 7709,
+      "medium": 3233,
+      "small": 16568,
+      "large": 2
+    },
+    "sequences_by_scene": {
+      "building": 51,
+      "cn_mountains": 20,
+      "cn_sky": 8,
+      "jungle": 5,
+      "urban-areas": 23,
+      "water": 13
+    },
+    "resolutions": {
+      "640x512": 120
+    },
+    "per_sequence": {
+      "building_1": {
+        "frames_kept": 232,
+        "labels_in_file": 925,
+        "boxes_kept": 119,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_10": {
+        "frames_kept": 294,
+        "labels_in_file": 1175,
+        "boxes_kept": 123,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_11": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_12": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 95,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_13": {
+        "frames_kept": 300,
+        "labels_in_file": 1200,
+        "boxes_kept": 241,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_14": {
+        "frames_kept": 275,
+        "labels_in_file": 1100,
+        "boxes_kept": 214,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_15": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 206,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_16": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 213,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_17": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 247,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_18": {
+        "frames_kept": 287,
+        "labels_in_file": 1145,
+        "boxes_kept": 287,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_19": {
+        "frames_kept": 312,
+        "labels_in_file": 1247,
+        "boxes_kept": 303,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_2": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_20": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_21": {
+        "frames_kept": 264,
+        "labels_in_file": 1055,
+        "boxes_kept": 264,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_22": {
+        "frames_kept": 305,
+        "labels_in_file": 1220,
+        "boxes_kept": 305,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_23": {
+        "frames_kept": 255,
+        "labels_in_file": 1020,
+        "boxes_kept": 255,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_24": {
+        "frames_kept": 372,
+        "labels_in_file": 1488,
+        "boxes_kept": 267,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_25": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_26": {
+        "frames_kept": 280,
+        "labels_in_file": 1120,
+        "boxes_kept": 279,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_27": {
+        "frames_kept": 294,
+        "labels_in_file": 1175,
+        "boxes_kept": 245,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_28": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_29": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 241,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_3": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_30": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 152,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_31": {
+        "frames_kept": 389,
+        "labels_in_file": 1556,
+        "boxes_kept": 251,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_32": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 195,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_33": {
+        "frames_kept": 319,
+        "labels_in_file": 1275,
+        "boxes_kept": 317,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_34": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 161,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_35": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 24,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_36": {
+        "frames_kept": 282,
+        "labels_in_file": 1125,
+        "boxes_kept": 210,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_37": {
+        "frames_kept": 355,
+        "labels_in_file": 1418,
+        "boxes_kept": 196,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_38": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 183,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_39": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 200,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_4": {
+        "frames_kept": 279,
+        "labels_in_file": 1115,
+        "boxes_kept": 177,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_40": {
+        "frames_kept": 282,
+        "labels_in_file": 1125,
+        "boxes_kept": 232,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_5": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 180,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_55": {
+        "frames_kept": 249,
+        "labels_in_file": 995,
+        "boxes_kept": 247,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_56": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 172,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_57": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_58": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 249,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_59": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_6": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 241,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_60": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_61": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 248,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_62": {
+        "frames_kept": 269,
+        "labels_in_file": 1075,
+        "boxes_kept": 189,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_63": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_64": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 215,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_65": {
+        "frames_kept": 224,
+        "labels_in_file": 894,
+        "boxes_kept": 224,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_7": {
+        "frames_kept": 150,
+        "labels_in_file": 600,
+        "boxes_kept": 61,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_8": {
+        "frames_kept": 253,
+        "labels_in_file": 1010,
+        "boxes_kept": 235,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "building_9": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_1": {
+        "frames_kept": 364,
+        "labels_in_file": 1454,
+        "boxes_kept": 240,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_10": {
+        "frames_kept": 249,
+        "labels_in_file": 995,
+        "boxes_kept": 146,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_11": {
+        "frames_kept": 348,
+        "labels_in_file": 1389,
+        "boxes_kept": 189,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_12": {
+        "frames_kept": 376,
+        "labels_in_file": 1504,
+        "boxes_kept": 282,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_13": {
+        "frames_kept": 368,
+        "labels_in_file": 1471,
+        "boxes_kept": 352,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_14": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 239,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_15": {
+        "frames_kept": 312,
+        "labels_in_file": 1245,
+        "boxes_kept": 199,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_16": {
+        "frames_kept": 281,
+        "labels_in_file": 1124,
+        "boxes_kept": 281,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_17": {
+        "frames_kept": 266,
+        "labels_in_file": 1064,
+        "boxes_kept": 249,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_18": {
+        "frames_kept": 275,
+        "labels_in_file": 1099,
+        "boxes_kept": 275,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_19": {
+        "frames_kept": 344,
+        "labels_in_file": 1374,
+        "boxes_kept": 315,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_2": {
+        "frames_kept": 380,
+        "labels_in_file": 1520,
+        "boxes_kept": 335,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_20": {
+        "frames_kept": 295,
+        "labels_in_file": 1179,
+        "boxes_kept": 292,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_3": {
+        "frames_kept": 195,
+        "labels_in_file": 779,
+        "boxes_kept": 170,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_4": {
+        "frames_kept": 194,
+        "labels_in_file": 775,
+        "boxes_kept": 178,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_5": {
+        "frames_kept": 195,
+        "labels_in_file": 777,
+        "boxes_kept": 169,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_6": {
+        "frames_kept": 210,
+        "labels_in_file": 840,
+        "boxes_kept": 154,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_7": {
+        "frames_kept": 224,
+        "labels_in_file": 895,
+        "boxes_kept": 176,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_8": {
+        "frames_kept": 198,
+        "labels_in_file": 789,
+        "boxes_kept": 188,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_mountains_9": {
+        "frames_kept": 263,
+        "labels_in_file": 1050,
+        "boxes_kept": 177,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_1": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 231,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_2": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 238,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_3": {
+        "frames_kept": 280,
+        "labels_in_file": 1120,
+        "boxes_kept": 240,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_4": {
+        "frames_kept": 388,
+        "labels_in_file": 1551,
+        "boxes_kept": 374,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_5": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 214,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_6": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_7": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 220,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "cn_sky_8": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 219,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_1": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 233,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_2": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 226,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_3": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_4": {
+        "frames_kept": 238,
+        "labels_in_file": 950,
+        "boxes_kept": 194,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "jungle_5": {
+        "frames_kept": 253,
+        "labels_in_file": 1010,
+        "boxes_kept": 182,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_1": {
+        "frames_kept": 506,
+        "labels_in_file": 2022,
+        "boxes_kept": 364,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_10": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 243,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_11": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_12": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 244,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_13": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 239,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_14": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 216,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_15": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 239,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_16": {
+        "frames_kept": 262,
+        "labels_in_file": 1048,
+        "boxes_kept": 261,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_17": {
+        "frames_kept": 387,
+        "labels_in_file": 1545,
+        "boxes_kept": 387,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_18": {
+        "frames_kept": 375,
+        "labels_in_file": 1500,
+        "boxes_kept": 340,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_19": {
+        "frames_kept": 375,
+        "labels_in_file": 1500,
+        "boxes_kept": 364,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_2": {
+        "frames_kept": 325,
+        "labels_in_file": 1300,
+        "boxes_kept": 323,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_20": {
+        "frames_kept": 375,
+        "labels_in_file": 1500,
+        "boxes_kept": 338,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_21": {
+        "frames_kept": 242,
+        "labels_in_file": 965,
+        "boxes_kept": 147,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_22": {
+        "frames_kept": 389,
+        "labels_in_file": 1555,
+        "boxes_kept": 311,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_23": {
+        "frames_kept": 240,
+        "labels_in_file": 960,
+        "boxes_kept": 188,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_3": {
+        "frames_kept": 262,
+        "labels_in_file": 1045,
+        "boxes_kept": 246,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_4": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 142,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_5": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 143,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_6": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 215,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_7": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 250,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_8": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 249,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "urban-areas_9": {
+        "frames_kept": 250,
+        "labels_in_file": 1000,
+        "boxes_kept": 249,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_1": {
+        "frames_kept": 237,
+        "labels_in_file": 947,
+        "boxes_kept": 237,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_10": {
+        "frames_kept": 206,
+        "labels_in_file": 824,
+        "boxes_kept": 206,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_11": {
+        "frames_kept": 193,
+        "labels_in_file": 772,
+        "boxes_kept": 193,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_12": {
+        "frames_kept": 213,
+        "labels_in_file": 849,
+        "boxes_kept": 213,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_13": {
+        "frames_kept": 203,
+        "labels_in_file": 811,
+        "boxes_kept": 203,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_2": {
+        "frames_kept": 203,
+        "labels_in_file": 809,
+        "boxes_kept": 167,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_3": {
+        "frames_kept": 185,
+        "labels_in_file": 737,
+        "boxes_kept": 185,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_4": {
+        "frames_kept": 216,
+        "labels_in_file": 862,
+        "boxes_kept": 216,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_5": {
+        "frames_kept": 219,
+        "labels_in_file": 875,
+        "boxes_kept": 191,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_6": {
+        "frames_kept": 210,
+        "labels_in_file": 837,
+        "boxes_kept": 210,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_7": {
+        "frames_kept": 277,
+        "labels_in_file": 1107,
+        "boxes_kept": 264,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_8": {
+        "frames_kept": 200,
+        "labels_in_file": 798,
+        "boxes_kept": 186,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      },
+      "water_9": {
+        "frames_kept": 203,
+        "labels_in_file": 811,
+        "boxes_kept": 203,
+        "label_file": "IR_label.json",
+        "resolution": "640x512"
+      }
+    }
+  },
+  "download": {
+    "parts": [
+      [
+        "CST-AntiUAV.z01",
+        "12il79A75af_ahfQEakKtzrA3LEqWTn2G"
+      ],
+      [
+        "CST-AntiUAV.z02",
+        "1bWscp-86dgeZ8mLUNQkoLCzLZGA7wvkt"
+      ],
+      [
+        "CST-AntiUAV.z03",
+        "1V6jql4Kiq6ReTv61sEh3Rx8Yxi2ZYcJw"
+      ],
+      [
+        "CST-AntiUAV.z04",
+        "1pq7XRB34DI3oMANx1HqU8M3Ah11VJESa"
+      ],
+      [
+        "CST-AntiUAV.z05",
+        "1XRkXugzW7Aije4vy6dEZHs1fIy6-b5i9"
+      ],
+      [
+        "CST-AntiUAV.z06",
+        "1PJgfgMbQpQ5kmYaGw51qwdOAUxc03Wt9"
+      ],
+      [
+        "CST-AntiUAV.z07",
+        "1HMfUlGTOhinMPKRwmt9gYfPZq8OV28dl"
+      ],
+      [
+        "CST-AntiUAV.z08",
+        "1YlL527rZ6SYgIj-8IN-Mb1vhqJe_kvG5"
+      ],
+      [
+        "CST-AntiUAV.z09",
+        "1QvqlSLm_XuPBnpYDcFDBJxY7UG0MKoZ_"
+      ],
+      [
+        "CST-AntiUAV.z10",
+        "1zCALY_qU2KI8NZF_pQ-kSNVP0nCNpR4l"
+      ],
+      [
+        "CST-AntiUAV.zip",
+        "14zO4bcudHkY2DxmbLyiRKlHpUg6vIv0d"
+      ]
+    ],
+    "bytes_consumed": 23226837159,
+    "sha256_of_consumed_stream": "3cb20532d7baf819c7c1942ab75c9199497b989eb49bb3709504dcfc362eab1e",
+    "stopped_at": "non-entry signature b'PK\\x01\\x02'",
+    "kept_files": 43835,
+    "skipped_entries": 202522,
+    "sequences": {
+      "train": 120,
+      "val": 40
+    },
+    "images_with_non_numeric_name": {},
+    "test_part_check": {
+      "bytes": 6654933195,
+      "sha256": "9fccc0c0502098135f83c00cd71b11637b92ce48bf50bc2b02f96da649b816a3",
+      "matches_stage2_log": true
+    },
+    "frame_stride": 4,
+    "minutes": 10.0,
+    "date": "2026-11-21 18:45:32 KST"
+  }
+}

@@ -5,3 +5,6 @@
 *.pt
 *.pth
 __pycache__/
+# Stage 2: demo videos and other rendered media are never committed.
+*.mp4
+*.mov

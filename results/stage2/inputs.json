@@ -1,0 +1,1389 @@
+{
+  "set": "svan_dev10",
+  "frames": 5626,
+  "stage1_threshold": 0.9541826248168945,
+  "T_base": 0.3766760212036171,
+  "configs": {
+    "s1_x1": {
+      "label": "x1 whole image",
+      "status": "ok",
+      "k_selected": 1.2,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.5036093418259023
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.5282377919320594
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.5532908704883227
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.5562632696390658
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.5579617834394904
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.5507430997876858
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.5337579617834395
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.5193205944798301
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.49851380042462845
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.47473460721868366
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.44331210191082804
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.4004246284501062
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.354140127388535
+        }
+      ],
+      "s_per_frame": 0.14,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.2,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.5579617834394904,
+        "recall_center": 0.6471337579617834,
+        "far": 0.16089803554724041,
+        "far_by_class": {
+          "BIRD": 0.05172413793103448,
+          "AIRPLANE": 0.12860892388451445,
+          "HELICOPTER": 0.3617021276595745
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.8,
+            "center": 0.9657142857142857
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.7035714285714286,
+            "center": 0.8121428571428572
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.08099173553719008,
+            "center": 0.08099173553719008
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.04541241890639481,
+            "center": 0.05004633920296571
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.1242344706911636,
+            "center": 0.1242344706911636
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.3132387706855792,
+            "center": 0.3617021276595745
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.7981143593788148,
+        "k": 1.2,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7660297239915075,
+        "recall_center": 0.8768577494692145,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2848932676518883,
+          "AIRPLANE": 0.3455818022747157,
+          "HELICOPTER": 0.5508274231678487
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.8257142857142857,
+            "center": 0.9971428571428571
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8514285714285714,
+            "center": 0.9742857142857143
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.5338842975206611,
+            "center": 0.5818181818181818
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.2159406858202039,
+            "center": 0.2428174235403151
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.2992125984251969,
+            "center": 0.32458442694663164
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.3806146572104019,
+            "center": 0.5449172576832151
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.9825444817543031,
+        "k": 1.2,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.31634819532908703,
+        "recall_center": 0.3732484076433121,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.010673234811165846,
+          "AIRPLANE": 0.06824146981627296,
+          "HELICOPTER": 0.2706855791962175
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7457142857142857,
+            "center": 0.9
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.3442857142857143,
+            "center": 0.4014285714285714
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.003305785123966942,
+            "center": 0.003305785123966942
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.011121408711770158,
+            "center": 0.011121408711770158
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.06824146981627296,
+            "center": 0.06824146981627296
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.25295508274231676,
+            "center": 0.2706855791962175
+          }
+        }
+      },
+      "paired_vs_x2_iso_far": {
+        "recall_iou50": {
+          "diff": 0.027600849256900317,
+          "ci95": [
+            -0.0043,
+            0.0629
+          ]
+        },
+        "recall_center": {
+          "diff": 0.03227176220806793,
+          "ci95": [
+            0.0048,
+            0.0637
+          ]
+        },
+        "far": {
+          "diff": 0.0,
+          "ci95": [
+            -0.0636,
+            0.063
+          ]
+        }
+      }
+    },
+    "s1": {
+      "label": "x2 whole image (stage 1)",
+      "status": "ok",
+      "k_selected": 1.35,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.4823779193205945
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.5447983014861996
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.6076433121019108
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.6547770700636942
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.689171974522293
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.7112526539278131
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.732484076433121
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.7384288747346072
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.7358811040339702
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.7295116772823779
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.7104033970276008
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.692144373673036
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.6747346072186836
+        }
+      ],
+      "s_per_frame": null,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.35,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7384288747346072,
+        "recall_center": 0.8445859872611465,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2651888341543514,
+          "AIRPLANE": 0.4243219597550306,
+          "HELICOPTER": 0.4728132387706856
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.8142857142857143,
+            "center": 0.9828571428571429
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8621428571428571,
+            "center": 0.9707142857142858
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.40826446280991735,
+            "center": 0.4727272727272727
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.12418906394810009,
+            "center": 0.1519925857275255
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.28433945756780404,
+            "center": 0.3665791776027997
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.39361702127659576,
+            "center": 0.4728132387706856
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.9540945291519166,
+        "k": 1.35,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7384288747346072,
+        "recall_center": 0.8445859872611465,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2651888341543514,
+          "AIRPLANE": 0.4243219597550306,
+          "HELICOPTER": 0.4728132387706856
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.8142857142857143,
+            "center": 0.9828571428571429
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8621428571428571,
+            "center": 0.9707142857142858
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.40826446280991735,
+            "center": 0.4727272727272727
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.12418906394810009,
+            "center": 0.1519925857275255
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.28433945756780404,
+            "center": 0.3665791776027997
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.39361702127659576,
+            "center": 0.4728132387706856
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.989094913005829,
+        "k": 1.35,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.44501061571125267,
+        "recall_center": 0.5099787685774947,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.023809523809523808,
+          "AIRPLANE": 0.10323709536307961,
+          "HELICOPTER": 0.2044917257683215
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7628571428571429,
+            "center": 0.92
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.5564285714285714,
+            "center": 0.6257142857142857
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.003305785123966942,
+            "center": 0.0049586776859504135
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.022242817423540315,
+            "center": 0.023169601482854494
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.10061242344706911,
+            "center": 0.10236220472440945
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.20094562647754138,
+            "center": 0.2044917257683215
+          }
+        }
+      }
+    },
+    "s1_x3": {
+      "label": "x3 whole image",
+      "status": "ok",
+      "k_selected": 1.55,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.3503184713375796
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.41953290870488325
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.4802547770700637
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.5418259023354565
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.6025477707006369
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.6522292993630573
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.7019108280254777
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.7452229299363057
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.7736730360934183
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.7859872611464969
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.8072186836518047
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.8114649681528663
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.7995753715498939
+        }
+      ],
+      "s_per_frame": 0.3956,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.8114649681528663,
+        "recall_center": 0.9363057324840764,
+        "far": 0.5459931400062363,
+        "far_by_class": {
+          "BIRD": 0.44745484400656815,
+          "AIRPLANE": 0.6132983377077865,
+          "HELICOPTER": 0.5969267139479906
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.78,
+            "center": 0.9771428571428571
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8728571428571429,
+            "center": 0.995
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.687603305785124,
+            "center": 0.7768595041322314
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.2428174235403151,
+            "center": 0.329935125115848
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.43919510061242345,
+            "center": 0.5564304461942258
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.4231678486997636,
+            "center": 0.5921985815602837
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.9738330841064454,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7588110403397028,
+        "recall_center": 0.8692144373673036,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2504105090311987,
+          "AIRPLANE": 0.45931758530183725,
+          "HELICOPTER": 0.44680851063829785
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7771428571428571,
+            "center": 0.9742857142857143
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8664285714285714,
+            "center": 0.9878571428571429
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.4991735537190083,
+            "center": 0.5338842975206611
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.13067655236329936,
+            "center": 0.1742354031510658
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.32720909886264216,
+            "center": 0.4015748031496063
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.3664302600472813,
+            "center": 0.44680851063829785
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.9913587570190431,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.5142250530785563,
+        "recall_center": 0.5906581740976645,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.04433497536945813,
+          "AIRPLANE": 0.09098862642169729,
+          "HELICOPTER": 0.19148936170212766
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.74,
+            "center": 0.9342857142857143
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.6642857142857143,
+            "center": 0.7435714285714285
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.03636363636363636,
+            "center": 0.03801652892561983
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.033364226135310475,
+            "center": 0.03614457831325301
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.08661417322834646,
+            "center": 0.08748906386701662
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.1879432624113475,
+            "center": 0.19148936170212766
+          }
+        }
+      },
+      "paired_vs_x2_iso_far": {
+        "recall_iou50": {
+          "diff": 0.020382165605095648,
+          "ci95": [
+            -0.0028,
+            0.0444
+          ]
+        },
+        "recall_center": {
+          "diff": 0.024628450106157107,
+          "ci95": [
+            0.0095,
+            0.0418
+          ]
+        },
+        "far": {
+          "diff": 0.0,
+          "ci95": [
+            -0.0327,
+            0.0347
+          ]
+        }
+      }
+    },
+    "s1_x4": {
+      "label": "x4 whole image",
+      "status": "ok",
+      "k_selected": 1.6,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.24713375796178344
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.3333333333333333
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.3953290870488323
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.45222929936305734
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.5065817409766454
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.5664543524416136
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.6195329087048832
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.659447983014862
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.6942675159235668
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.7358811040339702
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.7694267515923567
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.7881104033970276
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.7953290870488323
+        }
+      ],
+      "s_per_frame": 0.5842,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7953290870488323,
+        "recall_center": 0.9528662420382166,
+        "far": 0.6058621764889305,
+        "far_by_class": {
+          "BIRD": 0.5632183908045977,
+          "AIRPLANE": 0.6999125109361329,
+          "HELICOPTER": 0.5401891252955082
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7371428571428571,
+            "center": 0.94
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8678571428571429,
+            "center": 0.9957142857142857
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.6611570247933884,
+            "center": 0.8611570247933884
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.20852641334569044,
+            "center": 0.48841519925857274
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.39457567804024496,
+            "center": 0.6605424321959755
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.3463356973995272,
+            "center": 0.5366430260047281
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.9768255949020387,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7613588110403398,
+        "recall_center": 0.9031847133757962,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2832512315270936,
+          "AIRPLANE": 0.4820647419072616,
+          "HELICOPTER": 0.36879432624113473
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7228571428571429,
+            "center": 0.92
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8607142857142858,
+            "center": 0.9878571428571429
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.5537190082644629,
+            "center": 0.6975206611570248
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.1195551436515292,
+            "center": 0.20945319740500462
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.29658792650918636,
+            "center": 0.4409448818897638
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.2730496453900709,
+            "center": 0.36879432624113473
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.9918990135192872,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.5753715498938429,
+        "recall_center": 0.6615711252653927,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.05090311986863711,
+          "AIRPLANE": 0.10936132983377078,
+          "HELICOPTER": 0.15721040189125296
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.6857142857142857,
+            "center": 0.8685714285714285
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.7442857142857143,
+            "center": 0.8385714285714285
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.1206611570247934,
+            "center": 0.1322314049586777
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.04077849860982391,
+            "center": 0.04448563484708063
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.09711286089238845,
+            "center": 0.09798775153105861
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.15130023640661938,
+            "center": 0.15721040189125296
+          }
+        }
+      },
+      "paired_vs_x2_iso_far": {
+        "recall_iou50": {
+          "diff": 0.02292993630573259,
+          "ci95": [
+            -0.0049,
+            0.0553
+          ]
+        },
+        "recall_center": {
+          "diff": 0.05859872611464967,
+          "ci95": [
+            0.0271,
+            0.0977
+          ]
+        },
+        "far": {
+          "diff": 0.0,
+          "ci95": [
+            -0.0525,
+            0.0545
+          ]
+        }
+      }
+    },
+    "s1_t3": {
+      "label": "x3, 2x2 tiles",
+      "status": "ok",
+      "k_selected": 1.55,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.3435244161358811
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.41273885350318473
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.4696390658174098
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.5346072186836518
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.6008492569002123
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.6458598726114649
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.6917197452229299
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.7350318471337579
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.7634819532908705
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.7881104033970276
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.8033970276008493
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.8067940552016986
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.8
+        }
+      ],
+      "s_per_frame": 0.7797,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.8067940552016986,
+        "recall_center": 0.9354564755838641,
+        "far": 0.5222949797318366,
+        "far_by_class": {
+          "BIRD": 0.4064039408866995,
+          "AIRPLANE": 0.605424321959755,
+          "HELICOPTER": 0.5768321513002365
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7828571428571428,
+            "center": 0.98
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8678571428571429,
+            "center": 0.9942857142857143
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.6793388429752066,
+            "center": 0.7735537190082644
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.21872103799814643,
+            "center": 0.3169601482854495
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.42869641294838146,
+            "center": 0.5503062117235346
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.41252955082742315,
+            "center": 0.5756501182033097
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.9723684191703797,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7719745222929937,
+        "recall_center": 0.889171974522293,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.25779967159277506,
+          "AIRPLANE": 0.4575678040244969,
+          "HELICOPTER": 0.4385342789598109
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7771428571428571,
+            "center": 0.9685714285714285
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8621428571428571,
+            "center": 0.9864285714285714
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.5603305785123966,
+            "center": 0.6181818181818182
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.12882298424467098,
+            "center": 0.1835032437442076
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.32983377077865267,
+            "center": 0.40332458442694663
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.3546099290780142,
+            "center": 0.4385342789598109
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.9910675883293153,
+        "k": 1.55,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.5180467091295117,
+        "recall_center": 0.5978768577494692,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.04597701149425287,
+          "AIRPLANE": 0.09273840769903761,
+          "HELICOPTER": 0.1867612293144208
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7371428571428571,
+            "center": 0.9228571428571428
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.6642857142857143,
+            "center": 0.7521428571428571
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.05289256198347107,
+            "center": 0.05289256198347107
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.03985171455050973,
+            "center": 0.04170528266913809
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.08398950131233596,
+            "center": 0.08486439195100612
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.18321513002364065,
+            "center": 0.1867612293144208
+          }
+        }
+      },
+      "paired_vs_x2_iso_far": {
+        "recall_iou50": {
+          "diff": 0.033545647558386515,
+          "ci95": [
+            0.0069,
+            0.064
+          ]
+        },
+        "recall_center": {
+          "diff": 0.04458598726114649,
+          "ci95": [
+            0.0225,
+            0.0698
+          ]
+        },
+        "far": {
+          "diff": 0.0,
+          "ci95": [
+            -0.0399,
+            0.0387
+          ]
+        }
+      }
+    },
+    "s1_t4": {
+      "label": "x4, 2x2 tiles",
+      "status": "ok",
+      "k_selected": 1.6,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.24203821656050956
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.3286624203821656
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.3902335456475584
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.4467091295116773
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.5044585987261146
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.5575371549893843
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.6144373673036093
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.6560509554140127
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.689171974522293
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.7329087048832271
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.7583864118895967
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.7821656050955414
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.7923566878980892
+        }
+      ],
+      "s_per_frame": 1.0341,
+      "at_stage1_threshold": {
+        "threshold": 0.9541826248168945,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7923566878980892,
+        "recall_center": 0.9494692144373673,
+        "far": 0.604614904895541,
+        "far_by_class": {
+          "BIRD": 0.5336617405582923,
+          "AIRPLANE": 0.694663167104112,
+          "HELICOPTER": 0.5851063829787234
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.7257142857142858,
+            "center": 0.9314285714285714
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8678571428571429,
+            "center": 0.995
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.656198347107438,
+            "center": 0.8545454545454545
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.19462465245597776,
+            "center": 0.458758109360519
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.3858267716535433,
+            "center": 0.652668416447944
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.34278959810874704,
+            "center": 0.5283687943262412
+          }
+        }
+      },
+      "iso_far_T_base": {
+        "threshold": 0.9767275452613832,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.7596602972399151,
+        "recall_center": 0.9031847133757962,
+        "far": 0.3766760212036171,
+        "far_by_class": {
+          "BIRD": 0.2651888341543514,
+          "AIRPLANE": 0.4916885389326334,
+          "HELICOPTER": 0.3817966903073286
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.72,
+            "center": 0.9228571428571428
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.8571428571428571,
+            "center": 0.9835714285714285
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.5570247933884298,
+            "center": 0.7057851239669422
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.11677479147358666,
+            "center": 0.21408711770157554
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.3079615048118985,
+            "center": 0.4453193350831146
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.2777777777777778,
+            "center": 0.3806146572104019
+          }
+        }
+      },
+      "iso_far_10pct": {
+        "threshold": 0.9920815229415895,
+        "k": 1.6,
+        "drone_gt": 2355,
+        "non_drone_frames": 3207,
+        "recall_iou50": 0.5719745222929936,
+        "recall_center": 0.6564755838641189,
+        "far": 0.09978172747115685,
+        "far_by_class": {
+          "BIRD": 0.047619047619047616,
+          "AIRPLANE": 0.12510936132983377,
+          "HELICOPTER": 0.14066193853427897
+        },
+        "recall_by_distance": {
+          "CLOSE": {
+            "gt": 350,
+            "iou50": 0.6771428571428572,
+            "center": 0.8657142857142858
+          },
+          "MEDIUM": {
+            "gt": 1400,
+            "iou50": 0.7414285714285714,
+            "center": 0.8335714285714285
+          },
+          "DISTANT": {
+            "gt": 605,
+            "iou50": 0.11900826446280992,
+            "center": 0.1256198347107438
+          }
+        },
+        "object_flagged": {
+          "BIRD": {
+            "frames_with_label": 1079,
+            "iou50": 0.03892493049119555,
+            "center": 0.04355885078776645
+          },
+          "AIRPLANE": {
+            "frames_with_label": 1143,
+            "iou50": 0.10498687664041995,
+            "center": 0.10673665791776028
+          },
+          "HELICOPTER": {
+            "frames_with_label": 846,
+            "iou50": 0.1359338061465721,
+            "center": 0.14066193853427897
+          }
+        }
+      },
+      "paired_vs_x2_iso_far": {
+        "recall_iou50": {
+          "diff": 0.021231422505307962,
+          "ci95": [
+            -0.0067,
+            0.0534
+          ]
+        },
+        "recall_center": {
+          "diff": 0.05859872611464967,
+          "ci95": [
+            0.0257,
+            0.0959
+          ]
+        },
+        "far": {
+          "diff": 0.0,
+          "ci95": [
+            -0.0551,
+            0.0559
+          ]
+        }
+      }
+    }
+  },
+  "selection": {
+    "best_by_metric": "s1_t3",
+    "within_1_point": [
+      "s1_x1",
+      "s1_t3"
+    ],
+    "selected": "s1_x1",
+    "rule": "highest dev iso-FAR(T_base) IoU>=0.5 recall; within 1 point -> cheaper"
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-19T18:19:09+00:00",
+    "git_commit": "c258be0a44656949cfb1e9514257f3ca1d4c3f47",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 2
+  }
+}

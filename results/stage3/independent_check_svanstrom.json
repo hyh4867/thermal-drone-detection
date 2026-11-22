@@ -1,0 +1,47 @@
+{
+ "tolerance": 1e-06,
+ "all_match": true,
+ "configs": {
+  "T1_S1_m1": {
+   "tag": "s1_m1",
+   "threshold": 0.9541826248168945,
+   "independent": {
+    "recall_center": 0.8585182084554207,
+    "recall_iou50": 0.49141900376726666,
+    "far": 0.3934032983508246,
+    "drone_gt": 2389,
+    "non_drone_frames": 3335
+   },
+   "pipeline": {
+    "recall_center": 0.8585182084554207,
+    "recall_iou50": 0.49141900376726666,
+    "far": 0.3934032983508246,
+    "drone_gt": 2389,
+    "non_drone_frames": 3335
+   },
+   "max_abs_diff": 0.0,
+   "match": true
+  },
+  "T2_20": {
+   "tag": "t2_20_m1",
+   "threshold": 0.9210467338562012,
+   "independent": {
+    "recall_center": 0.9522812892423608,
+    "recall_iou50": 0.2971954792800335,
+    "far": 0.7325337331334333,
+    "drone_gt": 2389,
+    "non_drone_frames": 3335
+   },
+   "pipeline": {
+    "recall_center": 0.9522812892423608,
+    "recall_iou50": 0.2971954792800335,
+    "far": 0.7325337331334333,
+    "drone_gt": 2389,
+    "non_drone_frames": 3335
+   },
+   "max_abs_diff": 0.0,
+   "match": true
+  }
+ },
+ "pipeline_git_commit": "2575109cd6d683160c2d88235a9561ab3ad195e9"
+}

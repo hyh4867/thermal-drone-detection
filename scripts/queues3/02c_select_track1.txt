@@ -1,0 +1,5 @@
+# Part of 02_select_track1.txt, run under one heavy lock per file (GROUP_LOCK=1). Finished labels are skipped.
+s_b_m1 | tdd.stage3.infer --tag b_m1 --set svan_dev20 --model B --m 1
+s_t1a_m1 | tdd.stage3.infer --tag t1a_m1 --set svan_dev20 --model T1a --m 1
+s_b_m2 | tdd.stage3.infer --tag b_m2 --set svan_dev20 --model B --m 2 --limit-s-per-frame 2.0
+s_t1a_m2 | tdd.stage3.infer --tag t1a_m2 --set svan_dev20 --model T1a --m 2 --limit-s-per-frame 2.0

@@ -1,0 +1,299 @@
+{
+  "set": "svan_test_h",
+  "frames": 5819,
+  "videos": 183,
+  "note": "run after the final results were seen (addendum 6); not used for any verdict; Svanström input is enlarged 2x (m = 1); k = 1",
+  "configs": {
+    "T1_S1_m1": {
+      "tag": "s1_m1",
+      "model": "S1",
+      "m": 1,
+      "checkpoint_sha256": "354ac7bf6739c618fe70c17462d8354712db0c39d2c89550bd1a484699855fe3",
+      "threshold": 0.9541826248168945,
+      "k": 1.0,
+      "drone_gt": 2389,
+      "non_drone_frames": 3335,
+      "recall_iou50": 0.49141900376726666,
+      "recall_center": 0.8585182084554207,
+      "far": 0.3934032983508246,
+      "far_by_class": {
+        "BIRD": 0.1938610662358643,
+        "AIRPLANE": 0.47701149425287354,
+        "HELICOPTER": 0.558589306029579
+      },
+      "recall_by_distance": {
+        "CLOSE": {
+          "gt": 389,
+          "iou50": 0.6709511568123393,
+          "center": 1.0
+        },
+        "MEDIUM": {
+          "gt": 1395,
+          "iou50": 0.5698924731182796,
+          "center": 0.9455197132616487
+        },
+        "DISTANT": {
+          "gt": 605,
+          "iou50": 0.19504132231404958,
+          "center": 0.5669421487603306
+        }
+      },
+      "object_flagged": {
+        "BIRD": {
+          "frames_with_label": 1068,
+          "iou50": 0.020599250936329586,
+          "center": 0.14700374531835206
+        },
+        "AIRPLANE": {
+          "frames_with_label": 1218,
+          "iou50": 0.12233169129720854,
+          "center": 0.4753694581280788
+        },
+        "HELICOPTER": {
+          "frames_with_label": 879,
+          "iou50": 0.25597269624573377,
+          "center": 0.5551763367463026
+        }
+      },
+      "recall_by_size": {
+        "tiny": {
+          "gt": 0,
+          "iou50": NaN,
+          "center": NaN
+        },
+        "small": {
+          "gt": 34,
+          "iou50": 0.0,
+          "center": 0.0
+        },
+        "medium": {
+          "gt": 1564,
+          "iou50": 0.5198209718670077,
+          "center": 0.8286445012787724
+        },
+        "large": {
+          "gt": 765,
+          "iou50": 0.4718954248366013,
+          "center": 0.9529411764705882
+        },
+        "xlarge": {
+          "gt": 26,
+          "iou50": 0.0,
+          "center": 1.0
+        }
+      },
+      "at_far10_same_frames": {
+        "threshold": 0.9908161163330079,
+        "far": 0.09985007496251874,
+        "recall_iou50": 0.2519882796149016,
+        "recall_center": 0.3210548346588531,
+        "note": "a point read off the curve of the same frames, not a usable threshold"
+      },
+      "box_ratio_pred_over_label": {
+        "n": 2050,
+        "width_median": 0.7110449569420756,
+        "height_median": 0.7623785528793561
+      },
+      "ci95": {
+        "recall_iou50": [
+          0.4042,
+          0.5801
+        ],
+        "recall_center": [
+          0.7942,
+          0.9132
+        ],
+        "far": [
+          0.3176,
+          0.4734
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "video",
+      "n_videos": 183
+    },
+    "T2_20": {
+      "tag": "t2_20_m1",
+      "model": "T2_20",
+      "m": 1,
+      "checkpoint_sha256": "ca8336d1fe86124de0829d844bc36c8d4377222613e9cf8f9eec3d801265aa63",
+      "threshold": 0.9210467338562012,
+      "k": 1.0,
+      "drone_gt": 2389,
+      "non_drone_frames": 3335,
+      "recall_iou50": 0.2971954792800335,
+      "recall_center": 0.9522812892423608,
+      "far": 0.7325337331334333,
+      "far_by_class": {
+        "BIRD": 0.5993537964458805,
+        "AIRPLANE": 0.7972085385878489,
+        "HELICOPTER": 0.8304891922639362
+      },
+      "recall_by_distance": {
+        "CLOSE": {
+          "gt": 389,
+          "iou50": 0.5886889460154242,
+          "center": 0.9974293059125964
+        },
+        "MEDIUM": {
+          "gt": 1395,
+          "iou50": 0.3247311827956989,
+          "center": 0.9913978494623656
+        },
+        "DISTANT": {
+          "gt": 605,
+          "iou50": 0.04628099173553719,
+          "center": 0.8330578512396695
+        }
+      },
+      "object_flagged": {
+        "BIRD": {
+          "frames_with_label": 1068,
+          "iou50": 0.00749063670411985,
+          "center": 0.6020599250936329
+        },
+        "AIRPLANE": {
+          "frames_with_label": 1218,
+          "iou50": 0.06568144499178982,
+          "center": 0.7963875205254516
+        },
+        "HELICOPTER": {
+          "frames_with_label": 879,
+          "iou50": 0.24914675767918087,
+          "center": 0.8111490329920364
+        }
+      },
+      "recall_by_size": {
+        "tiny": {
+          "gt": 0,
+          "iou50": NaN,
+          "center": NaN
+        },
+        "small": {
+          "gt": 34,
+          "iou50": 0.0,
+          "center": 0.0
+        },
+        "medium": {
+          "gt": 1564,
+          "iou50": 0.2774936061381074,
+          "center": 0.9571611253196931
+        },
+        "large": {
+          "gt": 765,
+          "iou50": 0.3607843137254902,
+          "center": 0.9830065359477124
+        },
+        "xlarge": {
+          "gt": 26,
+          "iou50": 0.0,
+          "center": 1.0
+        }
+      },
+      "at_far10_same_frames": {
+        "threshold": 0.9902976155281068,
+        "far": 0.09985007496251874,
+        "recall_iou50": 0.22226873168689829,
+        "recall_center": 0.3976559229803265,
+        "note": "a point read off the curve of the same frames, not a usable threshold"
+      },
+      "box_ratio_pred_over_label": {
+        "n": 2238,
+        "width_median": 0.6298452811105768,
+        "height_median": 0.6130908627750169
+      },
+      "ci95": {
+        "recall_iou50": [
+          0.2267,
+          0.3711
+        ],
+        "recall_center": [
+          0.9055,
+          0.9865
+        ],
+        "far": [
+          0.6706,
+          0.7902
+        ]
+      },
+      "B": 1000,
+      "seed": 0,
+      "unit": "video",
+      "n_videos": 183,
+      "paired_diff": {
+        "recall_iou50": {
+          "diff": -0.19422352448723318,
+          "ci95": [
+            -0.2449,
+            -0.1506
+          ]
+        },
+        "recall_center": {
+          "diff": 0.09376308078694007,
+          "ci95": [
+            0.0546,
+            0.1355
+          ]
+        },
+        "far": {
+          "diff": 0.3391304347826087,
+          "ci95": [
+            0.2828,
+            0.397
+          ]
+        }
+      }
+    }
+  },
+  "paired": "T2_20 minus T1_S1_m1, each at its own frozen threshold (their alarm rates differ)",
+  "reading_rule": {
+    "diff_recall_center": {
+      "diff": 0.09376308078694007,
+      "ci95": [
+        0.0546,
+        0.1355
+      ]
+    },
+    "sentence": "Svanström에서는 이득이 있었다"
+  },
+  "P10": {
+    "prediction": "T2-20 centre recall more than 3 points below the track 1 final",
+    "diff": 0.09376308078694007,
+    "correct": false
+  },
+  "frozen_config": "results/stage3/frozen_config.json",
+  "meta": {
+    "timestamp_utc": "2026-11-22T09:04:28+00:00",
+    "git_commit": "2575109cd6d683160c2d88235a9561ab3ad195e9",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 3
+  }
+}

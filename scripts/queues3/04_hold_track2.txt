@@ -1,0 +1,6 @@
+# Stage 3 track 2 choices on the CST train hold-out (20 sequences never trained on). One heavy lock for the file (GROUP_LOCK=1).
+h_t2_20_m1 | tdd.stage3.infer --tag t2_20_m1 --set cst_tr_hold --model T2_20 --m 1
+h_t2_20_m2 | tdd.stage3.infer --tag t2_20_m2 --set cst_tr_hold --model T2_20 --m 2 --limit-s-per-frame 3.0
+# box convention of the track 1 final model (reported only)
+h_s1_m1 | tdd.stage3.infer --tag s1_m1 --set cst_tr_hold --model S1 --m 1
+verify_hold | tdd.stage3.verify_caches --scope hold

@@ -1,0 +1,18 @@
+# dev_b comparison (results/stage2/dev_compare__models_dev_b.json): S1 68.6%, R1 epoch 1 67.1%,
+# R1 epoch 2 68.3% (iso-FAR IoU 0.5 recall, x1 + flip TTA). By the registered rules:
+# B = R1 epoch 2 (runs/stage2/r1/epoch1.pt); R2 starts from S1 (runs/full_frcnn/best.pt).
+# Training runs 2-4 of at most 4, N = 4, 12, 37, each followed by dev_b inference.
+train_r2_n4 | tdd.stage2.train --run r2_n4 --epochs 1 --svan-n 4 --init runs/full_frcnn/best.pt --svan-scale 1
+r2n4_devb | tdd.stage2.infer --tag r2n4_x1tta --set svan_dev_b --ckpt runs/stage2/r2_n4/last.pt --scale 1 --tta
+train_r2_n12 | tdd.stage2.train --run r2_n12 --epochs 1 --svan-n 12 --init runs/full_frcnn/best.pt --svan-scale 1
+r2n12_devb | tdd.stage2.infer --tag r2n12_x1tta --set svan_dev_b --ckpt runs/stage2/r2_n12/last.pt --scale 1 --tta
+train_r2_n37 | tdd.stage2.train --run r2_n37 --epochs 1 --svan-n 37 --init runs/full_frcnn/best.pt --svan-scale 1
+r2n37_devb | tdd.stage2.infer --tag r2n37_x1tta --set svan_dev_b --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta
+# B is calibrated on all dev videos: R1 epoch 2 on the other dev half
+r1e1_deva | tdd.stage2.infer --tag r1e1_x1tta --set svan_dev_a --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+# Anti-UAV val with TTA: max-F1 threshold per model for 640x512 data
+val_s1 | tdd.stage2.infer --tag s1_ntta --set auv_val --scale 1 --tta
+val_r1e1 | tdd.stage2.infer --tag r1e1_ntta --set auv_val --ckpt runs/stage2/r1/epoch1.pt --scale 1 --tta
+val_r2n4 | tdd.stage2.infer --tag r2n4_ntta --set auv_val --ckpt runs/stage2/r2_n4/last.pt --scale 1 --tta
+val_r2n12 | tdd.stage2.infer --tag r2n12_ntta --set auv_val --ckpt runs/stage2/r2_n12/last.pt --scale 1 --tta
+val_r2n37 | tdd.stage2.infer --tag r2n37_ntta --set auv_val --ckpt runs/stage2/r2_n37/last.pt --scale 1 --tta

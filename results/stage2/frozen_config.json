@@ -1,0 +1,1439 @@
+{
+  "input": {
+    "name": "x1tta",
+    "scale": 1,
+    "tile": 1,
+    "tta": true,
+    "note": "Svanström (320x256) only; 640x512 data is run at scale 1"
+  },
+  "stage1_threshold": 0.9541826248168945,
+  "models": {
+    "A": {
+      "prefix": "s1",
+      "checkpoint": "runs/full_frcnn/best.pt",
+      "dev_set": "svan_dev",
+      "svanstrom_tag": "s1_x1tta",
+      "native_tag": "s1_ntta",
+      "T_base_on_dev_set": 0.377970102281668,
+      "k": 1.15,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.4986042516641615
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.5239424522224608
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.5443418509770238
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.5486364612411424
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.5469186171354949
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.5383293966072579
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.5254455658149023
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.5097702383508697
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.48786772600386513
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.4631737169851836
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.42989048743826497
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.3910242645479923
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.3500107365256603
+        }
+      ],
+      "thresholds": {
+        "T_base": 0.78030264377594,
+        "T10": 0.9808213710784913
+      },
+      "dev_detector": {
+        "T_base": {
+          "threshold": 0.78030264377594,
+          "k": 1.15,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.7768949967790423,
+          "recall_center": 0.8842602533820055,
+          "far": 0.377970102281668,
+          "far_by_class": {
+            "BIRD": 0.277317880794702,
+            "AIRPLANE": 0.3556928508384819,
+            "HELICOPTER": 0.5534967124925284
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.8280346820809249,
+              "center": 0.9971098265895953
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.8558526011560693,
+              "center": 0.9725433526011561
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.5647451963241437,
+              "center": 0.6148705096073517
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.20045977011494254,
+              "center": 0.23908045977011494
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.30935569285083847,
+              "center": 0.33495145631067963
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.3341303048416019,
+              "center": 0.5451285116557083
+            }
+          }
+        },
+        "T10": {
+          "threshold": 0.9808213710784913,
+          "k": 1.15,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.33004079879750914,
+          "recall_center": 0.38587073223105,
+          "far": 0.0999213217938631,
+          "far_by_class": {
+            "BIRD": 0.014900662251655629,
+            "AIRPLANE": 0.06884377758164166,
+            "HELICOPTER": 0.2647937836222355
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.7557803468208093,
+              "center": 0.9002890173410405
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.36596820809248554,
+              "center": 0.42377167630057805
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.000835421888053467,
+              "center": 0.000835421888053467
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.012873563218390805,
+              "center": 0.014712643678160919
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.06884377758164166,
+              "center": 0.06884377758164166
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.2355050806933652,
+              "center": 0.2647937836222355
+            }
+          }
+        },
+        "at_stage1_threshold": {
+          "threshold": 0.9541826248168945,
+          "k": 1.15,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.5486364612411424,
+          "recall_center": 0.6356023190895427,
+          "far": 0.15641227380015735,
+          "far_by_class": {
+            "BIRD": 0.043874172185430466,
+            "AIRPLANE": 0.12797881729920565,
+            "HELICOPTER": 0.3574417214584579
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.7976878612716763,
+              "center": 0.9609826589595376
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.6911127167630058,
+              "center": 0.7947976878612717
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.07518796992481203,
+              "center": 0.07936507936507936
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.03586206896551724,
+              "center": 0.041379310344827586
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.12488967343336276,
+              "center": 0.12577228596646073
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.27734608487746565,
+              "center": 0.3574417214584579
+            }
+          }
+        }
+      },
+      "tracker": {
+        "params": {
+          "model": "cv",
+          "q": 654.5671530581313,
+          "confirm_m": 2,
+          "confirm_n": 3,
+          "delete_misses": 5,
+          "det_threshold": 0.3,
+          "coast_outputs": 0
+        },
+        "track_score_thresholds": {
+          "T_base": 0.6862105886141461,
+          "T10": 0.9736924672126771
+        },
+        "dev": {
+          "T_base": {
+            "track_score_threshold": 0.6862105886141461,
+            "recall_iou50": 0.7921408632166631,
+            "recall_center": 0.9046596521365686,
+            "far": 0.377970102281668,
+            "false_tracks_per_min": 9.913453973249407,
+            "never_found_share_center": 0.04054054054054054,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.97184420459878
+          },
+          "T10": {
+            "track_score_threshold": 0.9736924672126771,
+            "recall_iou50": 0.3805024694009019,
+            "recall_center": 0.4543697659437406,
+            "far": 0.0999213217938631,
+            "false_tracks_per_min": 2.4925255704169937,
+            "never_found_share_center": 0.4594594594594595,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.8864218616567037
+          }
+        },
+        "tuning_file": "results/stage2/tracker_tuning__s1_x1tta__svan_dev.json"
+      },
+      "antiuav_val": {
+        "threshold": 0.9511470198631287,
+        "val_ap50": 0.9414310873131215,
+        "val_f1": 0.9330721514854717,
+        "source": "cache s1_ntta__auv_val"
+      }
+    },
+    "B": {
+      "prefix": "r1e1",
+      "checkpoint": "runs/stage2/r1/epoch1.pt",
+      "dev_set": "svan_dev",
+      "svanstrom_tag": "r1e1_x1tta",
+      "native_tag": "r1e1_ntta",
+      "T_base_on_dev_set": 0.377970102281668,
+      "k": 1.25,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.5812754992484432
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.6300193257461886
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.6628730942666953
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.6849903371269057
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.6897144084174361
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.6918617135494954
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.6854197981533175
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.6699592012024909
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.6529954906592227
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.6315224393386301
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.6014601674898002
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.5600171784410565
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.5155679622074297
+        }
+      ],
+      "thresholds": {
+        "T_base": 0.9246804714202882,
+        "T10": 0.9877861738204957
+      },
+      "dev_detector": {
+        "T_base": {
+          "threshold": 0.9246804714202882,
+          "k": 1.25,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.7683057762508052,
+          "recall_center": 0.8599957053897359,
+          "far": 0.377970102281668,
+          "far_by_class": {
+            "BIRD": 0.20943708609271522,
+            "AIRPLANE": 0.3901147396293027,
+            "HELICOPTER": 0.6049013747758517
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.819364161849711,
+              "center": 0.9985549132947977
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.8869219653179191,
+              "center": 0.9801300578034682
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.4644945697577276,
+              "center": 0.5020885547201337
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.13241379310344828,
+              "center": 0.16229885057471263
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.32744924977934686,
+              "center": 0.38923212709620475
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.3795576808129109,
+              "center": 0.6049013747758517
+            }
+          }
+        },
+        "T10": {
+          "threshold": 0.9877861738204957,
+          "k": 1.25,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.3573115739746618,
+          "recall_center": 0.409276358170496,
+          "far": 0.0999213217938631,
+          "far_by_class": {
+            "BIRD": 0.03228476821192053,
+            "AIRPLANE": 0.08164165931156223,
+            "HELICOPTER": 0.22235505080693366
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.7384393063583815,
+              "center": 0.9002890173410405
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.4165462427745665,
+              "center": 0.46351156069364163
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.0,
+              "center": 0.0
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.011954022988505748,
+              "center": 0.012413793103448275
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.08164165931156223,
+              "center": 0.08164165931156223
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.20920502092050208,
+              "center": 0.22235505080693366
+            }
+          }
+        },
+        "at_stage1_threshold": {
+          "threshold": 0.9541826248168945,
+          "k": 1.25,
+          "drone_gt": 4657,
+          "non_drone_frames": 6355,
+          "recall_iou50": 0.6918617135494954,
+          "recall_center": 0.7753918831866008,
+          "far": 0.26042486231313927,
+          "far_by_class": {
+            "BIRD": 0.1316225165562914,
+            "AIRPLANE": 0.24051191526919682,
+            "HELICOPTER": 0.4734010759115362
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 692,
+              "iou50": 0.819364161849711,
+              "center": 0.9985549132947977
+            },
+            "MEDIUM": {
+              "gt": 2768,
+              "iou50": 0.8522398843930635,
+              "center": 0.940028901734104
+            },
+            "DISTANT": {
+              "gt": 1197,
+              "iou50": 0.24728487886382622,
+              "center": 0.2656641604010025
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 2175,
+              "iou50": 0.07172413793103448,
+              "center": 0.09011494252873563
+            },
+            "AIRPLANE": {
+              "frames_with_label": 2266,
+              "iou50": 0.22683142100617829,
+              "center": 0.24051191526919682
+            },
+            "HELICOPTER": {
+              "frames_with_label": 1673,
+              "iou50": 0.33831440526001194,
+              "center": 0.4734010759115362
+            }
+          }
+        }
+      },
+      "tracker": {
+        "params": {
+          "model": "cv",
+          "q": 654.5671530581313,
+          "confirm_m": 2,
+          "confirm_n": 3,
+          "delete_misses": 5,
+          "det_threshold": 0.1,
+          "coast_outputs": 0
+        },
+        "track_score_thresholds": {
+          "T_base": 0.885887255271276,
+          "T10": 0.9851673140245326
+        },
+        "dev": {
+          "T_base": {
+            "track_score_threshold": 0.885887255271276,
+            "recall_iou50": 0.777753918831866,
+            "recall_center": 0.8681554648915611,
+            "far": 0.377970102281668,
+            "false_tracks_per_min": 7.2509834775767095,
+            "never_found_share_center": 0.06756756756756757,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.9744973025993134
+          },
+          "T10": {
+            "track_score_threshold": 0.9851673140245326,
+            "recall_iou50": 0.4114236633025553,
+            "recall_center": 0.4694009018681555,
+            "far": 0.0999213217938631,
+            "false_tracks_per_min": 2.4358772619984257,
+            "never_found_share_center": 0.43243243243243246,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.8859504132231405
+          }
+        },
+        "tuning_file": "results/stage2/tracker_tuning__r1e1_x1tta__svan_dev.json"
+      },
+      "antiuav_val": {
+        "threshold": 0.9400007128715515,
+        "val_ap50": 0.9302944146590475,
+        "val_f1": 0.9271955599085865,
+        "source": "cache r1e1_ntta__auv_val"
+      }
+    },
+    "C4": {
+      "prefix": "r2n4",
+      "checkpoint": "runs/stage2/r2_n4/last.pt",
+      "dev_set": "svan_dev_b",
+      "svanstrom_tag": "r2n4_x1tta",
+      "native_tag": "r2n4_ntta",
+      "T_base_on_dev_set": 0.3331290223720503,
+      "k": 1.15,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.36721311475409835
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.385655737704918
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.39959016393442626
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.4081967213114754
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.4028688524590164
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.39672131147540984
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.37991803278688524
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.3684426229508197
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.3540983606557377
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.3319672131147541
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.3073770491803279
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.28770491803278686
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.2573770491803279
+        }
+      ],
+      "thresholds": {
+        "T_base": 0.8898476362228395,
+        "T10": 0.9589829444885255
+      },
+      "dev_detector": {
+        "T_base": {
+          "threshold": 0.8898476362228395,
+          "k": 1.15,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.6163934426229508,
+          "recall_center": 0.6934426229508197,
+          "far": 0.3331290223720503,
+          "far_by_class": {
+            "BIRD": 0.34169278996865204,
+            "AIRPLANE": 0.2963620230700976,
+            "HELICOPTER": 0.3686046511627907
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8225806451612904,
+              "center": 0.9220430107526881
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.6397212543554007,
+              "center": 0.7205574912891987
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.4423380726698262,
+              "center": 0.4976303317535545
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.31478260869565217,
+              "center": 0.3382608695652174
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.26441881100266196,
+              "center": 0.2777284826974268
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.3372093023255814,
+              "center": 0.3686046511627907
+            }
+          }
+        },
+        "T10": {
+          "threshold": 0.9589829444885255,
+          "k": 1.15,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.37336065573770494,
+          "recall_center": 0.42704918032786887,
+          "far": 0.09990806006742262,
+          "far_by_class": {
+            "BIRD": 0.08385579937304075,
+            "AIRPLANE": 0.06654835847382432,
+            "HELICOPTER": 0.16744186046511628
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.7016129032258065,
+              "center": 0.7956989247311828
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.3797909407665505,
+              "center": 0.4411149825783972
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.16587677725118483,
+              "center": 0.17851500789889416
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.07130434782608695,
+              "center": 0.07652173913043478
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.061224489795918366,
+              "center": 0.061224489795918366
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.16162790697674417,
+              "center": 0.16744186046511628
+            }
+          }
+        },
+        "at_stage1_threshold": {
+          "threshold": 0.9541826248168945,
+          "k": 1.15,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.4081967213114754,
+          "recall_center": 0.46434426229508197,
+          "far": 0.12105424456022065,
+          "far_by_class": {
+            "BIRD": 0.10109717868338558,
+            "AIRPLANE": 0.09228039041703638,
+            "HELICOPTER": 0.1883720930232558
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.7231182795698925,
+              "center": 0.8198924731182796
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.41602787456445994,
+              "center": 0.47874564459930313
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.20537124802527645,
+              "center": 0.22274881516587677
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.08695652173913043,
+              "center": 0.09391304347826086
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.08429458740017746,
+              "center": 0.08518189884649512
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.1813953488372093,
+              "center": 0.1883720930232558
+            }
+          }
+        }
+      },
+      "tracker": {
+        "params": {
+          "model": "cv",
+          "q": 220.63460305519408,
+          "confirm_m": 2,
+          "confirm_n": 3,
+          "delete_misses": 3,
+          "det_threshold": 0.1,
+          "coast_outputs": 0
+        },
+        "track_score_thresholds": {
+          "T_base": 0.7611991167068483,
+          "T10": 0.9222059100866319
+        },
+        "dev": {
+          "T_base": {
+            "track_score_threshold": 0.7611991167068483,
+            "recall_iou50": 0.6913934426229508,
+            "recall_center": 0.7795081967213114,
+            "far": 0.3331290223720503,
+            "false_tracks_per_min": 9.598528961078763,
+            "never_found_share_center": 0.07692307692307693,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.8928229665071771
+          },
+          "T10": {
+            "track_score_threshold": 0.9222059100866319,
+            "recall_iou50": 0.34098360655737703,
+            "recall_center": 0.37663934426229506,
+            "far": 0.09990806006742262,
+            "false_tracks_per_min": 4.082133006435796,
+            "never_found_share_center": 0.3076923076923077,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.6330731014904187
+          }
+        },
+        "tuning_file": "results/stage2/tracker_tuning__r2n4_x1tta__svan_dev_b.json"
+      },
+      "antiuav_val": {
+        "threshold": 0.9709224700927734,
+        "val_ap50": 0.9443332888747693,
+        "val_f1": 0.9328529315427447,
+        "source": "cache r2n4_ntta__auv_val"
+      }
+    },
+    "C12": {
+      "prefix": "r2n12",
+      "checkpoint": "runs/stage2/r2_n12/last.pt",
+      "dev_set": "svan_dev_b",
+      "svanstrom_tag": "r2n12_x1tta",
+      "native_tag": "r2n12_ntta",
+      "T_base_on_dev_set": 0.3331290223720503,
+      "k": 1.0,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.46352459016393444
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.46147540983606555
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.4516393442622951
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.4278688524590164
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.4131147540983607
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.39221311475409837
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.3721311475409836
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.35
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.3221311475409836
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.294672131147541
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.25614754098360654
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.22295081967213115
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.19139344262295083
+        }
+      ],
+      "thresholds": {
+        "T_base": 0.7324224710464479,
+        "T10": 0.9334765672683717
+      },
+      "dev_detector": {
+        "T_base": {
+          "threshold": 0.7324224710464479,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.7491803278688525,
+          "recall_center": 0.8356557377049181,
+          "far": 0.3331290223720503,
+          "far_by_class": {
+            "BIRD": 0.31974921630094044,
+            "AIRPLANE": 0.26175687666370895,
+            "HELICOPTER": 0.44651162790697674
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8924731182795699,
+              "center": 0.9838709677419355
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.8432055749128919,
+              "center": 0.9484320557491289
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.4518167456556082,
+              "center": 0.4928909952606635
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.28782608695652173,
+              "center": 0.31217391304347825
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.24933451641526175,
+              "center": 0.2608695652173913
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.2372093023255814,
+              "center": 0.44651162790697674
+            }
+          }
+        },
+        "T10": {
+          "threshold": 0.9334765672683717,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.5331967213114754,
+          "recall_center": 0.605327868852459,
+          "far": 0.09990806006742262,
+          "far_by_class": {
+            "BIRD": 0.06426332288401254,
+            "AIRPLANE": 0.062111801242236024,
+            "HELICOPTER": 0.20232558139534884
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8172043010752689,
+              "center": 0.9005376344086021
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.6550522648083623,
+              "center": 0.7540069686411149
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.09004739336492891,
+              "center": 0.0947867298578199
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.057391304347826085,
+              "center": 0.06608695652173913
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.05678793256433008,
+              "center": 0.05856255545696539
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.1697674418604651,
+              "center": 0.20232558139534884
+            }
+          }
+        },
+        "at_stage1_threshold": {
+          "threshold": 0.9541826248168945,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.46352459016393444,
+          "recall_center": 0.5315573770491804,
+          "far": 0.0698743487588109,
+          "far_by_class": {
+            "BIRD": 0.0384012539184953,
+            "AIRPLANE": 0.030168589174800354,
+            "HELICOPTER": 0.1686046511627907
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8145161290322581,
+              "center": 0.8978494623655914
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.5665505226480836,
+              "center": 0.6606271777003484
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.023696682464454975,
+              "center": 0.023696682464454975
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.03391304347826087,
+              "center": 0.0408695652173913
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.026619343389529725,
+              "center": 0.026619343389529725
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.1558139534883721,
+              "center": 0.1686046511627907
+            }
+          }
+        }
+      },
+      "tracker": {
+        "params": {
+          "model": "cv",
+          "q": 654.5671530581313,
+          "confirm_m": 2,
+          "confirm_n": 3,
+          "delete_misses": 3,
+          "det_threshold": 0.5,
+          "coast_outputs": 2
+        },
+        "track_score_thresholds": {
+          "T_base": 0.7098690032958985,
+          "T10": 0.9132333000500998
+        },
+        "dev": {
+          "T_base": {
+            "track_score_threshold": 0.7098690032958985,
+            "recall_iou50": 0.7618852459016393,
+            "recall_center": 0.8479508196721312,
+            "far": 0.33282255593012566,
+            "false_tracks_per_min": 8.60557768924303,
+            "never_found_share_center": 0.07692307692307693,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.9704057279236277
+          },
+          "T10": {
+            "track_score_threshold": 0.9132333000500998,
+            "recall_iou50": 0.5065573770491804,
+            "recall_center": 0.5733606557377049,
+            "far": 0.09990806006742262,
+            "false_tracks_per_min": 3.530493410971499,
+            "never_found_share_center": 0.28205128205128205,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.8715829624920534
+          }
+        },
+        "tuning_file": "results/stage2/tracker_tuning__r2n12_x1tta__svan_dev_b.json"
+      },
+      "antiuav_val": {
+        "threshold": 0.9512110352516174,
+        "val_ap50": 0.9426223064466486,
+        "val_f1": 0.9340300457217505,
+        "source": "cache r2n12_ntta__auv_val"
+      }
+    },
+    "C37": {
+      "prefix": "r2n37",
+      "checkpoint": "runs/stage2/r2_n37/last.pt",
+      "dev_set": "svan_dev_b",
+      "svanstrom_tag": "r2n37_x1tta",
+      "native_tag": "r2n37_ntta",
+      "T_base_on_dev_set": 0.3331290223720503,
+      "k": 1.0,
+      "k_sweep": [
+        {
+          "k": 1.0,
+          "recall_iou50": 0.5639344262295082
+        },
+        {
+          "k": 1.05,
+          "recall_iou50": 0.5594262295081968
+        },
+        {
+          "k": 1.1,
+          "recall_iou50": 0.5438524590163935
+        },
+        {
+          "k": 1.15,
+          "recall_iou50": 0.5217213114754098
+        },
+        {
+          "k": 1.2,
+          "recall_iou50": 0.49426229508196723
+        },
+        {
+          "k": 1.25,
+          "recall_iou50": 0.46229508196721314
+        },
+        {
+          "k": 1.3,
+          "recall_iou50": 0.4364754098360656
+        },
+        {
+          "k": 1.35,
+          "recall_iou50": 0.40491803278688526
+        },
+        {
+          "k": 1.4,
+          "recall_iou50": 0.35327868852459016
+        },
+        {
+          "k": 1.45,
+          "recall_iou50": 0.29713114754098363
+        },
+        {
+          "k": 1.5,
+          "recall_iou50": 0.24631147540983606
+        },
+        {
+          "k": 1.55,
+          "recall_iou50": 0.2069672131147541
+        },
+        {
+          "k": 1.6,
+          "recall_iou50": 0.17295081967213113
+        }
+      ],
+      "thresholds": {
+        "T_base": 0.7459598779678346,
+        "T10": 0.9414364099502565
+      },
+      "dev_detector": {
+        "T_base": {
+          "threshold": 0.7459598779678346,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.7918032786885246,
+          "recall_center": 0.8700819672131147,
+          "far": 0.3331290223720503,
+          "far_by_class": {
+            "BIRD": 0.23667711598746083,
+            "AIRPLANE": 0.3735581188997338,
+            "HELICOPTER": 0.4232558139534884
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8978494623655914,
+              "center": 0.9919354838709677
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.8780487804878049,
+              "center": 0.9658536585365853
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.5339652448657188,
+              "center": 0.5813586097946287
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.20173913043478262,
+              "center": 0.21913043478260869
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.34960070984915703,
+              "center": 0.37089618456078083
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.27906976744186046,
+              "center": 0.4232558139534884
+            }
+          }
+        },
+        "T10": {
+          "threshold": 0.9414364099502565,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.6200819672131147,
+          "recall_center": 0.6823770491803278,
+          "far": 0.09990806006742262,
+          "far_by_class": {
+            "BIRD": 0.0438871473354232,
+            "AIRPLANE": 0.09582963620230701,
+            "HELICOPTER": 0.1883720930232558
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8629032258064516,
+              "center": 0.9516129032258065
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.802787456445993,
+              "center": 0.883623693379791
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.0631911532385466,
+              "center": 0.0679304897314376
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.03739130434782609,
+              "center": 0.04521739130434783
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.09050576752440107,
+              "center": 0.0940550133096717
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.17209302325581396,
+              "center": 0.1883720930232558
+            }
+          }
+        },
+        "at_stage1_threshold": {
+          "threshold": 0.9541826248168945,
+          "k": 1.0,
+          "drone_gt": 2440,
+          "non_drone_frames": 3263,
+          "recall_iou50": 0.5639344262295082,
+          "recall_center": 0.6192622950819672,
+          "far": 0.08121360711002146,
+          "far_by_class": {
+            "BIRD": 0.034482758620689655,
+            "AIRPLANE": 0.064773735581189,
+            "HELICOPTER": 0.17209302325581396
+          },
+          "recall_by_distance": {
+            "CLOSE": {
+              "gt": 372,
+              "iou50": 0.8467741935483871,
+              "center": 0.9274193548387096
+            },
+            "MEDIUM": {
+              "gt": 1435,
+              "iou50": 0.7303135888501742,
+              "center": 0.8034843205574913
+            },
+            "DISTANT": {
+              "gt": 633,
+              "iou50": 0.020537124802527645,
+              "center": 0.020537124802527645
+            }
+          },
+          "object_flagged": {
+            "BIRD": {
+              "frames_with_label": 1150,
+              "iou50": 0.030434782608695653,
+              "center": 0.03739130434782609
+            },
+            "AIRPLANE": {
+              "frames_with_label": 1127,
+              "iou50": 0.061224489795918366,
+              "center": 0.06388642413487133
+            },
+            "HELICOPTER": {
+              "frames_with_label": 860,
+              "iou50": 0.16511627906976745,
+              "center": 0.17209302325581396
+            }
+          }
+        }
+      },
+      "tracker": {
+        "params": {
+          "model": "cv",
+          "q": 654.5671530581313,
+          "confirm_m": 2,
+          "confirm_n": 3,
+          "delete_misses": 5,
+          "det_threshold": 0.2,
+          "coast_outputs": 2
+        },
+        "track_score_thresholds": {
+          "T_base": 0.6308343344264561,
+          "T10": 0.909770580855283
+        },
+        "dev": {
+          "T_base": {
+            "track_score_threshold": 0.6308343344264561,
+            "recall_iou50": 0.8024590163934426,
+            "recall_center": 0.8758196721311475,
+            "far": 0.33282255593012566,
+            "false_tracks_per_min": 8.826233527428748,
+            "never_found_share_center": 0.07692307692307693,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.9822346891070594
+          },
+          "T10": {
+            "track_score_threshold": 0.909770580855283,
+            "recall_iou50": 0.514344262295082,
+            "recall_center": 0.5586065573770492,
+            "far": 0.09990806006742262,
+            "false_tracks_per_min": 3.30983757278578,
+            "never_found_share_center": 0.20512820512820512,
+            "latency_median_center": 0.16666666666666666,
+            "maintenance_center": 0.748314606741573
+          }
+        },
+        "tuning_file": "results/stage2/tracker_tuning__r2n37_x1tta__svan_dev_b.json"
+      },
+      "antiuav_val": {
+        "threshold": 0.9530181884765625,
+        "val_ap50": 0.9448726075848839,
+        "val_f1": 0.935124508519004,
+        "source": "cache r2n37_ntta__auv_val"
+      }
+    }
+  },
+  "stage1_x2": {
+    "dev_set": "svan_dev",
+    "k": 1.35,
+    "k_sweep": [
+      {
+        "k": 1.0,
+        "recall_iou50": 0.4805668885548636
+      },
+      {
+        "k": 1.05,
+        "recall_iou50": 0.5488511917543483
+      },
+      {
+        "k": 1.1,
+        "recall_iou50": 0.6121966931500966
+      },
+      {
+        "k": 1.15,
+        "recall_iou50": 0.6557869873308997
+      },
+      {
+        "k": 1.2,
+        "recall_iou50": 0.690143869443848
+      },
+      {
+        "k": 1.25,
+        "recall_iou50": 0.7159115310285592
+      },
+      {
+        "k": 1.3,
+        "recall_iou50": 0.733948894137857
+      },
+      {
+        "k": 1.35,
+        "recall_iou50": 0.739746617994417
+      },
+      {
+        "k": 1.4,
+        "recall_iou50": 0.7382435044019755
+      },
+      {
+        "k": 1.45,
+        "recall_iou50": 0.7313721279793859
+      },
+      {
+        "k": 1.5,
+        "recall_iou50": 0.7156968005153532
+      },
+      {
+        "k": 1.55,
+        "recall_iou50": 0.6955121322739961
+      },
+      {
+        "k": 1.6,
+        "recall_iou50": 0.6774747691646983
+      }
+    ],
+    "dev_at_stage1_threshold": {
+      "threshold": 0.9541826248168945,
+      "k": 1.35,
+      "drone_gt": 4657,
+      "non_drone_frames": 6355,
+      "recall_iou50": 0.739746617994417,
+      "recall_center": 0.8456087610049388,
+      "far": 0.377970102281668,
+      "far_by_class": {
+        "BIRD": 0.26531456953642385,
+        "AIRPLANE": 0.4258605472197705,
+        "HELICOPTER": 0.4757919904363419
+      },
+      "recall_by_distance": {
+        "CLOSE": {
+          "gt": 692,
+          "iou50": 0.8164739884393064,
+          "center": 0.9797687861271677
+        },
+        "MEDIUM": {
+          "gt": 2768,
+          "iou50": 0.865606936416185,
+          "center": 0.9725433526011561
+        },
+        "DISTANT": {
+          "gt": 1197,
+          "iou50": 0.404344193817878,
+          "center": 0.47451963241436923
+        }
+      },
+      "object_flagged": {
+        "BIRD": {
+          "frames_with_label": 2175,
+          "iou50": 0.12413793103448276,
+          "center": 0.15264367816091953
+        },
+        "AIRPLANE": {
+          "frames_with_label": 2266,
+          "iou50": 0.2855251544571933,
+          "center": 0.3676081200353045
+        },
+        "HELICOPTER": {
+          "frames_with_label": 1673,
+          "iou50": 0.3980872683801554,
+          "center": 0.47519426180514046
+        }
+      }
+    },
+    "thresholds": {
+      "T10": 0.9892054796218873
+    }
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-20T03:20:39+00:00",
+    "git_commit": "09f0655d2a3b523dc5e5463a919ce7f078ea41a8",
+    "git_dirty": true,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 2
+  }
+}
