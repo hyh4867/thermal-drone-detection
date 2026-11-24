@@ -170,6 +170,7 @@ def main():
     ap.add_argument("--cst-split", default="", help="stage 3 track 2: cst_tr_5 or cst_tr_20 frames mixed in (never used in track 1)")
     ap.add_argument("--cst-per-batch", type=int, default=2)
     ap.add_argument("--seed", type=int, default=None, help="stage 3: overrides the config seed")
+    ap.add_argument("--group", default="", help="seed study: output folders runs/<group>, results/<group> instead of stage<N>")
     ap.add_argument("--max-iters", type=int, default=0, help="smoke test only (does not count as a run below 100)")
     ap.add_argument("--smoke-persist", action="store_true", help="smoke test of the checkpoint / resume path")
     args = ap.parse_args()
@@ -183,9 +184,10 @@ def main():
     persist = not args.max_iters or args.smoke_persist
     tc, mc = cfg["train"], cfg["model"]
     device = torch.device(tc["device"] if torch.backends.mps.is_available() else "cpu")
-    run_dir = ROOT / "runs" / f"stage{args.stage}" / args.run
+    group = args.group or f"stage{args.stage}"
+    run_dir = ROOT / "runs" / group / args.run
     run_dir.mkdir(parents=True, exist_ok=True)
-    res_path = ROOT / "results" / f"stage{args.stage}" / f"train_{args.run}.json"
+    res_path = ROOT / "results" / group / f"train_{args.run}.json"
 
     train = read_json(MAN / "antiuav_train.json")
     val = read_json(MAN / "antiuav_val.json")

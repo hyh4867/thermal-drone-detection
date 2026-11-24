@@ -1,0 +1,113 @@
+{
+  "run": "t2_20_s2",
+  "status": "complete",
+  "args": {
+    "run": "t2_20_s2",
+    "config": "configs/full.yaml",
+    "init": "runs/full_frcnn/best.pt",
+    "epochs": 1,
+    "lr": 0.005,
+    "warmup": 100,
+    "small_aug": 0.5,
+    "svan_n": 0,
+    "svan_per_batch": 2,
+    "svan_scale": 2.0,
+    "time_limit_min": 150.0,
+    "stage": 3,
+    "anchors": "",
+    "cst_split": "cst_tr_20",
+    "cst_per_batch": 2,
+    "seed": 2,
+    "group": "seeds",
+    "max_iters": 0,
+    "smoke_persist": false
+  },
+  "iterations": 1075,
+  "planned_iterations": 1075,
+  "steps_per_epoch": 1075,
+  "minutes_used": 42.512203419208525,
+  "time_limit_min": 150.0,
+  "history": [
+    {
+      "epoch": 0,
+      "iter": 1075,
+      "train_loss": 0.03875329366668856,
+      "val_ap50": 0.8953756060306242,
+      "val_frames": 1596,
+      "minutes": 42.5
+    }
+  ],
+  "adaptation_data": {
+    "source": "CST Anti-UAV train",
+    "split": "cst_tr_20",
+    "sequences": [
+      "building_15",
+      "building_16",
+      "building_25",
+      "building_36",
+      "building_4",
+      "building_40",
+      "building_63",
+      "building_8",
+      "cn_mountains_13",
+      "cn_mountains_5",
+      "cn_mountains_9",
+      "cn_sky_1",
+      "cn_sky_2",
+      "jungle_1",
+      "urban-areas_10",
+      "urban-areas_5",
+      "urban-areas_7",
+      "urban-areas_8",
+      "water_12",
+      "water_5"
+    ],
+    "frames": 5104,
+    "frames_with_box": 4462,
+    "per_batch": 2,
+    "scale": 1.0
+  },
+  "train_frames_antiuav": 8606,
+  "final": true,
+  "meta": {
+    "timestamp_utc": "2026-11-23T15:19:33+00:00",
+    "git_commit": "aecc0e4a50f629fa34611f46f2c33cd6349c6f10",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 2,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": 3,
+    "init": "runs/full_frcnn/best.pt",
+    "anchor_sizes": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ]
+  }
+}

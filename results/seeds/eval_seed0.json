@@ -1,0 +1,637 @@
+{
+  "seed": 0,
+  "model": "T2_20",
+  "m": 1,
+  "tag": "t2_20_m1",
+  "threshold": 0.9210467338562012,
+  "checkpoint_sha256": "ca8336d1fe86124de0829d844bc36c8d4377222613e9cf8f9eec3d801265aa63",
+  "hold": {
+    "ap50": 0.6392255413061486,
+    "f1_threshold": 0.9210467338562012,
+    "f1": 0.6437323279924598,
+    "precision": 0.7484931506849315,
+    "recall": 0.5646961554361306
+  },
+  "frozen": "results/stage3/frozen_config.json (T2_20)",
+  "note": "test data already used in stage 3 (CST val, Anti-UAV test, Svanström test); nothing is selected on them",
+  "cst_val": {
+    "status": "ok",
+    "set": "cst_val",
+    "frames": 11335,
+    "sequences": 40,
+    "reference": "S1_m1 (stage 3 cache s1_m1__cst_val, stage 1 threshold); paired_diff is against it",
+    "S1_m1": {
+      "threshold": 0.9541826248168945,
+      "ap50": 0.08076187747786741
+    },
+    "tag": "t2_20_m1",
+    "threshold": 0.9210467338562012,
+    "k": 1.0,
+    "gt_boxes": 9764,
+    "ap50": 0.4153838683557785,
+    "precision": 0.5763680525789399,
+    "recall_iou50": 0.41315034821794344,
+    "tp": 4034,
+    "fp": 2965,
+    "recall_center": 0.4396763621466612,
+    "drone_free_frames": 1571,
+    "drone_free_frames_with_alarm": 211,
+    "far_drone_free": 0.1343093570973902,
+    "recall_by_size": {
+      "tiny": {
+        "total": 3408,
+        "iou50": 0.4055164319248826,
+        "center": 0.4697769953051643
+      },
+      "small": {
+        "total": 5050,
+        "iou50": 0.44613861386138615,
+        "center": 0.4538613861386139
+      },
+      "medium": {
+        "total": 1216,
+        "iou50": 0.32319078947368424,
+        "center": 0.32401315789473684
+      },
+      "large": {
+        "total": 89,
+        "iou50": 0.06741573033707865,
+        "center": 0.06741573033707865
+      },
+      "xlarge": {
+        "total": 1,
+        "iou50": 0.0,
+        "center": 0.0
+      }
+    },
+    "at_far10_same_frames": {
+      "threshold": 0.9354933500289918,
+      "far_drone_free": 0.09993634627625717,
+      "recall_iou50": 0.39358869315854156,
+      "recall_center": 0.41734944694797216,
+      "recall_tiny_iou50": 0.38761737089201875,
+      "recall_tiny_center": 0.44630281690140844,
+      "recall_small_iou50": 0.42297029702970296,
+      "recall_small_center": 0.4293069306930693
+    },
+    "box_ratio_pred_over_label": {
+      "n": 4301,
+      "width_median": 1.0725026821573744,
+      "height_median": 1.0907935521402932
+    },
+    "ci95": {
+      "ap50": [
+        0.3136,
+        0.5206
+      ],
+      "recall_iou50": [
+        0.3173,
+        0.5074
+      ],
+      "recall_center": [
+        0.3377,
+        0.5369
+      ],
+      "precision": [
+        0.4778,
+        0.6918
+      ],
+      "far_drone_free": [
+        0.065,
+        0.212
+      ],
+      "recall_tiny_iou50": [
+        0.2478,
+        0.541
+      ],
+      "recall_tiny_center": [
+        0.2979,
+        0.6215
+      ],
+      "recall_small_iou50": [
+        0.3144,
+        0.5689
+      ],
+      "recall_small_center": [
+        0.3205,
+        0.5771
+      ]
+    },
+    "B": 1000,
+    "seed": 0,
+    "unit": "sequence",
+    "n_units": 40,
+    "paired_diff": {
+      "ap50": {
+        "diff": 0.3346219908779111,
+        "ci95": [
+          0.2406,
+          0.4328
+        ]
+      },
+      "recall_iou50": {
+        "diff": 0.29731667349446944,
+        "ci95": [
+          0.217,
+          0.3851
+        ]
+      },
+      "recall_center": {
+        "diff": 0.1775911511675543,
+        "ci95": [
+          0.1141,
+          0.2522
+        ]
+      },
+      "precision": {
+        "diff": 0.37731842216711303,
+        "ci95": [
+          0.285,
+          0.4799
+        ]
+      },
+      "far_drone_free": {
+        "diff": -0.06301718650541058,
+        "ci95": [
+          -0.1412,
+          0.0046
+        ]
+      },
+      "recall_tiny_iou50": {
+        "diff": 0.3770539906103286,
+        "ci95": [
+          0.2342,
+          0.5014
+        ]
+      },
+      "recall_tiny_center": {
+        "diff": 0.329518779342723,
+        "ci95": [
+          0.1873,
+          0.4654
+        ]
+      },
+      "recall_small_iou50": {
+        "diff": 0.3215841584158416,
+        "ci95": [
+          0.2306,
+          0.4088
+        ]
+      },
+      "recall_small_center": {
+        "diff": 0.12712871287128713,
+        "ci95": [
+          0.0823,
+          0.1793
+        ]
+      }
+    },
+    "J4": {
+      "diff_ap50": {
+        "diff": 0.3346219908779111,
+        "ci95": [
+          0.2406,
+          0.4328
+        ]
+      },
+      "helped": true,
+      "ap50": 0.4153838683557785,
+      "line": 0.3,
+      "still_low": false
+    }
+  },
+  "antiuav": {
+    "status": "ok",
+    "set": "auv_test",
+    "frames": 9582,
+    "reference": "S1 stage 1 caches at the stage 1 threshold",
+    "reference_S1_stage1": {
+      "threshold": 0.9541826248168945,
+      "k": 1.0,
+      "frames": 9582,
+      "sequences": 91,
+      "gt_boxes": 8429,
+      "ap50": 0.8846873018676265,
+      "precision": 0.9666261316038374,
+      "recall_iou50": 0.8487365049234785,
+      "tp": 7154,
+      "fp": 247,
+      "recall_center": 0.8541938545497687,
+      "drone_free_frames": 1153,
+      "drone_free_frames_with_alarm": 40,
+      "far_drone_free": 0.03469210754553339
+    },
+    "tag": "t2_20_m1",
+    "threshold": 0.9210467338562012,
+    "k": 1.0,
+    "sequences": 91,
+    "gt_boxes": 8429,
+    "ap50": 0.8626143347982238,
+    "precision": 0.9259307642064011,
+    "recall_iou50": 0.8409063945901056,
+    "tp": 7088,
+    "fp": 567,
+    "recall_center": 0.852651560090165,
+    "drone_free_frames": 1153,
+    "drone_free_frames_with_alarm": 79,
+    "far_drone_free": 0.06851691240242845,
+    "recall_by_size": {
+      "tiny": {
+        "total": 2,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 40,
+        "iou50": 0.825,
+        "center": 0.85
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7684478371501272,
+        "center": 0.7974554707379135
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8601721938775511,
+        "center": 0.8667091836734694
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    },
+    "at_far10_same_frames": {
+      "threshold": 0.8940314650535585,
+      "far_drone_free": 0.0997398091934085,
+      "recall_iou50": 0.8458891920749793,
+      "recall_center": 0.8590580139992882,
+      "recall_tiny_iou50": 0.0,
+      "recall_tiny_center": 0.0,
+      "recall_small_iou50": 0.825,
+      "recall_small_center": 0.85
+    },
+    "box_ratio_pred_over_label": {
+      "n": 7186,
+      "width_median": 1.0044012382075462,
+      "height_median": 0.9558786764705878
+    },
+    "ci95": {
+      "ap50": [
+        0.8171,
+        0.9066
+      ],
+      "recall_iou50": [
+        0.7924,
+        0.8873
+      ],
+      "recall_center": [
+        0.8071,
+        0.8978
+      ],
+      "precision": [
+        0.9057,
+        0.9446
+      ],
+      "far_drone_free": [
+        0.0291,
+        0.1388
+      ],
+      "recall_tiny_iou50": [
+        0.0,
+        0.0
+      ],
+      "recall_tiny_center": [
+        0.0,
+        0.0
+      ],
+      "recall_small_iou50": [
+        0.3992,
+        0.9231
+      ],
+      "recall_small_center": [
+        0.4,
+        0.9286
+      ]
+    },
+    "B": 1000,
+    "seed": 0,
+    "unit": "sequence",
+    "n_units": 91,
+    "paired_diff": {
+      "ap50": {
+        "diff": -0.02207296706940265,
+        "ci95": [
+          -0.0309,
+          -0.0142
+        ]
+      },
+      "recall_iou50": {
+        "diff": -0.007830110333372886,
+        "ci95": [
+          -0.0147,
+          -0.0013
+        ]
+      },
+      "recall_center": {
+        "diff": -0.0015422944596037436,
+        "ci95": [
+          -0.0071,
+          0.0043
+        ]
+      },
+      "precision": {
+        "diff": -0.04069536739743629,
+        "ci95": [
+          -0.0581,
+          -0.0259
+        ]
+      },
+      "far_drone_free": {
+        "diff": 0.03382480485689506,
+        "ci95": [
+          0.0033,
+          0.0721
+        ]
+      },
+      "recall_tiny_iou50": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall_tiny_center": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall_small_iou50": {
+        "diff": 0.1499999999999999,
+        "ci95": [
+          0.0815,
+          0.3333
+        ]
+      },
+      "recall_small_center": {
+        "diff": 0.09999999999999998,
+        "ci95": [
+          0.0,
+          0.2609
+        ]
+      }
+    },
+    "J5": {
+      "diffs": {
+        "recall_iou50": {
+          "diff": -0.007830110333372886,
+          "ci95": [
+            -0.0147,
+            -0.0013
+          ]
+        },
+        "ap50": {
+          "diff": -0.02207296706940265,
+          "ci95": [
+            -0.0309,
+            -0.0142
+          ]
+        },
+        "far_drone_free": {
+          "diff": 0.03382480485689506,
+          "ci95": [
+            0.0033,
+            0.0721
+          ]
+        }
+      },
+      "limits": {
+        "recall_iou50": -0.02,
+        "ap50": -0.02,
+        "far_drone_free": 0.02
+      },
+      "over_limit": {
+        "recall_iou50": false,
+        "ap50": true,
+        "far_drone_free": true
+      },
+      "regression": true
+    },
+    "recall_by_size_with_supplement": {
+      "tiny": {
+        "total": 17,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "small": {
+        "total": 365,
+        "iou50": 0.7972602739726027,
+        "center": 0.8356164383561644
+      },
+      "medium": {
+        "total": 1965,
+        "iou50": 0.7684478371501272,
+        "center": 0.7974554707379135
+      },
+      "large": {
+        "total": 6272,
+        "iou50": 0.8601721938775511,
+        "center": 0.8667091836734694
+      },
+      "xlarge": {
+        "total": 150,
+        "iou50": 1.0,
+        "center": 1.0
+      }
+    }
+  },
+  "svanstrom": {
+    "status": "ok",
+    "set": "svan_test_h",
+    "frames": 5819,
+    "videos": 183,
+    "reference": "S1_m1 (stage 3 cache s1_m1__svan_test_h, stage 1 threshold); Svanström input enlarged 2x; k = 1",
+    "S1_m1": {
+      "threshold": 0.9541826248168945,
+      "k": 1.0,
+      "drone_gt": 2389,
+      "non_drone_frames": 3335,
+      "recall_iou50": 0.49141900376726666,
+      "recall_center": 0.8585182084554207,
+      "far": 0.3934032983508246
+    },
+    "tag": "t2_20_m1",
+    "threshold": 0.9210467338562012,
+    "k": 1.0,
+    "drone_gt": 2389,
+    "non_drone_frames": 3335,
+    "recall_iou50": 0.2971954792800335,
+    "recall_center": 0.9522812892423608,
+    "far": 0.7325337331334333,
+    "far_by_class": {
+      "BIRD": 0.5993537964458805,
+      "AIRPLANE": 0.7972085385878489,
+      "HELICOPTER": 0.8304891922639362
+    },
+    "recall_by_distance": {
+      "CLOSE": {
+        "gt": 389,
+        "iou50": 0.5886889460154242,
+        "center": 0.9974293059125964
+      },
+      "MEDIUM": {
+        "gt": 1395,
+        "iou50": 0.3247311827956989,
+        "center": 0.9913978494623656
+      },
+      "DISTANT": {
+        "gt": 605,
+        "iou50": 0.04628099173553719,
+        "center": 0.8330578512396695
+      }
+    },
+    "object_flagged": {
+      "BIRD": {
+        "frames_with_label": 1068,
+        "iou50": 0.00749063670411985,
+        "center": 0.6020599250936329
+      },
+      "AIRPLANE": {
+        "frames_with_label": 1218,
+        "iou50": 0.06568144499178982,
+        "center": 0.7963875205254516
+      },
+      "HELICOPTER": {
+        "frames_with_label": 879,
+        "iou50": 0.24914675767918087,
+        "center": 0.8111490329920364
+      }
+    },
+    "recall_by_size": {
+      "tiny": {
+        "gt": 0,
+        "iou50": NaN,
+        "center": NaN
+      },
+      "small": {
+        "gt": 34,
+        "iou50": 0.0,
+        "center": 0.0
+      },
+      "medium": {
+        "gt": 1564,
+        "iou50": 0.2774936061381074,
+        "center": 0.9571611253196931
+      },
+      "large": {
+        "gt": 765,
+        "iou50": 0.3607843137254902,
+        "center": 0.9830065359477124
+      },
+      "xlarge": {
+        "gt": 26,
+        "iou50": 0.0,
+        "center": 1.0
+      }
+    },
+    "at_far10_same_frames": {
+      "threshold": 0.9902976155281068,
+      "far": 0.09985007496251874,
+      "recall_iou50": 0.22226873168689829,
+      "recall_center": 0.3976559229803265,
+      "note": "a point read off the curve of the same frames, not a usable threshold"
+    },
+    "box_ratio_pred_over_label": {
+      "n": 2238,
+      "width_median": 0.6298452811105768,
+      "height_median": 0.6130908627750169
+    },
+    "ci95": {
+      "recall_iou50": [
+        0.2267,
+        0.3711
+      ],
+      "recall_center": [
+        0.9055,
+        0.9865
+      ],
+      "far": [
+        0.6706,
+        0.7902
+      ]
+    },
+    "B": 1000,
+    "seed": 0,
+    "unit": "video",
+    "n_videos": 183,
+    "paired_diff": {
+      "recall_iou50": {
+        "diff": -0.19422352448723318,
+        "ci95": [
+          -0.2449,
+          -0.1506
+        ]
+      },
+      "recall_center": {
+        "diff": 0.09376308078694007,
+        "ci95": [
+          0.0546,
+          0.1355
+        ]
+      },
+      "far": {
+        "diff": 0.3391304347826087,
+        "ci95": [
+          0.2828,
+          0.397
+        ]
+      }
+    }
+  },
+  "reproduces_stage3": {
+    "compared_values": 58,
+    "max_abs_diff": 0.0,
+    "matches": true,
+    "files": [
+      "results/stage3/final__cst_val.json",
+      "results/stage3/final__antiuav.json",
+      "results/stage3/svanstrom_test.json"
+    ]
+  },
+  "meta": {
+    "timestamp_utc": "2026-11-23T17:28:25+00:00",
+    "git_commit": "32c81fdd297413d5c046bc58316c56c01ed41a14",
+    "git_dirty": false,
+    "config": "configs/full.yaml",
+    "config_sha256": "21e7d1883ee25c4d42957575c38a6821a2215684105a0e9ac3bcbb76e938d600",
+    "seed": 0,
+    "datasets": {
+      "anti_uav300": {
+        "source": "https://github.com/ZhaoJ9014/Anti-UAV (Google Drive id 1NPYaop35ocVTYWHOYQQHn8YHsM9jmLGr)",
+        "file": "Anti-UAV-RGBT.zip",
+        "sha256": "ed7d80bbd8ca8e01ea784c64eb0782eae8b3a1572177535c0fada9beb53fdca8"
+      },
+      "svanstrom2021": {
+        "source": "https://doi.org/10.5281/zenodo.5500576 (v1.0.0)",
+        "file": "Drone-detection-dataset-v1.0.0.zip",
+        "sha256": "53deda08127dc7896e96454cf35e866e8d6bee336f25d290b26e1f5324e23c81"
+      }
+    },
+    "env": {
+      "python": "3.12.7",
+      "platform": "macOS-26.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "processor": "Apple M2",
+      "memory_bytes": 8589934592,
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "opencv": "5.0.0",
+      "mps_available": true
+    },
+    "stage": "seeds"
+  }
+}

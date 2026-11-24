@@ -145,6 +145,37 @@ The three alarm rates have different denominators (drone-free frames for CST and
 
 **Limits of stage 3.** One training run per configuration (seed 0); intervals come from 40 sequences and are wide. Whether a doubled input helps on CST val was not measured. Only one amount of target data (20 sequences) was tested. Nothing here covers threat assessment, prioritisation or any response function; the scope ends at detection scores on public data.
 
+## Seed study: T2-20 trained with three seeds
+
+Added 2026-11-24. Pre-registration: `docs/PREREGISTRATION_SEEDS.md` (Korean, committed before the runs). Report: `docs/reports/2026-11-24-drone-seeds.md` (Korean).
+
+Stage 3 trained each configuration once (seed 0). Here the fine-tuned model T2-20 was trained two more times with the same data and arguments and only the training seed changed (1 and 2). The magnification was fixed to the value seed 0 chose. Each seed got its own operating threshold by the stage 3 rule (highest F1 on the 20 held-out CST train sequences) and that threshold was committed before any test inference of the seed. Seed 0 is the stage 3 run; it was not inferred again.
+
+**The three test sets were already used in stage 3.** CST val, Anti-UAV test and Svanström test are not unseen here. Nothing was selected on them: no seed was chosen or dropped by its test result.
+
+Each seed at its own threshold (`results/seeds/eval_seed0.json`, `eval_seed1.json`, `eval_seed2.json`; means and ranges in `results/seeds/summary.json`; thresholds in `results/stage3/frozen_config.json` and `results/seeds/frozen_seed1.json`, `frozen_seed2.json`):
+
+| | Seed 0 | Seed 1 | Seed 2 | Range (max − min) |
+|---|---|---|---|---|
+| Operating threshold | 0.921 | 0.938 | 0.909 | 0.029 |
+| CST val AP@0.5 | 0.415 [0.314, 0.521] | 0.414 [0.313, 0.520] | 0.409 [0.308, 0.512] | 0.007 |
+| CST val AP@0.5, difference to the stage 1 model | +0.335 [0.241, 0.433] | +0.334 [0.240, 0.433] | +0.328 [0.235, 0.426] | 0.007 |
+| CST val, targets under 8 px, centre recall | 47.0% | 43.5% | 48.0% | 4.5 points |
+| Anti-UAV test AP@0.5 (stage 1 model 0.885) | 0.863 | 0.860 | 0.863 | 0.003 |
+| Anti-UAV test alarm rate on drone-free frames (stage 1 model 3.5%) | 6.9% | 5.5% | 7.8% | 2.3 points |
+| Svanström test alarm rate on bird / aeroplane / helicopter frames (stage 1 model 39.3%) | 73.3% | 63.0% | 73.4% | 10.4 points |
+| J4 (CST val) | helped | helped | helped | |
+| J5 (Anti-UAV test) | regression (AP, alarm rate) | regression (AP only) | regression (AP, alarm rate) | |
+
+- **The gain barely moved.** The range of CST val AP@0.5 over the three seeds is 0.007, far below the half-width of the bootstrap interval of one seed (about 0.10).
+- **The verdicts J4 and J5 are the same for all three seeds** (`verdicts` in `results/seeds/summary.json`). The items over the J5 limit differ: seed 1 is over the AP limit only. Its alarm-rate difference is +1.99 points against a limit of +2.0, one frame short (63 of 1,153 drone-free frames).
+- **The alarm rates follow the threshold each seed got.** The F1 curve on the held-out sequences is flat near its maximum, so the chosen threshold moved between 0.909 and 0.938. A read-out added after the results were seen (not pre-registered, descriptive, `results/seeds/posthoc_common_threshold.json`) puts all three seeds at the threshold of seed 0: the range of the Anti-UAV alarm rate drops from 2.3 to 0.8 points and that of the Svanström alarm rate from 10.4 to 4.7 points.
+- The cost on Svanström stays with every seed: the alarm rate on bird, aeroplane and helicopter frames is above 60% for all three.
+
+**Checks.** The ten prediction caches of seeds 1 and 2 passed the stage 3 cache check (`results/seeds/cache_check__seed{1,2}_{hold,test}.json`). Seed 0 put through the new aggregation code reproduces the stage 3 files (`reproduces_stage3` in `results/seeds/eval_seed0.json`). A script that uses only the standard library recomputed the per-seed numbers and 20 of the 23 summary rows (`scripts/independent_check_seeds.py` → `results/seeds/independent_check.json`, all match).
+
+**Limits of the seed study.** Three seeds give a mean and a range, not an interval for the seed spread. The test sets were reused. No seed was trained twice, so any nondeterminism of the hardware backend is mixed into the seed differences. Only T2-20 was repeated; every other configuration still has one training run. The weights and prediction caches are not in this repository, so `scripts/independent_check_seeds.py` and `scripts/seeds_run.sh` do not run from a fresh clone.
+
 ## How it was verified (stage 1)
 
 - **Splits by source video.** The official Anti-UAV train and validation sets share 26 of their 27 source videos. They were merged and re-split by source video: 22 for training and 5 for validation. The official test set (91 sequences from 10 other source videos) was kept as it was. The split is in `results/data/antiuav_split.json`.
@@ -175,11 +206,11 @@ python -m pip install -r requirements-test.txt
 PYTHONPATH=src python -m pytest -q tests/test_metrics.py
 ```
 
-The stage 2 and 3 tests (`tests/test_stage2.py`, `tests/test_stage3.py`) import the inference code and need `requirements.txt`. Without the datasets, three of them are skipped:
+The stage 2, stage 3 and seed-study tests (`tests/test_stage2.py`, `tests/test_stage3.py`, `tests/test_seeds.py`) import the inference code and need `requirements.txt`. Without the datasets and caches, four of them are skipped:
 
 ```sh
 python -m pip install -r requirements.txt pytest
-PYTHONPATH=src python -m pytest -q tests     # 23 passed, 3 skipped without data; 26 passed with data
+PYTHONPATH=src python -m pytest -q tests     # 29 passed, 4 skipped without data; 33 passed with data
 ```
 
 The full pipeline needs the datasets (below, about 6 GB for Anti-UAV300) and `requirements.txt` (PyTorch and torchvision). It was not re-run for this repository. The first run's commands are:
